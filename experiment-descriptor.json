@@ -1,0 +1,185 @@
+{
+  "unit-type": "lu",
+  "label": "Linked List",
+  "basedir": ".",
+  "units": [
+    {
+      "unit-type": "aim"
+    },
+    {
+      "unit-type": "task",
+      "label": "Overview",
+      "content-type": "video",
+      "source": "overview.md",
+      "target": "overview.html"
+    },
+    
+    {
+      "unit-type": "task",
+      "label": "Pre Test",
+      "content-type": "assesment",
+      "source": "pretest.js",
+      "target": "pretest.html"
+    },
+    {
+      "unit-type": "lu",
+      "label": "Basics",
+      "basedir": "basics",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+        {
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        }
+	
+      
+      ]
+    },
+    {
+      "unit-type": "lu",
+      "label": "Singly Linked List",
+      "basedir": "singly-linked-list",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        
+	{
+          "unit-type": "task",
+          "label": "SLL Introduction Insertion",
+          "content-type": "video",
+          "source": "sll-introduction-insertion.md",
+          "target": "sll-introduction-insertion.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "SLL Introduction Insertion",
+          "content-type": "video",
+          "source": "sll-introduction-deletion.md",
+          "target": "sll-introduction-deletion.html"
+        },
+        
+	{
+          "unit-type": "task",
+          "label": "SLL Practice",
+          "content-type": "simulation",
+          "source": "simulation/sllpractice.html",
+          "target": "sllpractice.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "SLL Exercise",
+          "content-type": "simulation",
+          "source": "simulation/sllexercise.html",
+          "target": "sllexercise.html"
+        }
+        
+      ]
+    },
+        {
+      "unit-type": "lu",
+      "label": "Doubly Linked List",
+      "basedir": "doubly-linked-list",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "DLL Introduction",
+          "content-type": "video",
+          "source": "dll-introduction.md",
+          "target": "dll-introduction.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "DLL Practice",
+          "content-type": "simulation",
+          "source": "simulation/dllpractice.html",
+          "target": "dllpractice.html"
+        },
+        
+	{
+          "unit-type": "task",
+          "label": " DLL Exercise ",
+          "content-type": "simulation",
+          "source": "simulation/dllexercise.html",
+          "target": "simulation/dllexercise.html"
+        }
+      ]
+    },
+     {
+      "unit-type": "lu",
+      "label": "Circular Linked List",
+      "basedir": "circular-linked-list",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "DLL Introduction",
+          "content-type": "video",
+          "source": "cll-introduction.md",
+          "target": "cll-introduction.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "cLL Practice",
+          "content-type": "simulation",
+          "source": "simulation/cllpractice.html",
+          "target": "cllpractice.html"
+        },
+        
+	{
+          "unit-type": "task",
+          "label": " DLL Exercise ",
+          "content-type": "simulation",
+          "source": "simulation/cllexercise.html",
+          "target": "simulation/cllexercise.html"
+        }
+      ]
+    },
+    {
+      "unit-type": "task",
+      "label": "Post Test",
+      "content-type": "assesment",
+      "source": "posttest.js",
+      "target": "posttest.html"
+    },
+       
+    {
+      "unit-type": "task",
+      "label": "Further Readings/References",
+      "content-type": "text",
+      "source": "further-reading-and-references.md",
+      "target": "further-reading-and-references.html"
+    }
+  ]
+}
