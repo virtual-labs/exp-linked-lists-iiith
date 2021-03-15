@@ -13,7 +13,13 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    
+    {
+      "unit-type": "task",
+      "label": "Pre Test Instructions",
+      "content-type": "video",
+      "source": "pre-test.md",
+      "target": "pre-test.html"
+    },
     {
       "unit-type": "task",
       "label": "Pre Test",
@@ -165,6 +171,13 @@
           "target": "simulation/cllexercise.html"
         }
       ]
+    },
+    {
+      "unit-type": "task",
+      "label": "Post Test Instructions",
+      "content-type": "video",
+      "source": "post-test.md",
+      "target": "post-test.html"
     },
     {
       "unit-type": "task",
