@@ -7,10 +7,8 @@ return start == NULL ? 1 : 0;
 }
 
 This function returns 1 if the list is empty, or returns 0 if the list is not empty.
+
 ### Deletion of elements from Singly Linked List
-
-
-
 Three cases may arise when we want to insert data at the front.
 
 **Case – 1** : When the list is empty i.e. head = NULL
@@ -28,7 +26,7 @@ Here, we don’t have to do anything because there is nothing that is to be dele
 <img src="images/deletion-2.png"/>
 
 ### Deletion of node from Linked List (Case 3a)
-<img src="images/deletion-2a.pngg"/>
+<img src="images/deletion-2a.png"/>
 
 ### Deletion of node from Linked List (Case 3b)
 <img src="images/deletion-2b.png"/>
