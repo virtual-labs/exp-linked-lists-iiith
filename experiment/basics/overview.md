@@ -17,11 +17,11 @@ There are three types of linked lists:
 ### Need for linked list
 **1. Memory Management:**
 When you declare an array, the size of the array is fixed. You cannot change the size of the array. And there might be a case where you are not able to consume all the space that you have reserved as an array that means you are wasting a part of your memory or there might be a case where you have consumed all of the space that was reserved as an array and still you are not able to store your complete data. Linked List manages the memory efficiently. Size of the Linked list if flexible. Linked List consume only that much space which is required to store the data. Whenever a data is to be stored in the Linked List, linked list allocates the memory at the same time so we shouldn’t worry that our space may remain un-utilized. And whenever a data is deleted from the Linked List it frees the memory which was consumed by the deleting data and thus allows the memory to be reused, which is not possible with arrays.
+
 **2. Faster Processing:**
 To delete an element from an array we need to shift the elements of the array. In the worst case, suppose we have an array of size n. Now we want to delete the first element of the array that means we need to shift the (n-1) elements of the array to the left which have time complexity of O(n). Also we waste the memory that was occupied by the rightmost element. On the other hand, deleting an element from Linked List is quite simple, we just need to change the address hold by the two pointers which have O(1) time complexity. Also the memory occupied by this element can be freed so that it can be re-utilized.
+
 ### Single Linked List
-
-
 Each Node of the singly list consists of two parts:
 
    - First part of the singly linked list Node contains the information to be stored.
@@ -31,6 +31,7 @@ Each Node of the singly list consists of two parts:
 
 ### Representation of Linked List Experiment
 <img src="images/linkedlist.png"/>
+
 ### Data Type used in Singly Linked List
 
 To implement a singly linked list we first need a data type( type of the data that is to be stored by the list).
@@ -50,10 +51,13 @@ Node *next; // pointer holds the address of the next Node
 };
 ### What is Linked List?
 <img src="images/linked-list-example.jpg"/>
+
 ### Linked List vs Array
 <img src="images/llintro.png"/>
+
 ### Types of Linked List
 <img src="images/types-of-ll.png"/>
+
 ### Operations on Linked list
 <iframe src="https://www.youtube.com/embed/wyyYQF89pJ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
