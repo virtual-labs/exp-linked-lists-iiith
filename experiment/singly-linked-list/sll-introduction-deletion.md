@@ -30,5 +30,6 @@ Here, we don’t have to do anything because there is nothing that is to be dele
 
 ### Deletion of node from Linked List (Case 3b)
 <img src="images/deletion-2b.png"/>
+
 ### Deletion of tail node from Linked List
 <img src="images/deletion-2c.png"/>
