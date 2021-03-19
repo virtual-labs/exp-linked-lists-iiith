@@ -129,7 +129,7 @@
           "label": " DLL Exercise ",
           "content-type": "simulation",
           "source": "simulation/dllexercise.html",
-          "target": "simulation/dllexercise.html"
+          "target": "dllexercise.html"
         }
       ]
     },
@@ -168,7 +168,7 @@
           "label": " CLL Exercise ",
           "content-type": "simulation",
           "source": "simulation/cllexercise.html",
-          "target": "simulation/cllexercise.html"
+          "target": "cllexercise.html"
         }
       ]
     },
