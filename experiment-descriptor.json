@@ -150,14 +150,14 @@
         },
         {
           "unit-type": "task",
-          "label": "DLL Introduction",
+          "label": "CLL Introduction",
           "content-type": "video",
           "source": "cll-introduction.md",
           "target": "cll-introduction.html"
         },
         {
           "unit-type": "task",
-          "label": "cLL Practice",
+          "label": "CLL Practice",
           "content-type": "simulation",
           "source": "simulation/cllpractice.html",
           "target": "cllpractice.html"
@@ -165,20 +165,14 @@
         
 	{
           "unit-type": "task",
-          "label": " DLL Exercise ",
+          "label": " CLL Exercise ",
           "content-type": "simulation",
           "source": "simulation/cllexercise.html",
           "target": "simulation/cllexercise.html"
         }
       ]
     },
-    {
-      "unit-type": "task",
-      "label": "Post Test Quiz Instructions",
-      "content-type": "video",
-      "source": "post-test.md",
-      "target": "post-test.html"
-    },
+    
     {
       "unit-type": "task",
       "label": "Post Test Quiz",
