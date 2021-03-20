@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+<link href="css/styles.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../assets/css/common-styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SLL Exercise</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>    
+</head>
+<body onload="handlers()">
+  <div class="instruction-box">
+      <button class="collapsible">Instructions</button>
+      <div class="content">
+          <ul><li>Enter the value to be inserted in the fields given corresponding to the position.</li>
+      <li>Click the corresponding button according to whether you want to insert the element at the head, the tail, or after a particular node.</li>
+      <li>Observe the linked list changing as per your modifications.</li>
+      <li>Explore various linked list operations!</li>
+      <li>Click on <b>Submit</b> button to check your answer.</li>
+      <li>Click on <b>Reset</b> button to start the experiment again.</li></ul>
+      </div>
+  </div>
+  <div class="wrapper">
+      <p id="questionid"><b>Question:</b>Convert to</p>
+      <canvas id="linkedlist" width="1360" height="280">Your browser does not support canvas.</canvas>
+      <div id="comments">
+        <p><b>Observations</b></p>
+        <p id="ins"> </p>
+      </div>
+      <div id="buttondiv">
+          <div>
+              <input name="textbox1" id="HeadtoBeInserted" type="text" maxlength="3" placeholder="at head" class="text-box">
+              <button type="button" class="button-input" id="head-insert">Insert At Head</button>
+              <input name="textbox2" id="TailtoBeInserted" type="text" maxlength="3" placeholder="at tail" class="text-box">
+              <button type="button" class="button-input" id="tail-insert">Insert At Tail</button>
+          </div><br><br>
+          <div>
+              <input name="textbox3" id="index" type="text" maxlength="3" placeholder="index" class="text-box">&nbsp
+              <input name="textbox4" id="AnytoBeInserted" type="text" maxlength="3" placeholder="at node" class="text-box">
+              <button type="button" class="button-input" id="node-insert">Insert At Node</button>
+              <button type="button" class="button-input" id="submit-button">Submit</button>
+              <button type="button" class="button-input" id="reset-button">Reset</button>
+          </div>
+      </div>
+  </div>
+  </script>
+  </body>
+<script src="js/sllexercise.js"></script>
+<script src="../../assets/js/instruction-box.js"></script>
+</body>
+</html>
