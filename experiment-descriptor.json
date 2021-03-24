@@ -13,13 +13,7 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    {
-      "unit-type": "task",
-      "label": "Pre Test Quiz Instructions",
-      "content-type": "video",
-      "source": "pre-test.md",
-      "target": "pre-test.html"
-    },
+    
     {
       "unit-type": "task",
       "label": "Pre Test Quiz",
@@ -54,24 +48,17 @@
         {
           "unit-type": "aim"
         },
+	
 	{
           "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
-        
-	{
-          "unit-type": "task",
-          "label": "SLL Introduction Insertion",
+          "label": " Insertion",
           "content-type": "video",
           "source": "sll-introduction-insertion.md",
           "target": "sll-introduction-insertion.html"
         },
 	{
           "unit-type": "task",
-          "label": "SLL Introduction Insertion",
+          "label": "Deletion",
           "content-type": "video",
           "source": "sll-introduction-deletion.md",
           "target": "sll-introduction-deletion.html"
@@ -79,14 +66,14 @@
         
 	{
           "unit-type": "task",
-          "label": "SLL Practice",
+          "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/sllpractice.html",
           "target": "sllpractice.html"
         },
 	{
           "unit-type": "task",
-          "label": "SLL Exercise",
+          "label": "Exercise",
           "content-type": "simulation",
           "source": "simulation/sllexercise.html",
           "target": "sllexercise.html"
@@ -102,23 +89,17 @@
         {
           "unit-type": "aim"
         },
-	{
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+	
         {
           "unit-type": "task",
-          "label": "DLL Introduction",
+          "label": "Introduction",
           "content-type": "video",
           "source": "dll-introduction.md",
           "target": "dll-introduction.html"
         },
         {
           "unit-type": "task",
-          "label": "DLL Practice",
+          "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/dllpractice.html",
           "target": "dllpractice.html"
@@ -126,7 +107,7 @@
         
 	{
           "unit-type": "task",
-          "label": " DLL Exercise ",
+          "label": "Exercise ",
           "content-type": "simulation",
           "source": "simulation/dllexercise.html",
           "target": "dllexercise.html"
@@ -141,23 +122,17 @@
         {
           "unit-type": "aim"
         },
-	{
-          "unit-type": "task",
-          "label": "Overview",
-          "content-type": "video",
-          "source": "overview.md",
-          "target": "overview.html"
-        },
+	
         {
           "unit-type": "task",
-          "label": "CLL Introduction",
+          "label": "Introduction",
           "content-type": "video",
           "source": "cll-introduction.md",
           "target": "cll-introduction.html"
         },
         {
           "unit-type": "task",
-          "label": "CLL Practice",
+          "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/cllpractice.html",
           "target": "cllpractice.html"
@@ -165,7 +140,7 @@
         
 	{
           "unit-type": "task",
-          "label": " CLL Exercise ",
+          "label": "Exercise ",
           "content-type": "simulation",
           "source": "simulation/cllexercise.html",
           "target": "cllexercise.html"
