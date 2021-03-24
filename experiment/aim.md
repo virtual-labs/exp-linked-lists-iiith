@@ -1,3 +1,7 @@
+### Estimated Time
+
+1 hour
+
 ### Learning Objectives of the Experiment
 
 In this experiment on Linked Lists, you will learn following topics:
