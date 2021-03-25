@@ -13,6 +13,7 @@ Now we are ready to insert the data in our singly linked list.
 First we allocate memory to store data as:
 
 struct Node *newNode = (Node*)malloc(sizeof(struct Node));
+
 ### Insertion of elements into Singly Linked List
 
 
@@ -24,18 +25,21 @@ Here we can simply do head = tail = newNode(pointer)
 
 **Case – 2** : When list contains some entries i.e. head != NULL
 
-    Insertion at Front
-    Insertion at End
-    Insertion after a Node
+   - Insertion at Front
+   - Insertion at End
+   - Insertion after a Node
 
 ### Insertion of node in Linked List (Case 1)
 <img src="images/insertion-1.png"/>
 
 ### Insertion of node in Linked List (Case 2a)
 <img src="images/insertion-2a.png"/> 
+
 ### Insertion of node in Linked List (Case 2b)
 <img src="images/insertion-2b.png"/> 
+
 ### Insertion of node in Linked List (Case 2c)
 <img src="images/insertion-2c.png"/> 
+
 ### Pictorial Representation of Linked List Experiment
 <img src="images/real-life.png"/> 

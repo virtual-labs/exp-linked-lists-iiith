@@ -1,5 +1,4 @@
-
-### A Short Introduction to Experiment..!
+### Overview of the Experiment..!
 <iframe src="https://www.youtube.com/embed/lMEvmsfV_dU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Prerequisites of the Experiment
@@ -12,6 +11,7 @@
    - Memory Representation
    - Linked List Basics
 -    And above all, a curiosity to learn and explore..!
+
 ### Structure of the Experiment
 <img src="images/structure.jpg"/>
 
