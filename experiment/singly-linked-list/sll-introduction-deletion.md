@@ -1,10 +1,10 @@
 ### Check
 
-We can check whether the list is empty or not using something like this:
+We can check whether the list is empty or not using something like this: <br>
 
-int isUnderflow(){
-return start == NULL ? 1 : 0;
-}
+int isUnderflow(){ <br>
+return start == NULL ? 1 : 0;<br>
+}<br>
 
 This function returns 1 if the list is empty, or returns 0 if the list is not empty.
 
