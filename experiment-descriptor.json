@@ -23,7 +23,7 @@
     },
     {
       "unit-type": "lu",
-      "label": "Basics",
+      "label": "Concept",
       "basedir": "basics",
       "units": [
         {
@@ -92,7 +92,7 @@
 	
         {
           "unit-type": "task",
-          "label": "Introduction",
+          "label": "Concept",
           "content-type": "video",
           "source": "dll-introduction.md",
           "target": "dll-introduction.html"
@@ -125,7 +125,7 @@
 	
         {
           "unit-type": "task",
-          "label": "Introduction",
+          "label": "Concept",
           "content-type": "video",
           "source": "cll-introduction.md",
           "target": "cll-introduction.html"
