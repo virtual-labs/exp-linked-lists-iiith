@@ -23,7 +23,7 @@
     },
     {
       "unit-type": "lu",
-      "label": "Basic Concept",
+      "label": "Concept",
       "basedir": "basics",
       "units": [
         {
@@ -31,7 +31,7 @@
         },
         {
           "unit-type": "task",
-          "label": "Concept",
+          "label": "Overview",
           "content-type": "video",
           "source": "overview.md",
           "target": "overview.html"
