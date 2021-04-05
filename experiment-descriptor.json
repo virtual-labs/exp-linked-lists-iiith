@@ -13,14 +13,6 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    
-    {
-      "unit-type": "task",
-      "label": "Pre Test Quiz",
-      "content-type": "assesment",
-      "source": "pretest.js",
-      "target": "pretest.html"
-    },
     {
       "unit-type": "lu",
       "label": "Concept",
@@ -147,14 +139,7 @@
         }
       ]
     },
-    
-    {
-      "unit-type": "task",
-      "label": "Post Test Quiz",
-      "content-type": "assesment",
-      "source": "posttest.js",
-      "target": "posttest.html"
-    },
+
        
     {
       "unit-type": "task",
