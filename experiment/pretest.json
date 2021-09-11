@@ -1,1 +1,66 @@
-[{"question":"1. Which of these best describes an array?","answers":{"a":" A data structure that shows a hierarchical behavior ","b":"Container of objects of similar types","c":"Container of objects of mixed types. ","d":" All of the mentioned "},"correctAnswer":"b"},{"question":"2. What is the time complexity of insertion at any point on an array?","answers":{"a":"O(N)","b":"O(N^2) ","c":"O(NLogN)","d":"None of these"},"correctAnswer":"a"},{"question":"3. Pick incorrect options from the following","answers":{"a":"If structure contains 3 types of data then three pointers are required for that structure ","b":"One variable can be bound to many structures ","c":"Contents of a structure are stored in contiguous memory ","d":"None of these "},"correctAnswer":"c"},{"question":"4. What are the reason/ reasons for using pointers in a C program?","answers":{"a":"Pointers allow different functions to share and modify their local variables ","b":" To pass large structures so that complete copy of the structure can be avoided","c":"Pointers enable complex “linked” data structures like linked lists and binary trees","d":" All of the above"},"correctAnswer":"b"},{"question":"5. Pick out incorrect statement from the following","answers":{"a":" Linked list is a data structure ","b":" Linked list is made up of structures ","c":"The nodes of linked list will always be stored contiguously","d":"  Linked lists do not allow random access"},"correctAnswer":"c"}]
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. Which of these best describes an array?",
+            "answers": {
+                "a": "A data structure that shows a hierarchical behaviour",
+                "b": "Container of objects of similar types",
+                "c": "Container of objects of mixed types",
+                "d": "All of the mentioned"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "The data structure that shows hierarchical behaviour is a tree, and hence it is the wrong answer.",
+                "b": "As we have read earlier a simple container for objects of similar types is an array, they might be integer, characters or any custom class objects, Hence this is the correct description for an array.",
+                "c": "We have a 'list' that is similar to an array but is a container of objects of mixed types, and hence is not an array and is the wrong answer.",
+                "d": "Only one of the mentioned answers describes an array and hence it cannot be all."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. What is the time complexity of insertion at any point in an array?",
+            "answers": {
+                "a": "O(N)",
+                "b": "O(N^2)",
+                "c": "O(NLogN)",
+                "d": "None of these"
+            },
+            "correctAnswer": "a",
+            "explanations": {},
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "3. Pick incorrect options from the following",
+            "answers": {
+                "a": "If structure contains 3 types of data then one pointer is sufficient for that structure",
+                "b": "One variable can be bound to many structures",
+                "c": "Contents of a structure are stored in contiguous memory",
+                "d": "None of these"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "A structure itself acts as a custom data type consisting of the 3 types of data and hence, a single pointer is sufficient to point to the structure.",
+                "b": "One variable cannot be bound to multiple structures.",
+                "c": "Contents of the structure are stored continuously in the memory, hence this statement is correct"
+            },
+            "difficulty": "na"
+        },
+        {
+            "question": "4. The memory occupied by a pointer _______",
+            "answers": {
+                "a": "Is independent on which data type the pointer points to.",
+                "b": "Is independent of data type.",
+                "c": "Depends on the program we are writing,",
+                "d": "None of these"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "A pointer pointing to any data type ultimately is just a variable that stores a memory address. The space required to store memory address is independent of what the memory address holds. Hence this is incorrect.",
+                "b": "As memory address is always a hexadecimal, it will depend on the system you are using. It will occupy 4 bytes on 32 bit system and 8 bytes on a 64 bit system. But is completely independent on which data type it is storing.",
+                "c": "Incorrect. It depends, only on which system we are declaring the pointer."
+            },
+            "difficulty": "beginner"
+        }
+    ]
+}
