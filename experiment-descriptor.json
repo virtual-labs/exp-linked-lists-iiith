@@ -18,7 +18,7 @@
       "unit-type": "task",
       "label": "Pre Test Quiz",
       "content-type": "assesment",
-      "source": "pretest.js",
+      "source": "pretest.json",
       "target": "pretest.html"
     },
     {
@@ -77,8 +77,14 @@
           "content-type": "simulation",
           "source": "simulation/sllexercise.html",
           "target": "sllexercise.html"
-        }
-        
+        },
+        {
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "singly-linked-list-quiz.json",
+          "target": "singly-linked-list-quiz.html"
+        } 
       ]
     },
         {
@@ -111,7 +117,14 @@
           "content-type": "simulation",
           "source": "simulation/dllexercise.html",
           "target": "dllexercise.html"
-        }
+        },
+        {
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "doubly-linked-list-quiz.json",
+          "target": "doubly-linked-list-quiz.html"
+        } 
       ]
     },
      {
@@ -144,7 +157,14 @@
           "content-type": "simulation",
           "source": "simulation/cllexercise.html",
           "target": "cllexercise.html"
-        }
+        },
+        {
+          "unit-type": "task",
+          "label": "Quiz",
+          "content-type": "assesment",
+          "source": "circular-linked-list-quiz.json",
+          "target": "circular-linked-list-quiz.html"
+        } 
       ]
     },
     
@@ -152,7 +172,7 @@
       "unit-type": "task",
       "label": "Post Test Quiz",
       "content-type": "assesment",
-      "source": "posttest.js",
+      "source": "posttest.json",
       "target": "posttest.html"
     },
        
