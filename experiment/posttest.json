@@ -1,0 +1,75 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. Pick one correct statement from the following?",
+            "answers": {
+                "a": "In a doubly linked list, each node is linked to one node.",
+                "b": "In a doubly linked list, each node is linked to three nodes.",
+                "c": "In a doubly linked list, each node is linked to two nodes.",
+                "d": "In a doubly linked list, each node is linked to zero nodes."
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "In a doubly linked list each node has three components. 2 pointer nodes and one data node. The pointer nodes point to the previous and the next elements respectively hence making it easy to traverse"
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. What is the time complexity of searching for an element in a circular linked list?",
+            "answers": {
+                "a": "O(n)",
+                "b": "O(nlogn)",
+                "c": "O(1)",
+                "d": "None of the mentioned"
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "As we would have to traverse the entire linked list of length n, the worst vase would be that the element is the n^th element and hence worst case time complexity for searching is O(N)"
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. Assuming memory is not a limitation which of the following linked list is the best for searching",
+            "answers": {
+                "a": "Singly Linked List",
+                "b": "Doubly Linked List",
+                "c": "Circular Linked List",
+                "d": "All give same performance"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "b": "Unlike Singly and Circular, Doubly linked list has a better index performance as it allows traversal on both sides and hence is the better option."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4. Consider the following linked list: 2 -> 4 -> 7 -> 9 -> 10 -> 13. Their addresses are 2408, 2560, 1560, 5440, 3240, 3000. Head variable is pointing at 4 (the second node). What will be head -> next -> next -> value.<br>(Node has value and next. value stores the value and next stores the address of the next variable).",
+            "answers": {
+                "a": "7",
+                "b": "10",
+                "c": "9",
+                "d": "13"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "b": "head is at the second element, i.e. head is pointing to the 2nd node. head -> next is the address stored by the node pointing to the next node. head->next = 1560, and it points to the third node. head->next->next = 5440 (with the same logic). head->next->next->value, means the value stored in the 4th node. i.e. 9."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "5. The first node of a linked list is at the location 2000. At which memory location will the second node be added to. Assume the nodes contain integers, each integer occupies a memory of 4 bits. And each pointer is 1 bit.",
+            "answers": {
+                "a": "2004",
+                "b": "2005",
+                "c": "1995",
+                "d": "Cannot Say"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "d": "Linked List does not store memory in contiguous format, hence we cannot say for certain where the next node will be created."
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}
