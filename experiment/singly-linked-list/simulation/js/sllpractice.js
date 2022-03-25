@@ -79,13 +79,13 @@
     arrowline.onload = counter;
     dot.onload = counter;
     
-    box.src = '../../static/img/slldemosearch-rectangle-19-copy-13@2x.png';
-    tbox.src = '../../static/img/slldemoinsert-rectangle-19-copy-12@2x.png';
-    sbox.src = '../../static/img/slldemosearch-rectangle-19-copy-14@2x.png';
-    boxline.src = '../../static/img/slldemosearch-path-5@2x.png';
-    arrowtriangle.src = '../../static/img/slldemosearch-triangle 4@2x.png';
-    arrowline.src = '../../static/img/slldemosearch-path-15 4@2x.png';
-    dot.src = '../../static/img/slldemosearch-oval-7-copy@2x.png';
+    box.src = 'static/img/slldemosearch-rectangle-19-copy-13@2x.png';
+    tbox.src = 'static/img/slldemoinsert-rectangle-19-copy-12@2x.png';
+    sbox.src = 'static/img/slldemosearch-rectangle-19-copy-14@2x.png';
+    boxline.src = 'static/img/slldemosearch-path-5@2x.png';
+    arrowtriangle.src = 'static/img/slldemosearch-triangle 4@2x.png';
+    arrowline.src = 'static/img/slldemosearch-path-15 4@2x.png';
+    dot.src = 'static/img/slldemosearch-oval-7-copy@2x.png';
   }
   imgdeclarer();
   function drawBox(x, y, ind, color) {
