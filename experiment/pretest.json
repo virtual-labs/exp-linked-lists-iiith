@@ -49,7 +49,7 @@
         {
             "question": "4. The memory occupied by a pointer _______",
             "answers": {
-                "a": "Is independent on which data type the pointer points to.",
+                "a": "Is dependent on which data type the pointer points to.",
                 "b": "Is independent of data type.",
                 "c": "Depends on the program we are writing,",
                 "d": "None of these"
