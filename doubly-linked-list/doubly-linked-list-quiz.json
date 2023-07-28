@@ -1,0 +1,53 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. What are the advantages of a doubly linked list ?",
+            "answers": {
+                "a": "The memory required for a doubly linked list is less than a linked list",
+                "b": "Doubly linked list allows for traversing both sides.",
+                "c": "Inserting an element is faster in a doubly linked list.",
+                "d": "There is no advantage."
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "a": "Doubly linked list needs to store two memory addresses for each node, unlike linked list which only stores one.",
+                "b": "This is correct, as each node has a memory address of both previous and next node, which makes it possible to traverse both sides of a linked list.",
+                "c": "There is no difference in time for insertion in either doubly linked list or singly linked list."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. What is the time complexity for insertion of an element into a doubly linked list?",
+            "answers": {
+                "a": "O(1)",
+                "b": "O(log n)",
+                "c": "O(n)",
+                "d": "O(n^2)"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "Just like in linked lists the insertion will take O(n) time, doubly linked lists don't impact the time complexity of insertions."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. Which of the following can make deletion in doubly linked list a constant time operation?",
+            "answers": {
+                "a": "Keeping the doubly linked list sorted",
+                "b": "Having a pointer at both the first and last element",
+                "c": "Having the pointer of the node to be deleted",
+                "d": "Knowing the position of the node"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "a": "Sorting a doubly linked list does in no way affect the time taken for deletion of a node.",
+                "b": "This still requires us to traverse the array till we find the element either from starting or the end, and this leaves us with time complexity O(n)",
+                "c": "This is the right answer because, if we get the pointer of the node to be deleted, we have access to both previous and next node, and hence we just do 3 constant time operations and can delete the node.",
+                "d": "As it\u2019s not an array, knowing the position of the node will not help, we would still have to traverse till the position."
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}
+       
