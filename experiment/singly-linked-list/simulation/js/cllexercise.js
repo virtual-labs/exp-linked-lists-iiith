@@ -322,12 +322,7 @@ function insertAtTail() {
     keyc = 0;
     decider = 1;
     value = document.getElementById('TailtoBeInserted').value;
-    if (numbers.length == 7) {
-        document.getElementById('ins').innerHTML= "Only 7 boxes allowed";
-        clear();
-        busy = 0;
-        return;
-    }
+    
     index = numbers.length;
     clear();
 	color_stopper = setInterval(colorer, 500, index);
@@ -359,12 +354,7 @@ function insertAtNode() {
         busy = 0;
         return;
     }
-    if (numbers.length == 7) {
-        document.getElementById('ins').innerHTML= "Only 7 boxes allowed";
-        clear();
-        busy = 0;
-        return;
-    }
+    
     clear();
     color_stopper = setInterval(colorer, 500, index);
 }
