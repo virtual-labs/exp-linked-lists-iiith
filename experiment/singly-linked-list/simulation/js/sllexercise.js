@@ -181,6 +181,7 @@ function srenderer() {
     ctx.fill();
     ctx.closePath();
 }
+
 function array_maker(){
 	if (decider==1)
 		numbers.push(value);
@@ -191,6 +192,7 @@ function array_maker(){
 	if (decider==4)
 		numbers.unshift(value);
 }
+
 function nodeshift() {
     if (keyc == boxDist) {
         busy = 0;
@@ -234,6 +236,7 @@ function nodeshift() {
     else
         keyc = keyc + 1;
 }
+
 function colorer(last) {
     if (numa == last) {
         if (decider == 1) {
@@ -269,6 +272,7 @@ function colorer(last) {
     }
     numa = numa + 1;
 }
+
 function insertAtHead() {
     if (busy == 1) {
         clear();
@@ -284,6 +288,7 @@ function insertAtHead() {
     clear();
 	shift_stopper = setInterval(nodeshift, 1);
 }
+
 function insertAtTail() {
     if (busy == 1) {
         clear();
@@ -300,6 +305,7 @@ function insertAtTail() {
     clear();
 	color_stopper = setInterval(colorer, 500, index);
 }
+
 function insertAtNode() {
     if (busy == 1) {
         clear();
