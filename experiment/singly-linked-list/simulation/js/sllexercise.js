@@ -181,6 +181,7 @@ function srenderer() {
     ctx.fill();
     ctx.closePath();
 }
+
 function array_maker(){
 	if (decider==1)
 		numbers.push(value);
@@ -191,6 +192,7 @@ function array_maker(){
 	if (decider==4)
 		numbers.unshift(value);
 }
+
 function nodeshift() {
     if (keyc == boxDist) {
         busy = 0;
@@ -234,6 +236,7 @@ function nodeshift() {
     else
         keyc = keyc + 1;
 }
+
 function colorer(last) {
     if (numa == last) {
         if (decider == 1) {
@@ -269,6 +272,7 @@ function colorer(last) {
     }
     numa = numa + 1;
 }
+
 function insertAtHead() {
     if (busy == 1) {
         clear();
@@ -280,15 +284,11 @@ function insertAtHead() {
     index = 0;
     keyc = 0;
     decider = 4;
-    if (numbers.length == 7) {
-        document.getElementById('ins').innerHTML= "Only 7 boxes allowed";
-        clear();
-        busy = 0;
-        return;
-    }
+    
     clear();
 	shift_stopper = setInterval(nodeshift, 1);
 }
+
 function insertAtTail() {
     if (busy == 1) {
         clear();
@@ -300,16 +300,12 @@ function insertAtTail() {
     keyc = 0;
     decider = 1;
     value = document.getElementById('TailtoBeInserted').value;
-    if (numbers.length == 7) {
-        document.getElementById('ins').innerHTML= "Only 7 boxes allowed";
-        clear();
-        busy = 0;
-        return;
-    }
+    
     index = numbers.length;
     clear();
 	color_stopper = setInterval(colorer, 500, index);
 }
+
 function insertAtNode() {
     if (busy == 1) {
         clear();
@@ -337,12 +333,15 @@ function insertAtNode() {
         busy = 0;
         return;
     }
-    if (numbers.length == 7) {
-        document.getElementById('ins').innerHTML= "Only 7 boxes allowed";
-        clear();
-        busy = 0;
-        return;
-    }
+
+
+
+
+
+
+
+
+
     clear();
     color_stopper = setInterval(colorer, 500, index);
 }

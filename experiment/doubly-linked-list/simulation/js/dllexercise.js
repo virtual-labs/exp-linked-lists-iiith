@@ -44,6 +44,7 @@ var ansl = 1;
 var tvalues = [];
 var  quesnumbers = [];
 var ques_string = document.getElementById("questionid");
+
 function handlers(){ 
  document.getElementById("head-insert").onclick = function() { insertAtHead(); };
  document.getElementById("tail-insert").onclick = function() { insertAtTail(); };
@@ -51,6 +52,7 @@ function handlers(){
  document.getElementById("submit-button").onclick = function() { check(); };
  document.getElementById("reset-button").onclick = function() { reseter(); };
 }; 
+
 Array.prototype.insert = function ( index, item ) {
 	this.splice( index, 0, item );
 };
@@ -314,6 +316,7 @@ function colorer(last){
   ctx.closePath();
   numa = numa + 1;
 }
+
 function insertAtHead() {
     if (busy == 1) {
         clear();
@@ -325,15 +328,10 @@ function insertAtHead() {
     index = 0;
     keyc = 0;
     decider = 4;
-    if (numbers.length == 7) {
-        document.getElementById('ins').innerHTML= "Only 7 boxes allowed";
-        clear();
-        busy = 0;
-        return;
-    }
     clear();
 	shift_stopper = setInterval(nodeshift, 1);
 }
+
 function insertAtTail() {
     if (busy == 1) {
         clear();
@@ -345,16 +343,11 @@ function insertAtTail() {
     keyc = 0;
     decider = 1;
     value = document.getElementById('TailtoBeInserted').value;
-    if (numbers.length == 7) {
-        document.getElementById('ins').innerHTML= "Only 7 boxes allowed";
-        clear();
-        busy = 0;
-        return;
-    }
     index = numbers.length;
     clear();
 	color_stopper = setInterval(colorer, 500, index);
 }
+
 function insertAtNode(){
   if (busy==1){
 	clear();
@@ -367,12 +360,7 @@ function insertAtNode(){
   decider = 2;
   value = document.getElementById('AnytoBeInserted').value;
   index = document.getElementById('index').value;
-  if (numbers.length==7){
-		document.getElementById('ins').innerHTML = "Only 7 nodes are allowed";
-		clear();
-		busy = 0;
-		return;
-	}
+  
   if ((index>String(parseInt(numbers.length)-1))||(index<1)) {
 	if (numbers.length==0)
 	  document.getElementById('ins').innerHTML = "Linked List is empty!";
@@ -381,20 +369,16 @@ function insertAtNode(){
 	clear();
 	busy = 0;
 	return;
-  }
-	if (numbers.length==7){
-		document.getElementById('ins').innerHTML = "Only 7 nodes are allowed";
-		clear();
-		busy = 0;
-		return;
-	}	
+  }	
   clear();
   color_stopper = setInterval(colorer , 500, index);
 }
+
 function randomIntFromInterval(min,max)
 {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
+
 function q2() {
     for (var i = 0; i < numbers.length; i++)
         tvalues[i] = numbers[i];
@@ -408,6 +392,7 @@ function q2() {
         ques_string.innerHTML = ques_string.innerHTML + ' ' + tvalues[i] + ',';
     ques_string.innerHTML = ques_string.innerHTML + ' ' + tvalues[tvalues.length - 1];
 }
+
 function check() {
     ansl = 0;
     if (numbers.length != tvalues.length)
@@ -427,6 +412,7 @@ function check() {
     }
     clear();
 }
+
 function llgenerator(){
 	for (i=0; i<randomIntFromInterval(3,6); i++) 
 	{
