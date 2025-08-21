@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-03-13 Sat 10:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Linked List Library</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Sumaid and Swapnil" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Linked List Library</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgbf9e5af">1. Introduction</a>
+<ul>
+<li><a href="#orgb1a3005">1.1. Insertion</a></li>
+<li><a href="#org48550e3">1.2. Search</a></li>
+<li><a href="#org1d27e17">1.3. Delete</a></li>
+<li><a href="#org969001e">1.4. Display Linked List</a></li>
+</ul>
+</li>
+<li><a href="#orgd7cea33">2. Method names for each operation</a></li>
+<li><a href="#org86f679e">3. Node Constructor</a></li>
+<li><a href="#org7014190">4. Head of Linked List</a></li>
+<li><a href="#orgd1418fa">5. Insertion at Head</a></li>
+<li><a href="#org8b85b6e">6. Insertion at Tail</a></li>
+<li><a href="#org9cfff2d">7. Insert after a given node</a></li>
+<li><a href="#org74bbb12">8. Search</a></li>
+<li><a href="#org325cebe">9. Delete</a></li>
+<li><a href="#orgae5e900">10. Display</a></li>
+<li><a href="#orgecaeebb">11. Testing</a></li>
+<li><a href="#org52fed6b">12. Tangling</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbf9e5af" class="outline-2">
+<h2 id="orgbf9e5af"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Here is the javascript implementation of singly linked list with
+following operations:
+</p>
+</div>
+
+<div id="outline-container-orgb1a3005" class="outline-3">
+<h3 id="orgb1a3005"><span class="section-number-3">1.1</span> Insertion</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Insertion at head</li>
+<li>Insertion at tail</li>
+<li>Insertion after a given previous node</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org48550e3" class="outline-3">
+<h3 id="org48550e3"><span class="section-number-3">1.2</span> Search</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Given a key search for it's occurence throughout the linked list.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1d27e17" class="outline-3">
+<h3 id="org1d27e17"><span class="section-number-3">1.3</span> Delete</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Delete the first occurence of a given key in linked list</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org969001e" class="outline-3">
+<h3 id="org969001e"><span class="section-number-3">1.4</span> Display Linked List</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>The linked list will be displayed from head to tail</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd7cea33" class="outline-2">
+<h2 id="orgd7cea33"><span class="section-number-2">2</span> Method names for each operation</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Operation</b></th>
+<th scope="col" class="org-left"><b>Function Name</b></th>
+<th scope="col" class="org-left"><b>Parameters</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Insertion at head</td>
+<td class="org-left">insert_head()</td>
+<td class="org-left">Data</td>
+</tr>
+
+<tr>
+<td class="org-left">Insertion at tail</td>
+<td class="org-left">insert_tail()</td>
+<td class="org-left">Data</td>
+</tr>
+
+<tr>
+<td class="org-left">Insertion after a node</td>
+<td class="org-left">insert_after()</td>
+<td class="org-left">previous node, data</td>
+</tr>
+
+<tr>
+<td class="org-left">Search</td>
+<td class="org-left">search()</td>
+<td class="org-left">Key</td>
+</tr>
+
+<tr>
+<td class="org-left">Delete</td>
+<td class="org-left">remove()</td>
+<td class="org-left">Key</td>
+</tr>
+
+<tr>
+<td class="org-left">Display Linked List</td>
+<td class="org-left">display_list()</td>
+<td class="org-left">-</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org86f679e" class="outline-2">
+<h2 id="org86f679e"><span class="section-number-2">3</span> Node Constructor</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+ Function <code>node()</code> acts as constructor of a single node. Any instance
+of node can be created by using operator new with <code>node()</code> and
+supplying data to be stored in node as parameter.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="org2d4ac65">            <span style="font-weight: bold;">function</span> <span style="font-weight: bold;">node</span>(<span style="font-weight: bold; font-style: italic;">val</span>) {
+            <span style="font-weight: bold; text-decoration: underline;">this</span>.val = val;
+            <span style="font-weight: bold; text-decoration: underline;">this</span>.next = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+        };
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7014190" class="outline-2">
+<h2 id="org7014190"><span class="section-number-2">4</span> Head of Linked List</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+The head of linked list is declared and intialised to null.
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript" id="org72808cc">            <span style="font-weight: bold; text-decoration: underline;">this</span>.head = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd1418fa" class="outline-2">
+<h2 id="orgd1418fa"><span class="section-number-2">5</span> Insertion at Head</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org5823fd1">            <span style="font-weight: bold; text-decoration: underline;">this</span>.insert_head = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">val</span>) {
+            <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newnode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">node</span>(val); 
+                newnode.next = <span style="font-weight: bold; text-decoration: underline;">this</span>.head;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.head = newnode;
+          }
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8b85b6e" class="outline-2">
+<h2 id="org8b85b6e"><span class="section-number-2">6</span> Insertion at Tail</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgfe9f855">            <span style="font-weight: bold; text-decoration: underline;">this</span>.insert_tail = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">val</span>) {
+            <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newnode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">node</span>(val), 
+                temp = <span style="font-weight: bold; text-decoration: underline;">this</span>.head;
+            
+            <span style="font-weight: bold;">if</span>(!temp) 
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.head = newnode;
+            
+            <span style="font-weight: bold;">while</span>(temp.next) 
+                temp = temp.next;
+            
+            temp.next = newnode;
+          }
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9cfff2d" class="outline-2">
+<h2 id="org9cfff2d"><span class="section-number-2">7</span> Insert after a given node</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org34fd8e6">            <span style="font-weight: bold; text-decoration: underline;">this</span>.insert_after = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">prevnode</span>,<span style="font-weight: bold; font-style: italic;">val</span>) {
+            <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">newnode</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">node</span>(val);
+                newnode.next = prevnode.next;
+                prevnode.next = newnode;
+           }
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org74bbb12" class="outline-2">
+<h2 id="org74bbb12"><span class="section-number-2">8</span> Search</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org74bb66c">            <span style="font-weight: bold; text-decoration: underline;">this</span>.search = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">val</span>) {
+            <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">temp</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.head; 
+            <span style="font-weight: bold;">while</span>(temp) {
+                <span style="font-weight: bold;">if</span> (temp.val==val)
+                {
+                   console.log(<span style="font-style: italic;">'The key is there in linked list'</span>);      
+                   <span style="font-weight: bold;">return</span> temp;
+                }
+                temp = temp.next;
+            }
+            console.log(<span style="font-style: italic;">'The key is not there in linked list'</span>);         
+            <span style="font-weight: bold;">return</span> temp;
+          }    
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org325cebe" class="outline-2">
+<h2 id="org325cebe"><span class="section-number-2">9</span> Delete</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org2b2aba1">            <span style="font-weight: bold; text-decoration: underline;">this</span>.remove = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">val</span>) {
+            <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">temp</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.head; 
+            <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">flag</span> = 0;
+            <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">prev</span> = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+            <span style="font-weight: bold;">if</span> (temp != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; temp.val==val)
+            {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.head = temp.next;
+                flag = 1;
+                console.log(<span style="font-style: italic;">'The key is deleted'</span>);
+                <span style="font-weight: bold;">return</span> flag;
+            }
+
+            <span style="font-weight: bold;">while</span> (temp != <span style="font-weight: bold; text-decoration: underline;">null</span> &amp;&amp; temp.val != val)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+
+            <span style="font-weight: bold;">if</span> (temp == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+            {
+                console.log(<span style="font-style: italic;">'The key is not there in linked list'</span>);
+                <span style="font-weight: bold;">return</span> flag;
+            }
+            prev.next = temp.next;
+            flag = 1;
+            console.log(<span style="font-style: italic;">'The key is deleted'</span>);
+            <span style="font-weight: bold;">return</span> flag;
+          }
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgae5e900" class="outline-2">
+<h2 id="orgae5e900"><span class="section-number-2">10</span> Display</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orga695146">            <span style="font-weight: bold; text-decoration: underline;">this</span>.display_list = <span style="font-weight: bold;">function</span>() {
+            <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">temp</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.head; 
+                <span style="font-weight: bold;">while</span> (temp != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        console.log(temp.val)
+                        temp = temp.next;
+                }
+          }
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgecaeebb" class="outline-2">
+<h2 id="orgecaeebb"><span class="section-number-2">11</span> Testing</h2>
+<div class="outline-text-2" id="text-11">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org316b692">list = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">singlylinkedlist</span>();
+list.insert_head(5);
+list.insert_head(3);
+list.insert_tail(7);
+list.insert_head(11);
+list.remove(7);
+list.display_list();
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org52fed6b" class="outline-2">
+<h2 id="org52fed6b"><span class="section-number-2">12</span> Tangling</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+ Function <code>singlylinkedlist()</code> acts as constructor of the Singly
+Linked List library. Any instance of singly linked list can be created
+by using operator new with <code>singlylinkedlist()</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">singlylinkedlist</span>() {
+&lt;&lt;constructor_node&gt;&gt;
+&lt;&lt;head&gt;&gt;
+&lt;&lt;insert_head&gt;&gt;
+&lt;&lt;insert_tail&gt;&gt;
+&lt;&lt;insert_after&gt;&gt;
+&lt;&lt;search&gt;&gt;
+&lt;&lt;<span style="font-weight: bold;">delete</span>&gt;&gt;
+&lt;&lt;display&gt;&gt;
+}
+&lt;&lt;test&gt;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2018-05-31 Thu 00:00</p>
+<p class="author">Author: Sumaid and Swapnil</p>
+<p class="date">Created: 2021-03-13 Sat 10:49</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
