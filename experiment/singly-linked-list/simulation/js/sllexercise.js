@@ -176,8 +176,19 @@ function drawBox(x, y, ind, color) {
   else if (color == scolor) ctx.fillStyle = "#fff";
   else ctx.fillStyle = "#fff";
 
-  ctx.font = "25px OpenSans-Regular";
-  var ll = ctx.measureText(val).width;
+  // Dynamically adjust font size to fit value in node
+  var baseFont = 25;
+  var minFont = 12;
+  var fontSize = baseFont;
+  ctx.font = fontSize + "px OpenSans-Regular";
+  var maxWidth = linegap - 10;
+  var textWidth = ctx.measureText(val).width;
+  while (textWidth > maxWidth && fontSize > minFont) {
+    fontSize -= 1;
+    ctx.font = fontSize + "px OpenSans-Regular";
+    textWidth = ctx.measureText(val).width;
+  }
+  var ll = textWidth;
   ctx.fillText(numbers[ind], x + (linegap - ll) / 2, rectHeight + y);
   ctx.fill();
   ctx.closePath();
