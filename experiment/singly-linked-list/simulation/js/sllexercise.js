@@ -73,6 +73,7 @@ function handlers() {
       numbers.splice(idx, 1);
       document.getElementById("ins").innerHTML =
         "Node with value " + value + " removed.";
+      document.getElementById("rightnode").value = "";
       renderer();
     } else {
       document.getElementById("ins").innerHTML = "Value not found in the list.";
@@ -372,6 +373,20 @@ function insertAtHead() {
     return;
   } else busy = 1;
   value = document.getElementById("HeadtoBeInserted").value;
+
+  if (!value || value.trim() === "") {
+    document.getElementById("ins").innerHTML = "Please enter a value to insert";
+    clear();
+    busy = 0;
+    return;
+  }
+  if (!value.isNumber()) {
+    document.getElementById("ins").innerHTML = "Please enter a valid number";
+    clear();
+    busy = 0;
+    return;
+  }
+
   index = 0;
   keyc = 0;
   decider = 4;
@@ -385,10 +400,25 @@ function insertAtTail() {
     clear();
     return;
   } else busy = 1;
+
+  value = document.getElementById("TailtoBeInserted").value;
+
+  if (!value || value.trim() === "") {
+    document.getElementById("ins").innerHTML = "Please enter a value to insert";
+    clear();
+    busy = 0;
+    return;
+  }
+  if (!value.isNumber()) {
+    document.getElementById("ins").innerHTML = "Please enter a valid number";
+    clear();
+    busy = 0;
+    return;
+  }
+
   numa = 0;
   keyc = 0;
   decider = 1;
-  value = document.getElementById("TailtoBeInserted").value;
 
   index = numbers.length;
   clear();
@@ -400,11 +430,35 @@ function insertAtNode() {
     clear();
     return;
   } else busy = 1;
+
+  value = document.getElementById("AnytoBeInserted").value;
+  index = document.getElementById("index").value;
+
+  if (!value || value.trim() === "") {
+    document.getElementById("ins").innerHTML = "Please enter a value to insert";
+    clear();
+    busy = 0;
+    return;
+  }
+  if (!value.isNumber()) {
+    document.getElementById("ins").innerHTML = "Please enter a valid number";
+    clear();
+    busy = 0;
+    return;
+  }
+
+  if (!index.isNumber()) {
+    document.getElementById("ins").innerHTML =
+      "Please enter a valid index number";
+    clear();
+    busy = 0;
+    return;
+  }
+
   numa = 0;
   keyc = 0;
   decider = 2;
-  value = document.getElementById("AnytoBeInserted").value;
-  index = document.getElementById("index").value;
+
   if (!index.isNumber()) {
     document.getElementById("ins").innerHTML = "Enter Numbers";
     clear();
