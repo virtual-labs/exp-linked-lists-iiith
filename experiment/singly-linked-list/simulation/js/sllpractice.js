@@ -1,3 +1,34 @@
+// Ensure renderer is defined at top-level scope
+function renderer() {
+  ctx.clearRect(0, 0, 1360, 320);
+  draw_head();
+  drawArrow(headX, headY, headX, topgap);
+  for (var i = 0; i < numbers.length; i++) {
+    drawBox(leftgap + i * boxDist, topgap, i, ncolor);
+  }
+  ctx.beginPath();
+  ctx.font = "22px OpenSans-SemiBold";
+  ctx.fillStyle = "#2f99d1";
+  ctx.fillText(
+    "Null",
+    leftgap + numbers.length * boxDist + 55,
+    topgap + rectHeight / 2 + 20,
+  );
+  ctx.fill();
+  ctx.closePath();
+}
+// Ensure array_maker is defined at top-level scope
+function array_maker() {
+  if (decider == 1) numbers.push(value);
+  if (decider == 2) {
+    // Insert at the specified index (0-based)
+    numbers.insert(index, value);
+  }
+  if (decider == 3 && index !== -1) numbers.splice(index, 1);
+  if (decider == 4) {
+    numbers.insert(0, value);
+  }
+}
 //to test if input is busy or not
 var busy = 0;
 //Height and width of the boxes in linked lists
@@ -54,13 +85,36 @@ var canvas = document.getElementById("linkedlist");
 var ctx = canvas.getContext("2d");
 function handlers() {
   document.getElementById("head-insert").onclick = function () {
+    console.log("Insert At Head button clicked");
     insertAtHead();
   };
   document.getElementById("tail-insert").onclick = function () {
+    console.log("Insert At Tail button clicked");
     insertAtTail();
   };
   document.getElementById("node-insert").onclick = function () {
-    insertAtNode();
+    console.log("Insert At Node button clicked");
+    if (busy) {
+      console.log("Busy flag is set, aborting insert at node");
+      return;
+    }
+    var idx = document.getElementById("index").value;
+    var val = document.getElementById("AnytoBeInserted").value;
+    console.log("Index input:", idx, "Value input:", val);
+    if (idx === "" || val === "") {
+      document.getElementById("ins").innerHTML =
+        "Please enter both index and value.";
+      console.log("Missing index or value");
+      return;
+    }
+    idx = parseInt(idx, 10);
+    val = parseInt(val, 10);
+    if (isNaN(idx) || isNaN(val) || idx < 0 || idx > numbers.length) {
+      document.getElementById("ins").innerHTML = "Invalid index or value.";
+      console.log("Invalid index or value after parsing", idx, val);
+      return;
+    }
+    insertAtNode(idx, val);
   };
   document.getElementById("search-button").onclick = function () {
     search_num();
@@ -107,63 +161,80 @@ function imgdeclarer() {
 imgdeclarer();
 function drawBox(x, y, ind, color) {
   val = numbers[ind];
-  if (color == ncolor) ctx.drawImage(box, x, y, nWidth, nHeight);
-  else if (color == scolor) ctx.drawImage(sbox, x, y, nWidth, nHeight);
-  else ctx.drawImage(tbox, x, y, nWidth, nHeight);
-  ctx.globalAlpha = 0.5;
-  ctx.drawImage(
-    boxline,
-    x + linegap * 0.9,
-    y + (nHeight - lineheight) / 2,
-    linewidth,
-    lineheight
-  );
-  ctx.globalAlpha = 1;
-
-  if (ind == numbers.length - 1) {
+  // Fallback: if images are not loaded, draw a rectangle and text
+  let imgOk = box && box.complete && box.naturalWidth > 0;
+  if (imgOk) {
+    if (color == ncolor) ctx.drawImage(box, x, y, nWidth, nHeight);
+    else if (color == scolor) ctx.drawImage(sbox, x, y, nWidth, nHeight);
+    else ctx.drawImage(tbox, x, y, nWidth, nHeight);
+    ctx.globalAlpha = 0.5;
     ctx.drawImage(
-      arrowtriangle,
-      x + (linegap + 15 + 43 + 45) * 0.9,
-      y + (nHeight - dotheight) / 2 - 5,
-      20,
-      14
+      boxline,
+      x + linegap * 0.9,
+      y + (nHeight - lineheight) / 2,
+      linewidth,
+      lineheight,
     );
+    ctx.globalAlpha = 1;
+
+    if (ind == numbers.length - 1) {
+      ctx.drawImage(
+        arrowtriangle,
+        x + (linegap + 15 + 43 + 45) * 0.9,
+        y + (nHeight - dotheight) / 2 - 5,
+        20,
+        14,
+      );
+      ctx.drawImage(
+        arrowline,
+        x + linegap + 15,
+        y + (nHeight - dotheight) / 2,
+        100 * 0.7,
+        5,
+      );
+    } else {
+      ctx.drawImage(
+        arrowtriangle,
+        x + (linegap + 15 + 43) * 0.9,
+        y + (nHeight - dotheight) / 2 - 5,
+        20,
+        14,
+      );
+      ctx.drawImage(
+        arrowline,
+        x + linegap + 15,
+        y + (nHeight - dotheight) / 2,
+        55 * 0.6,
+        5,
+      );
+    }
+
     ctx.drawImage(
-      arrowline,
-      x + linegap + 15,
-      y + (nHeight - dotheight) / 2,
-      100 * 0.7,
-      5
+      dot,
+      x + (linegap + 15) * 0.9,
+      y + (nHeight - dotheight) / 2 - 5,
+      dotwidth,
+      dotheight,
     );
   } else {
-    ctx.drawImage(
-      arrowtriangle,
-      x + (linegap + 15 + 43) * 0.9,
-      y + (nHeight - dotheight) / 2 - 5,
-      20,
-      14
-    );
-    ctx.drawImage(
-      arrowline,
-      x + linegap + 15,
-      y + (nHeight - dotheight) / 2,
-      55 * 0.6,
-      5
-    );
+    // Fallback: draw a rectangle and the value
+    ctx.save();
+    ctx.beginPath();
+    ctx.strokeStyle = "#2180bc";
+    ctx.lineWidth = 2;
+    ctx.fillStyle =
+      color == ncolor ? "#fff" : color == scolor ? "#cfc" : "#fcc";
+    ctx.rect(x, y, nWidth, nHeight);
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+    ctx.fillStyle = "#2180bc";
+    ctx.font = "22px OpenSans-SemiBold";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(val, x + nWidth / 2, y + nHeight / 2);
+    ctx.restore();
   }
-
-  ctx.drawImage(
-    dot,
-    x + (linegap + 15) * 0.9,
-    y + (nHeight - dotheight) / 2 - 5,
-    dotwidth,
-    dotheight
-  );
-
-  ctx.beginPath();
-  if (color == ncolor) ctx.fillStyle = "#2180bc";
-  else if (color == scolor) ctx.fillStyle = "#fff";
-  else ctx.fillStyle = "#fff";
 
   // Dynamically adjust font size to fit value in node
   var baseFont = 25;
@@ -195,12 +266,12 @@ function drawArrow(startX, startY, endX, endY) {
   ctx.beginPath();
   ctx.moveTo(
     endX - headlen * Math.cos(angle - Math.PI / 6),
-    endY - headlen * Math.sin(angle - Math.PI / 6)
+    endY - headlen * Math.sin(angle - Math.PI / 6),
   );
   ctx.lineTo(endX, endY);
   ctx.lineTo(
     endX - headlen * Math.cos(angle + Math.PI / 6),
-    endY - headlen * Math.sin(angle + Math.PI / 6)
+    endY - headlen * Math.sin(angle + Math.PI / 6),
   );
   ctx.fillStyle = "#979091";
   ctx.fill();
@@ -223,52 +294,54 @@ function draw_head() {
   ctx.stroke();
   ctx.closePath();
 }
-function renderer() {
-  ctx.clearRect(0, 0, 1360, 320);
-  draw_head();
-  drawArrow(headX, headY, headX, topgap);
-  for (var i = 0; i < numbers.length - 1; i++) {
-    drawBox(leftgap + i * boxDist, topgap, i, ncolor);
+function insertAtNode(idx, val) {
+  // Only log the start of the operation
+  if (busy) return;
+  busy = 1;
+  value = parseInt(val, 10);
+  index = parseInt(idx, 10);
+  if (isNaN(value) || isNaN(index)) {
+    document.getElementById("ins").innerHTML = "Invalid index or value.";
+    busy = 0;
+    clear();
+    return;
   }
-  if (numbers.length > 0)
-    drawBox(
-      leftgap + (numbers.length - 1) * boxDist,
-      topgap,
-      numbers.length - 1,
-      ncolor
-    );
-  ctx.beginPath();
-  ctx.font = "22px OpenSans-SemiBold";
-  ctx.fillStyle = "#2f99d1";
-  ctx.fillText(
-    "Null",
-    leftgap + numbers.length * boxDist + 55,
-    topgap + rectHeight / 2 + 20
-  );
-  ctx.fill();
-  ctx.closePath();
-}
-function array_maker() {
-  if (decider == 1) numbers.push(value);
-  if (decider == 2) numbers.insert(index, value);
-  if (decider == 3) numbers.splice(index - 1, 1);
-  if (decider == 4) numbers.unshift(value);
+  // Clamp index to valid range (0 to numbers.length)
+  if (index < 0 || index > numbers.length) {
+    document.getElementById("ins").innerHTML = "Invalid index or value.";
+    busy = 0;
+    clear();
+    return;
+  }
+  keyc = 0;
+  decider = 2;
+  if (numbers.length == 7) {
+    document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
+    busy = 0;
+    clear();
+    return;
+  }
+  clear();
+  document.getElementById("ins").innerHTML =
+    "Next of node at index " +
+    index +
+    " is pointed to the new node. Next of new node is pointed to the next of node at index " +
+    index +
+    ".";
+  shift_stopper = setInterval(nodeshift, 1);
 }
 function nodeshift() {
-  if (keyc == boxDist) {
+  // Only log animation completion for debugging
+  if (keyc == boxDist || keyc == -boxDist) {
+    // Only log when animation completes
+    // console.log("nodeshift: animation complete, calling array_maker");
     busy = 0;
     clearInterval(shift_stopper);
     array_maker();
     renderer();
     return;
   }
-  if (keyc == -boxDist) {
-    busy = 0;
-    clearInterval(shift_stopper);
-    array_maker();
-    renderer();
-    return;
-  }
+  // ...existing code...
   ctx.clearRect(0, 0, 1360, 320);
   draw_head();
   if (decider == 4) drawArrow(headX, headY, headX + keyc, topgap);
@@ -292,7 +365,7 @@ function nodeshift() {
   ctx.fillText(
     "Null",
     leftgap + numbers.length * boxDist + 55 + keyc,
-    topgap + rectHeight / 2 + 20
+    topgap + rectHeight / 2 + 20,
   );
   ctx.fill();
   ctx.closePath();
@@ -331,7 +404,7 @@ function colorer(last) {
   ctx.fillText(
     "Null",
     leftgap + numbers.length * boxDist + 55 + keyc,
-    topgap + rectHeight / 2 + 20
+    topgap + rectHeight / 2 + 20,
   );
   ctx.fill();
   ctx.closePath();
@@ -370,7 +443,7 @@ function searcher(val) {
       leftgap + (numbers.length - 1) * boxDist,
       topgap,
       numbers.length - 1,
-      ncolor
+      ncolor,
     );
   else {
     if (numbers[numb] == val) {
@@ -396,32 +469,43 @@ function searcher(val) {
   ctx.fillText(
     "Null",
     leftgap + numbers.length * boxDist + 55,
-    topgap + rectHeight / 2 + 20
+    topgap + rectHeight / 2 + 20,
   );
   ctx.fill();
   ctx.closePath();
   numb = numb + 1;
 }
 function insertAtHead() {
+  console.log("insertAtHead called");
   if (busy == 1) {
     clear();
+    console.log("Busy flag is set, aborting insert at head");
     return;
   } else busy = 1;
   num = 0;
-  value = document.getElementById("HeadtoBeInserted").value;
+  value = parseInt(document.getElementById("HeadtoBeInserted").value, 10);
   index = 0;
   keyc = 0;
   decider = 4;
-
+  console.log("Head value input:", value);
   if (numbers.length == 7) {
     document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
     busy = 0;
+    console.log("Max nodes reached");
+    clear();
     return;
   }
   clear();
   document.getElementById("ins").innerHTML =
     "Next of new node is pointed to the head node. Head pointer is now pointed to the new node.";
-  shift_stopper = setInterval(nodeshift, 1);
+  shift_stopper = setInterval(function () {
+    nodeshift();
+    if (busy === 0) {
+      clear();
+      document.getElementById("ins").innerHTML =
+        "Inserted at head. Current list: [" + numbers.join(", ") + "]";
+    }
+  }, 1);
 }
 function insertAtTail() {
   if (busy == 1) {
@@ -429,61 +513,71 @@ function insertAtTail() {
     return;
   } else busy = 1;
   numa = 0;
+  console.log("insertAtTail called");
   keyc = 0;
   decider = 1;
-  value = document.getElementById("TailtoBeInserted").value;
+  value = parseInt(document.getElementById("TailtoBeInserted").value, 10);
   index = numbers.length;
-
+  console.log("Tail value input:", value);
   if (numbers.length == 7) {
     document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
     clear();
     busy = 0;
+    console.log("Max nodes reached");
     return;
   }
   clear();
   document.getElementById("ins").innerHTML =
     "Next of last node is pointed to the new node. Next of new node is pointed to NULL.";
-  color_stopper = setInterval(colorer, 500, index);
+  color_stopper = setInterval(function () {
+    colorer(index);
+    if (busy === 0) {
+      clear();
+      document.getElementById("ins").innerHTML =
+        "Inserted at tail. Current list: [" + numbers.join(", ") + "]";
+    }
+  }, 500);
 }
-function insertAtNode() {
-  if (busy == 1) {
-    clear();
+function insertAtNode(idx, val) {
+  console.log("insertAtNode called with idx:", idx, "val:", val);
+  if (busy) {
+    console.log("Busy flag is set, aborting insert at node");
     return;
-  } else busy = 1;
-  numa = 0;
+  }
+  busy = 1;
+  value = parseInt(val, 10);
+  index = parseInt(idx, 10);
+  if (isNaN(value) || isNaN(index)) {
+    document.getElementById("ins").innerHTML = "Invalid index or value.";
+    busy = 0;
+    console.log(
+      "Invalid index or value for insert at node after parsing",
+      index,
+      value,
+    );
+    return;
+  }
   keyc = 0;
   decider = 2;
-  value = document.getElementById("AnytoBeInserted").value;
-  index = document.getElementById("index").value;
   if (numbers.length == 7) {
     document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
     clear();
     busy = 0;
-    return;
-  }
-  if (index > String(parseInt(numbers.length) - 1) || index < 1) {
-    if (numbers.length == 0)
-      document.getElementById("ins").innerHTML = "Linked List is empty!";
-    else
-      document.getElementById("ins").innerHTML =
-        "Node no should lie between 1 and " +
-        String(parseInt(numbers.length) - 1) +
-        " !";
-    clear();
-    busy = 0;
-    return;
-  }
-  if (numbers.length == 7) {
-    document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
-    clear();
-    busy = 0;
+    console.log("Max nodes reached");
     return;
   }
   clear();
   document.getElementById("ins").innerHTML =
-    "Next of new node is pointed to the next of nth node. Next of nth node is pointed to the new node. Where n = " +
-    index;
-  color_stopper = setInterval(colorer, 500, index);
+    "Next of nth node is pointed to the new node. Next of new node is pointed to the next of nth node. Where n = " +
+    idx;
+  shift_stopper = setInterval(function () {
+    nodeshift();
+    if (busy === 0) {
+      clear();
+      document.getElementById("ins").innerHTML =
+        "Inserted at node. Current list: [" + numbers.join(", ") + "]";
+    }
+  }, 1);
 }
 function search_num() {
   if (busy == 1) {
@@ -505,8 +599,8 @@ function deleter() {
   numb = 0;
   decider = 3;
   keyc = 0;
-  value = document.getElementById("rightnode").value;
-  index = numbers.indexOf(value) + 1;
+  value = parseInt(document.getElementById("rightnode").value, 10);
+  index = numbers.indexOf(value);
   clear();
   color_stopperb = setInterval(searcher, 500, value);
 }
