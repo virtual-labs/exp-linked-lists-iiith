@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-03-13 Sat 10:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Realization catalog</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Realization catalog</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org84d3e93">1. Introduction</a></li>
+<li><a href="#org3fe440b">2. Realization Catalog</a>
+<ul>
+<li><a href="#org861baa8">2.1. Json Realization Catalog</a></li>
+<li><a href="#orgcae0da4">2.2. Js Realization Catalog</a></li>
+</ul>
+</li>
+<li><a href="#org7930af0">3. Code Tangling</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org84d3e93" class="outline-2">
+<h2 id="org84d3e93"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This document captures the realization catalog of Linked List Experiment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fe440b" class="outline-2">
+<h2 id="org3fe440b"><span class="section-number-2">2</span> Realization Catalog</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org861baa8" class="outline-3">
+<h3 id="org861baa8"><span class="section-number-3">2.1</span> Json Realization Catalog</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-json" id="orgce4c5fc">{
+  "document_catalog":{
+    "linked-list":"expid"
+  },
+  "realization_catalog" : {
+    "rcatalog" : {
+      "id" : "",
+      "reference_id" : ""
+    },
+    "sll-vid" :  {
+      "id" : "sll-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/sll_intro.mp4"
+    },
+    "sll-insert-vid" :  {
+      "id" : "sll-insert-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/sll_insert.mp4"
+    },
+    "sll-search-vid" :  {
+      "id" : "sll-search-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/sll_search.mp4"
+    },
+    "sll-delete-vid" :  {
+      "id" : "sll-delete-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/sll_remove.mp4"
+    },
+    "dll-vid" :  {
+      "id" : "dll-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/dll_demo.mp4"
+    },
+    "cll-vid" :  {
+      "id" : "cll-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/cll_demo.mp4"
+    },
+    "pre-a2-quiz-js" :  {
+      "id" : "pre-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/prequiz_html.html"
+    },
+    "post-a2-quiz-js" :  {
+      "id" : "post-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/postquiz_html.html"
+    },
+    "sll-a2-quiz-js" :  {
+      "id" : "sll-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/sllquiz_html.html"
+    },
+    "dll-a2-quiz-js" :  {
+      "id" : "dll-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/dllquiz_html.html"
+    },
+    "cll-a2-quiz-js" :  {
+      "id" : "cll-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/cllquiz_html.html"
+    },
+    "singly-linked-list-operation-unit-req" :  {
+      "id" : "singly-linked-list-operation-unit-req",
+      "type" : "html",
+      "url": "/linked-list/html/sllpractice.html"
+    },
+    "doubly-linked-list-operation-unit-req" : {
+      "id" : "doubly-linked-list-operation-unit-req",
+      "type" : "html",
+      "url" : "/linked-list/html/dllpractice.html"
+    },
+    "circular-linked-list-operation-unit-req" : {
+      "id" : "circular-linked-list-operation-unit-req",
+      "type" : "html",
+      "url" : "/linked-list/html/cllpractice.html"
+    },
+    "sll-exe" : {
+      "id" : "sll-exe",
+      "type" : "html",
+      "url" : "/linked-list/html/sllexercise.html"
+    },
+    "dll-exe" : {
+      "id" : "dll-exe",
+      "type" : "html",
+      "url" : "/linked-list/html/dllexercise.html"
+    },
+    "cll-exe" : {
+      "id" : "cll-exe",
+      "type" : "html",
+      "url" : "/linked-list/html/cllexercise.html"
+    },
+    "singly-linked-list-memory-rep-text" : {
+      "id" : "singly-linked-list-memory-rep-text",
+      "type" : "image",
+      "url" : "/linked-list/img/mem-rep.png"
+    },
+    "dll-pic" : {
+      "id" : "dll-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/sll-vs-dll.png"
+    },
+    "cll-pic" : {
+      "id" : "cll-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/types-of-cll.png"
+    },
+    "sll-intro-image" : {
+      "id" : "sll-intro-image",
+      "type" : "image",
+      "url" : "/linked-list/img/sll.png"
+    },
+    "linked-list-example-pic" : {
+      "id" : "linked-list-example-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/real-life.png"
+    },
+    "linked-list-array-pic" : {
+      "id" : "linked-list-array-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/mem-rep.png"
+    },
+    "all-linked-list-array-pic" : {
+      "id" : "all-linked-list-array-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/types-of-ll.png"
+    },
+    "linked-list-structure-req" : {
+      "id" : "linked-list-structure-req",
+      "type" : "image",
+      "url" : "/linked-list/img/structure.jpg"
+    }
+  },
+  "typeOfDocument":"A2",
+  "expId":"linked-list"
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcae0da4" class="outline-3">
+<h3 id="orgcae0da4"><span class="section-number-3">2.2</span> Js Realization Catalog</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-js" id="org76b9052">
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">realizationCatalog</span> = {  
+  <span style="font-style: italic;">"Structure"</span>: {
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/img/structure.jpg"</span>,
+  },
+
+  <span style="font-style: italic;">"What is Linked List?"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/img/linked-list-example.jpg"</span>,
+  },
+
+  <span style="font-style: italic;">"Linked List vs Array"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/img/llintro.png"</span>,
+  },
+
+  <span style="font-style: italic;">"Types of Linked List"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/img/types-of-ll.png"</span>,
+  },
+
+  <span style="font-style: italic;">"Pictorial Representation of SLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/img/real-life.png"</span>,
+  },
+
+  <span style="font-style: italic;">"Representation of SLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/linkedlist.png"</span>,
+  },
+
+  <span style="font-style: italic;">"Insertion (1)"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/Insertion (1).png"</span>,
+  },
+
+  <span style="font-style: italic;">"Insertion (2a)"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/Insertion (2a).png"</span>,
+  },
+
+  <span style="font-style: italic;">"Insertion (2b)"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/Insertion (2b).png"</span>,
+  },
+
+  <span style="font-style: italic;">"Insertion (2c)"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/Insertion (2c).png"</span>,
+  },
+
+  <span style="font-style: italic;">"Deletion (2)"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/Deletion (2).png"</span>,
+  },
+
+  <span style="font-style: italic;">"Deletion (3a)"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/Deletion (3a).png"</span>,
+  },
+
+  <span style="font-style: italic;">"Deletion (3b)"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/Deletion (3b).png"</span>,
+  },
+
+  <span style="font-style: italic;">"Deletion (3c)"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/images/Deletion (3c).png"</span>,
+  },
+
+<span style="font-weight: bold; font-style: italic;">/*</span>
+<span style="font-weight: bold; font-style: italic;">  "Singly Linked List Video":{</span>
+<span style="font-weight: bold; font-style: italic;">    "resource_type": "video",</span>
+<span style="font-weight: bold; font-style: italic;">    "url": "/build/code/static/videos/sll_intro.mp4",</span>
+<span style="font-weight: bold; font-style: italic;">  },</span>
+
+<span style="font-weight: bold; font-style: italic;">  "Insertion Video":{</span>
+<span style="font-weight: bold; font-style: italic;">    "resource_type": "video",</span>
+<span style="font-weight: bold; font-style: italic;">    "url": "/build/code/static/videos/sll_insert.mp4"</span>
+<span style="font-weight: bold; font-style: italic;">  },</span>
+
+<span style="font-weight: bold; font-style: italic;">  "Search Video":{</span>
+<span style="font-weight: bold; font-style: italic;">    "resource_type": "video",</span>
+<span style="font-weight: bold; font-style: italic;">    "url": "/build/code/static/videos/sll_search.mp4",</span>
+<span style="font-weight: bold; font-style: italic;">  },</span>
+
+<span style="font-weight: bold; font-style: italic;">  "Delete Video":{</span>
+<span style="font-weight: bold; font-style: italic;">    "resource_type": "video",</span>
+<span style="font-weight: bold; font-style: italic;">    "url": "/build/code/static/videos/sll_remove.mp4",</span>
+<span style="font-weight: bold; font-style: italic;">  },</span>
+<span style="font-weight: bold; font-style: italic;">*/</span>
+
+  <span style="font-style: italic;">"Practice SLL"</span>:{
+    <span style="font-style: italic;">"reqs_satisfied"</span>: <span style="font-style: italic;">"Provides an artifact to practice sll"</span>,
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/sllpractice.html"</span>
+  },
+
+  <span style="font-style: italic;">"Exercise SLL"</span>:{
+    <span style="font-style: italic;">"reqs_satisfied"</span>: <span style="font-style: italic;">"Provides an artifact to exercise sll"</span>,
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/sllexercise.html"</span>
+  },
+
+  <span style="font-style: italic;">"Quiz DLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/dllquiz_html.html"</span>
+  },
+
+  <span style="font-style: italic;">"Pictorial Representation of DLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/img/doublyll.jpg"</span>,
+  },
+<span style="font-weight: bold; font-style: italic;">/*</span>
+<span style="font-weight: bold; font-style: italic;">  "DLL Video":{</span>
+<span style="font-weight: bold; font-style: italic;">    "resource_type": "video",</span>
+<span style="font-weight: bold; font-style: italic;">    "url": "/build/code/static/videos/dll_demo.mp4",</span>
+<span style="font-weight: bold; font-style: italic;">  },</span>
+<span style="font-weight: bold; font-style: italic;">*/</span>
+
+  <span style="font-style: italic;">"Practice DLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/dllpractice.html"</span>    
+  },
+
+  <span style="font-style: italic;">"Exercise DLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/dllexercise.html"</span>    
+  },
+
+  <span style="font-style: italic;">"Quiz DLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/dllquiz_html.html"</span>    
+  },
+
+  <span style="font-style: italic;">"Pictorial Representation of CLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"image"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/static/img/circularly_linked_lists.png"</span>,
+  },
+<span style="font-weight: bold; font-style: italic;">/*</span>
+<span style="font-weight: bold; font-style: italic;">  "CLL Video":{</span>
+<span style="font-weight: bold; font-style: italic;">    "resource_type": "video",</span>
+<span style="font-weight: bold; font-style: italic;">    "url": "/build/code/static/videos/cll_demo.mp4",</span>
+<span style="font-weight: bold; font-style: italic;">  },</span>
+<span style="font-weight: bold; font-style: italic;">*/</span>
+
+  <span style="font-style: italic;">"Practice CLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/cllpractice.html"</span>
+  },
+
+  <span style="font-style: italic;">"Exercise CLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/cllexercise.html"</span>  
+  },
+  
+  <span style="font-style: italic;">"Quiz CLL"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"html"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"/build/code/runtime/html/cllquiz_html.html"</span>  
+  },
+
+  <span style="font-style: italic;">"Linked list Concept"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"video"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"https://www.youtube.com/embed/vQu-hXJZlYM"</span>
+  },
+
+  <span style="font-style: italic;">"Linked list Operations"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"video"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"https://www.youtube.com/embed/wyyYQF89pJ8"</span>
+  },
+
+  <span style="font-style: italic;">"Introduction"</span>:{
+    <span style="font-style: italic;">"resource_type"</span>: <span style="font-style: italic;">"video"</span>,
+    <span style="font-style: italic;">"url"</span>: <span style="font-style: italic;">"https://www.youtube.com/embed/lMEvmsfV_dU"</span>
+  }
+};
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7930af0" class="outline-2">
+<h2 id="org7930af0"><span class="section-number-2">3</span> Code Tangling</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-json">&lt;&lt;json-catalog&gt;&gt;
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-js">&lt;&lt;js-catalog&gt;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2018-05-14 Mon 00:00</p>
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2021-03-13 Sat 10:49</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

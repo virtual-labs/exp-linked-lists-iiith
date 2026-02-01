@@ -1,0 +1,46 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. In a circular linked list",
+            "answers": {
+                "a": "We can navigate through the linked list in reverse order",
+                "b": "There is no beginning and no end",
+                "c": "Searching is faster than in a singly Linked list",
+                "d": "None of these"
+            },
+            "correctAnswer": "b",
+            "explanations": {},
+            "difficulty": "beginner"
+        },
+        {
+            "question": "2. In a circular linked list, if we insert an element how many pointers do we have to update ?",
+            "answers": {
+                "a": "0",
+                "b": "1",
+                "c": "2",
+                "d": "3"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "In a singly linked list and a doubly linked list, we point the new node to NULL and the last node to the new node, i.e. modifying one pointer. But in the Circular linked list the last node points to the first node. So we will have to update a new node to point to the first node and the current last node to the new node. Therefore 2 pointers have to be updated."
+            },
+            "difficulty": "beginner"
+        },
+        {
+            "question": "3. What is the time complexity for deleting an element from circular linked list?",
+            "answers": {
+                "a": "O(1)",
+                "b": "O(log n)",
+                "c": "O(n)",
+                "d": "O(n^2)"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "a": "Whenever we want to delete an element from a circular linked list, the worst case would be deleting from the last. we only have access to the first node, and therefore we would have to traverse to the position where we want to insert. Therefore insertion is O(n).<br>Note"
+            },
+            "difficulty": "beginner"
+        }
+    ]
+}
+ 
