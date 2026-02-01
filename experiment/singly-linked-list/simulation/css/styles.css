@@ -1,15 +1,162 @@
-#questionid{
-    /* font-size:2vw; */
+@media (max-width: 600px) {
+  .wrapper {
+    height: 92vh;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0 2vw;
+    /* Ensure children stack vertically with no overlap */
+    gap: 0;
+  }
+  #linkedlist {
+    height: 38vw !important;
+    min-height: 120px;
+    max-width: 100vw;
+    width: 100% !important;
+    display: block;
+    margin: 0 auto 2vh auto;
+  }
+  #buttondiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    width: 100%;
+    margin: 0 auto;
     text-align: center;
+  }
+  #buttondiv > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+  #buttondiv > div > input[type="number"],
+  #buttondiv > div > input[type="text"],
+  #buttondiv > div > button {
+    width: 90%;
+    max-width: 320px;
+    min-width: 100px;
+    font-size: 1.1em;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 2.2em;
+    display: block;
+  }
+  /* For Insert At Node row: two textboxes on one line, button below */
+  #buttondiv .node-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.7em;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.3em;
+  }
+  #buttondiv .node-row > input[type="number"],
+  #buttondiv .node-row > input[type="text"] {
+    width: 48%;
+    max-width: 120px;
+    min-width: 80px;
+    margin: 0;
+    display: inline-block;
+  }
+  #buttondiv .node-btn-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    width: 100%;
+  }
+  #buttondiv .node-btn-row > button {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  /* Remove row: textbox and button on same line */
+  #buttondiv .remove-row {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.7em;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.3em;
+  }
+  #buttondiv .remove-row > input[type="number"],
+  #buttondiv .remove-row > input[type="text"],
+  #buttondiv .remove-row > button {
+    width: 48%;
+    max-width: 120px;
+    min-width: 80px;
+    margin: 0;
+    display: inline-block;
+  }
+  /* Hide <br> tags that are direct children of #buttondiv > div in small screen mode */
+  #buttondiv > div > br {
+    display: none !important;
+  }
+
+  #comments {
+    min-height: 4.6em;
+    height: 4.6em;
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+  }
+  #ins {
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+    word-break: break-word;
+    max-width: 98vw;
+    overflow-wrap: break-word;
+    font-size: 1em;
+    background: none;
+    z-index: 2;
+    position: relative;
+    display: block;
+    white-space: pre-line;
+    text-align: center;
+    clear: both;
+    line-height: 1.3;
+    height: 2.6em;
+    min-height: 2.6em;
+    max-height: 2.6em;
+    overflow-y: auto;
+  }
+  /* Hide <br><br> in small screen mode */
+  #buttondiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2em;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* Remove margin-top, rely on flex stacking */
+    clear: both;
+    position: relative;
+    z-index: 1;
+  }
 }
-#comments{
+#questionid {
+  /* font-size:2vw; */
+  text-align: center;
+}
+#comments {
   text-align: center;
   height: 10vh;
   /* font-size: 1.5vw; */
 }
-#linkedlist{
-    width: 100%;
+#linkedlist {
+  width: 100%;
 }
-#buttondiv{
-    text-align: center;
+#buttondiv {
+  text-align: center;
 }
