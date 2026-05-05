@@ -116,12 +116,60 @@ function handlers() {
     }
     insertAtNode(idx, val);
   };
-  document.getElementById("search-button").onclick = function () {
-    search_num();
-  };
-  document.getElementById("remove-button").onclick = function () {
-    deleter();
-  };
+  var removeBtn = document.getElementById("remove-button");
+  if (removeBtn)
+    removeBtn.onclick = function () {
+      if (busy == 1) {
+        clear();
+        return;
+      } else busy = 1;
+      var val = document.getElementById("rightnode").value;
+      var idx = numbers.indexOf(parseInt(val, 10));
+      clear();
+      if (val === "" || isNaN(parseInt(val, 10))) {
+        document.getElementById("ins").innerHTML =
+          "Please enter a valid number to remove.";
+        busy = 0;
+        return;
+      }
+      if (idx === -1) {
+        document.getElementById("ins").innerHTML = "Value not found!";
+        busy = 0;
+        return;
+      }
+      numbers.splice(idx, 1);
+      document.getElementById("ins").innerHTML =
+        "Node with value " + val + " removed.";
+      renderer();
+      busy = 0;
+    };
+
+  var searchBtn = document.getElementById("search-button");
+  if (searchBtn)
+    searchBtn.onclick = function () {
+      if (busy == 1) {
+        clear();
+        return;
+      } else busy = 1;
+      var val = document.getElementById("toBeSearched").value;
+      clear();
+      if (val === "" || isNaN(parseInt(val, 10))) {
+        document.getElementById("ins").innerHTML =
+          "Please enter a valid number to search.";
+        busy = 0;
+        return;
+      }
+      var idx = numbers.indexOf(parseInt(val, 10));
+      if (idx === -1) {
+        document.getElementById("ins").innerHTML = "Value not found!";
+        busy = 0;
+        return;
+      }
+      document.getElementById("ins").innerHTML =
+        "Value found at position " + (idx + 1) + ".";
+      renderer();
+      busy = 0;
+    };
 }
 Array.prototype.insert = function (index, item) {
   this.splice(index, 0, item);
@@ -483,7 +531,16 @@ function insertAtHead() {
     return;
   } else busy = 1;
   num = 0;
-  value = parseInt(document.getElementById("HeadtoBeInserted").value, 10);
+  var inputValue = document.getElementById("HeadtoBeInserted").value;
+  value = parseInt(inputValue, 10);
+  if (inputValue === "" || isNaN(value)) {
+    document.getElementById("ins").innerHTML =
+      "Please enter a valid number to insert at head.";
+    busy = 0;
+    console.log("Invalid or empty input for head insertion");
+    clear();
+    return;
+  }
   index = 0;
   keyc = 0;
   decider = 4;
@@ -516,13 +573,22 @@ function insertAtTail() {
   console.log("insertAtTail called");
   keyc = 0;
   decider = 1;
-  value = parseInt(document.getElementById("TailtoBeInserted").value, 10);
-  index = numbers.length;
-  console.log("Tail value input:", value);
-  if (numbers.length == 7) {
-    document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
-    clear();
+  var inputValue = document.getElementById("TailtoBeInserted").value;
+  value = parseInt(inputValue, 10);
+  if (inputValue === "" || isNaN(value)) {
+    document.getElementById("ins").innerHTML =
+      "Please enter a valid number to insert at tail.";
     busy = 0;
+    var inputValue = document.getElementById("TailtoBeInserted").value;
+    value = parseInt(inputValue, 10);
+    if (inputValue === "" || isNaN(value)) {
+      document.getElementById("ins").innerHTML =
+        "Please enter a valid number to insert at tail.";
+      busy = 0;
+      console.log("Invalid or empty input for tail insertion");
+      clear();
+      return;
+    }
     console.log("Max nodes reached");
     return;
   }
@@ -547,7 +613,7 @@ function insertAtNode(idx, val) {
   busy = 1;
   value = parseInt(val, 10);
   index = parseInt(idx, 10);
-  if (isNaN(value) || isNaN(index)) {
+  if (val === "" || idx === "" || isNaN(value) || isNaN(index)) {
     document.getElementById("ins").innerHTML = "Invalid index or value.";
     busy = 0;
     console.log(
@@ -599,8 +665,18 @@ function deleter() {
   numb = 0;
   decider = 3;
   keyc = 0;
-  value = parseInt(document.getElementById("rightnode").value, 10);
-  index = numbers.indexOf(value);
+  var inputValue = document.getElementById("rightnode").value;
+  // Allow deletion of nodes with empty/undefined/NaN data
+  if (inputValue === "" || inputValue === undefined) {
+    // Try to find a node with empty/undefined/NaN data
+    index = numbers.findIndex(function (v) {
+      return v === undefined || v === null || v === "" || isNaN(v);
+    });
+    value = numbers[index];
+  } else {
+    value = parseInt(inputValue, 10);
+    index = numbers.indexOf(value);
+  }
   clear();
   color_stopperb = setInterval(searcher, 500, value);
 }
