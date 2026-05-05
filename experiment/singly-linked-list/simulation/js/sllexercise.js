@@ -128,7 +128,7 @@ function drawBox(x, y, ind, color) {
     x + linegap * 0.9,
     y + (nHeight - lineheight) / 2,
     linewidth,
-    lineheight
+    lineheight,
   );
   ctx.globalAlpha = 1;
 
@@ -138,14 +138,14 @@ function drawBox(x, y, ind, color) {
       x + (linegap + 15 + 43 + 45) * 0.9,
       y + (nHeight - dotheight) / 2 - 5,
       20,
-      14
+      14,
     );
     ctx.drawImage(
       arrowline,
       x + linegap + 15,
       y + (nHeight - dotheight) / 2,
       100 * 0.7,
-      5
+      5,
     );
   } else {
     ctx.drawImage(
@@ -153,14 +153,14 @@ function drawBox(x, y, ind, color) {
       x + (linegap + 15 + 43) * 0.9,
       y + (nHeight - dotheight) / 2 - 5,
       20,
-      14
+      14,
     );
     ctx.drawImage(
       arrowline,
       x + linegap + 15,
       y + (nHeight - dotheight) / 2,
       55 * 0.6,
-      5
+      5,
     );
   }
 
@@ -169,7 +169,7 @@ function drawBox(x, y, ind, color) {
     x + (linegap + 15) * 0.9,
     y + (nHeight - dotheight) / 2 - 5,
     dotwidth,
-    dotheight
+    dotheight,
   );
 
   ctx.beginPath();
@@ -209,12 +209,12 @@ function drawArrow(startX, startY, endX, endY) {
   ctx.beginPath();
   ctx.moveTo(
     endX - headlen * Math.cos(angle - Math.PI / 6),
-    endY - headlen * Math.sin(angle - Math.PI / 6)
+    endY - headlen * Math.sin(angle - Math.PI / 6),
   );
   ctx.lineTo(endX, endY);
   ctx.lineTo(
     endX - headlen * Math.cos(angle + Math.PI / 6),
-    endY - headlen * Math.sin(angle + Math.PI / 6)
+    endY - headlen * Math.sin(angle + Math.PI / 6),
   );
   ctx.fillStyle = "#979091";
   ctx.fill();
@@ -253,7 +253,7 @@ function renderer() {
   ctx.fillText(
     "Null",
     leftgap + numbers.length * boxDist + 55,
-    topgap + rectHeight / 2 + 20
+    topgap + rectHeight / 2 + 20,
   );
   ctx.fill();
   ctx.closePath();
@@ -272,7 +272,7 @@ function srenderer() {
   ctx.fillText(
     "Null",
     leftgap + numbers.length * boxDist + 55,
-    topgap + rectHeight / 2 + 10
+    topgap + rectHeight / 2 + 10,
   );
   ctx.fill();
   ctx.closePath();
@@ -321,7 +321,7 @@ function nodeshift() {
   ctx.fillText(
     "Null",
     leftgap + numbers.length * boxDist + 55 + keyc,
-    topgap + rectHeight / 2 + 20
+    topgap + rectHeight / 2 + 20,
   );
   ctx.fill();
   ctx.closePath();
@@ -359,7 +359,7 @@ function colorer(last) {
     ctx.fillText(
       "Null",
       leftgap + numbers.length * boxDist + 55 + keyc,
-      topgap + rectHeight / 2 + 20
+      topgap + rectHeight / 2 + 20,
     );
     ctx.fill();
     ctx.closePath();
@@ -373,24 +373,28 @@ function insertAtHead() {
     return;
   } else busy = 1;
   value = document.getElementById("HeadtoBeInserted").value;
-
   if (!value || value.trim() === "") {
-    document.getElementById("ins").innerHTML = "Please enter a value to insert";
+    document.getElementById("ins").innerHTML =
+      "Please enter a value to insert at head.";
     clear();
     busy = 0;
     return;
   }
   if (!value.isNumber()) {
-    document.getElementById("ins").innerHTML = "Please enter a valid number";
+    document.getElementById("ins").innerHTML =
+      "Please enter a valid number to insert at head.";
     clear();
     busy = 0;
     return;
   }
-
   index = 0;
   keyc = 0;
   decider = 4;
-
+  if (numbers.length == 8) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
+    busy = 0;
+    return;
+  }
   clear();
   shift_stopper = setInterval(nodeshift, 1);
 }
@@ -400,26 +404,29 @@ function insertAtTail() {
     clear();
     return;
   } else busy = 1;
-
   value = document.getElementById("TailtoBeInserted").value;
-
   if (!value || value.trim() === "") {
-    document.getElementById("ins").innerHTML = "Please enter a value to insert";
+    document.getElementById("ins").innerHTML =
+      "Please enter a value to insert at tail.";
     clear();
     busy = 0;
     return;
   }
   if (!value.isNumber()) {
-    document.getElementById("ins").innerHTML = "Please enter a valid number";
+    document.getElementById("ins").innerHTML =
+      "Please enter a valid number to insert at tail.";
     clear();
     busy = 0;
     return;
   }
-
   numa = 0;
   keyc = 0;
   decider = 1;
-
+  if (numbers.length == 8) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
+    busy = 0;
+    return;
+  }
   index = numbers.length;
   clear();
   color_stopper = setInterval(colorer, 500, index);
@@ -430,41 +437,31 @@ function insertAtNode() {
     clear();
     return;
   } else busy = 1;
-
   value = document.getElementById("AnytoBeInserted").value;
   index = document.getElementById("index").value;
-
   if (!value || value.trim() === "") {
-    document.getElementById("ins").innerHTML = "Please enter a value to insert";
+    document.getElementById("ins").innerHTML =
+      "Please enter a value to insert at node.";
     clear();
     busy = 0;
     return;
   }
   if (!value.isNumber()) {
-    document.getElementById("ins").innerHTML = "Please enter a valid number";
-    clear();
-    busy = 0;
-    return;
-  }
-
-  if (!index.isNumber()) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid index number";
+      "Please enter a valid number to insert at node.";
     clear();
     busy = 0;
     return;
   }
-
-  numa = 0;
-  keyc = 0;
-  decider = 2;
-
   if (!index.isNumber()) {
     document.getElementById("ins").innerHTML = "Enter Numbers";
     clear();
     busy = 0;
     return;
   }
+  numa = 0;
+  keyc = 0;
+  decider = 2;
   if (index > String(parseInt(numbers.length) - 1) || index < 1) {
     if (numbers.length == 0)
       document.getElementById("ins").innerHTML = "Linked List is empty!";
@@ -477,7 +474,6 @@ function insertAtNode() {
     busy = 0;
     return;
   }
-
   clear();
   color_stopper = setInterval(colorer, 500, index);
 }
