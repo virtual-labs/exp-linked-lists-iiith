@@ -1,0 +1,11 @@
+{
+  _: [],
+  f: [
+    '/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment-descriptor.json'
+  ],
+  files: [
+    '/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment-descriptor.json'
+  ],
+  '$0': 'validate'
+}
+Validated true

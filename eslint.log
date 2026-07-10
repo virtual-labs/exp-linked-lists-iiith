@@ -1,0 +1,1335 @@
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/sll.js
+   3:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   4:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   5:3  warning  Unnecessary semicolon  no-extra-semi
+   8:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   9:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  10:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  11:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  13:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  14:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  15:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  16:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  17:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  18:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  19:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  20:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  21:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  22:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  23:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  24:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  25:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  26:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  27:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  28:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  29:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  30:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  31:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  32:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  33:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  37:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  38:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  40:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  41:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  42:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  43:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  44:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  45:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  46:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  47:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  48:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  49:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  51:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  52:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  54:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  55:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  56:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  57:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  58:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  60:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  63:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  65:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  66:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  68:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  69:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  70:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  71:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  72:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  73:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  74:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  75:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  76:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  77:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  80:1  warning  'list' is not defined  no-undef
+  81:1  warning  'list' is not defined  no-undef
+  82:1  warning  'list' is not defined  no-undef
+  83:1  warning  'list' is not defined  no-undef
+  84:1  warning  'list' is not defined  no-undef
+  85:1  warning  'list' is not defined  no-undef
+  86:1  warning  'list' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/bootstrap.min.js
+  6:319    warning  'jQuery' is not defined                 no-undef
+  6:1071   warning  'jQuery' is not defined                 no-undef
+  6:2016   warning  'jQuery' is not defined                 no-undef
+  6:3965   warning  'jQuery' is not defined                 no-undef
+  6:8001   warning  'jQuery' is not defined                 no-undef
+  6:11369  warning  'jQuery' is not defined                 no-undef
+  6:13732  warning  'jQuery' is not defined                 no-undef
+  6:19734  warning  'jQuery' is not defined                 no-undef
+  6:27338  warning  'a' is assigned a value but never used  no-unused-vars
+  6:28677  warning  'jQuery' is not defined                 no-undef
+  6:30264  warning  'jQuery' is not defined                 no-undef
+  7:648    warning  'jQuery' is not defined                 no-undef
+  7:2468   warning  'jQuery' is not defined                 no-undef
+  7:4879   warning  'jQuery' is not defined                 no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/catalog.js
+  1:5  warning  'catalog' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/experiment.js
+   47:5   warning  'restrucureTheDivs' is assigned a value but never used     no-unused-vars
+   74:5   warning  'createTocAndSections' is assigned a value but never used  no-unused-vars
+   82:2   warning  Unnecessary semicolon                                      no-extra-semi
+   84:5   warning  'setHash' is assigned a value but never used               no-unused-vars
+  154:5   warning  '$' is not defined                                         no-undef
+  159:3   warning  '$' is not defined                                         no-undef
+  159:39  warning  'e' is defined but never used                              no-unused-vars
+  161:5   warning  'hash_path' is not defined                                 no-undef
+  162:31  warning  'hash_path' is not defined                                 no-undef
+  163:17  warning  'hash_path' is not defined                                 no-undef
+  173:2   warning  Unnecessary semicolon                                      no-extra-semi
+  175:1   warning  '$' is not defined                                         no-undef
+  190:3   warning  '$' is not defined                                         no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/get.resource.js
+  12:12  warning  'createHtmlElementWithClass' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/jquery.min.js
+  2:71     warning  'module' is not defined                                                    no-undef
+  2:86     warning  'module' is not defined                                                    no-undef
+  2:863    warning  'b' is assigned a value but never used                                     no-unused-vars
+  2:3050   warning  'r' is assigned a value but never used                                     no-unused-vars
+  2:5376   warning  Unexpected control character(s) in regular expression: \x1f, \x1f          no-control-regex
+  2:5847   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6101   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6532   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6758   warning  Empty block statement                                                      no-empty
+  2:7320   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9378   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9688   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11489  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12064  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12102  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12520  warning  Empty block statement                                                      no-empty
+  2:13134  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:13446  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15271  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15542  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15740  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:16114  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  2:16815  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19155  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19255  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19315  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:20674  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21288  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21399  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:23719  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:33344  warning  Empty block statement                                                      no-empty
+  2:37050  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:38265  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:38405  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:39039  warning  Empty block statement                                                      no-empty
+  2:45778  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:48087  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:49647  warning  Empty block statement                                                      no-empty
+  2:57298  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:59847  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:64132  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:65877  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:65943  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66247  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66313  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66720  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66997  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:72432  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:74924  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:75645  warning  'l.href' is assigned to itself                                             no-self-assign
+  2:79204  warning  Empty block statement                                                      no-empty
+  2:83243  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:83243  warning  'l' is assigned a value but never used                                     no-unused-vars
+  2:86651  warning  'define' is not defined                                                    no-undef
+  2:86663  warning  'define' is not defined                                                    no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/labtheme.js
+    1:1   warning  '$' is not defined             no-undef
+   45:3   warning  '$' is not defined             no-undef
+   47:3   warning  '$' is not defined             no-undef
+   47:35  warning  '$' is not defined             no-undef
+   73:3   warning  'main' is not defined          no-undef
+   73:10  warning  '$' is not defined             no-undef
+   74:3   warning  '$' is not defined             no-undef
+   74:5   warning  'main' is not defined          no-undef
+   77:3   warning  'contents' is not defined      no-undef
+   77:14  warning  '$' is not defined             no-undef
+   77:16  warning  'main' is not defined          no-undef
+   78:3   warning  '$' is not defined             no-undef
+   79:3   warning  'childs' is not defined        no-undef
+   79:12  warning  'main' is not defined          no-undef
+   80:7   warning  'idx' is not defined           no-undef
+   80:14  warning  'idx' is not defined           no-undef
+   80:18  warning  'childs' is not defined        no-undef
+   80:32  warning  'idx' is not defined           no-undef
+   81:5   warning  'cld' is not defined           no-undef
+   81:11  warning  'childs' is not defined        no-undef
+   81:18  warning  'idx' is not defined           no-undef
+   82:8   warning  'cld' is not defined           no-undef
+   83:13  warning  'cld' is not defined           no-undef
+   84:7   warning  'cld' is not defined           no-undef
+   85:7   warning  '$' is not defined             no-undef
+   85:9   warning  'cld' is not defined           no-undef
+   86:7   warning  '$' is not defined             no-undef
+   86:9   warning  'cld' is not defined           no-undef
+   87:7   warning  'text' is not defined          no-undef
+   87:14  warning  'childs' is not defined        no-undef
+   87:21  warning  'idx' is not defined           no-undef
+   88:7   warning  'link' is not defined          no-undef
+   88:87  warning  'text' is not defined          no-undef
+   89:7   warning  'childs' is not defined        no-undef
+   89:14  warning  'idx' is not defined           no-undef
+   89:31  warning  'link' is not defined          no-undef
+   89:38  warning  'cld' is not defined           no-undef
+   90:6   warning  Unnecessary semicolon          no-extra-semi
+   91:4   warning  Unnecessary semicolon          no-extra-semi
+   92:3   warning  'lists' is not defined         no-undef
+   92:11  warning  '$' is not defined             no-undef
+   92:13  warning  'main' is not defined          no-undef
+   93:13  warning  'lists' is not defined         no-undef
+   94:8   warning  'lists' is not defined         no-undef
+   95:7   warning  'lists' is not defined         no-undef
+   95:45  warning  'lists' is not defined         no-undef
+   95:91  warning  'lists' is not defined         no-undef
+   98:3   warning  'iHtml' is not defined         no-undef
+   98:11  warning  'main' is not defined          no-undef
+   99:3   warning  '$' is not defined             no-undef
+  100:3   warning  'str' is not defined           no-undef
+  117:3   warning  'str' is not defined           no-undef
+  117:9   warning  'str' is not defined           no-undef
+  117:15  warning  'iHtml' is not defined         no-undef
+  118:3   warning  'str' is not defined           no-undef
+  118:9   warning  'str' is not defined           no-undef
+  119:3   warning  '$' is not defined             no-undef
+  119:21  warning  'str' is not defined           no-undef
+  120:3   warning  'main' is not defined          no-undef
+  121:3   warning  '$' is not defined             no-undef
+  135:3   warning  '$' is not defined             no-undef
+  135:5   warning  'contents' is not defined      no-undef
+  136:3   warning  '$' is not defined             no-undef
+  136:5   warning  'contents' is not defined      no-undef
+  137:3   warning  '$' is not defined             no-undef
+  137:5   warning  'contents' is not defined      no-undef
+  139:3   warning  'str' is not defined           no-undef
+  141:3   warning  'cld' is not defined           no-undef
+  141:9   warning  '$' is not defined             no-undef
+  141:11  warning  'contents' is not defined      no-undef
+  142:11  warning  'i' is already defined         no-redeclare
+  142:17  warning  'cld' is not defined           no-undef
+  144:7   warning  'str' is not defined           no-undef
+  144:13  warning  'str' is not defined           no-undef
+  146:9   warning  '$' is not defined             no-undef
+  146:11  warning  'cld' is not defined           no-undef
+  147:7   warning  'iHTML' is not defined         no-undef
+  148:7   warning  'headText' is not defined      no-undef
+  148:18  warning  'cld' is not defined           no-undef
+  149:7   warning  'subChilds' is not defined     no-undef
+  149:19  warning  'cld' is not defined           no-undef
+  150:7   warning  'innerContent' is not defined  no-undef
+  151:21  warning  'subChilds' is not defined     no-undef
+  152:9   warning  'iHTML' is not defined         no-undef
+  153:12  warning  'subChilds' is not defined     no-undef
+  154:11  warning  'iText' is not defined         no-undef
+  154:19  warning  'subChilds' is not defined     no-undef
+  155:11  warning  'iHTML' is not defined         no-undef
+  155:36  warning  'headText' is not defined      no-undef
+  155:49  warning  'iText' is not defined         no-undef
+  155:71  warning  'iText' is not defined         no-undef
+  158:11  warning  'iHTML' is not defined         no-undef
+  158:19  warning  'iHTML' is not defined         no-undef
+  158:27  warning  'subChilds' is not defined     no-undef
+  160:9   warning  'innerContent' is not defined  no-undef
+  160:24  warning  'innerContent' is not defined  no-undef
+  160:39  warning  'iHTML' is not defined         no-undef
+  162:7   warning  'col' is not defined           no-undef
+  164:29  warning  'headText' is not defined      no-undef
+  164:54  warning  'headText' is not defined      no-undef
+  167:19  warning  'innerContent' is not defined  no-undef
+  171:7   warning  'str' is not defined           no-undef
+  171:13  warning  'str' is not defined           no-undef
+  171:19  warning  'col' is not defined           no-undef
+  174:7   warning  'col' is not defined           no-undef
+  176:19  warning  'cld' is not defined           no-undef
+  181:7   warning  'str' is not defined           no-undef
+  181:13  warning  'str' is not defined           no-undef
+  184:3   warning  '$' is not defined             no-undef
+  184:26  warning  'str' is not defined           no-undef
+  185:3   warning  '$' is not defined             no-undef
+  186:8   warning  '$' is not defined             no-undef
+  187:7   warning  '$' is not defined             no-undef
+  190:8   warning  '$' is not defined             no-undef
+  191:7   warning  '$' is not defined             no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/org-info.js
+   16:60   warning  'idx' is not defined                                   no-undef
+   27:9    warning  'a' is already defined                                 no-redeclare
+   28:28   warning  'a' is already defined                                 no-redeclare
+   31:515  warning  Unnecessary escape character: \'                       no-useless-escape
+   31:517  warning  Unnecessary escape character: \"                       no-useless-escape
+   31:524  warning  Unnecessary escape character: \'                       no-useless-escape
+   31:526  warning  Unnecessary escape character: \"                       no-useless-escape
+   32:38   warning  'orgInfoHooks' is not defined                          no-undef
+   32:63   warning  'orgInfoHooks' is not defined                          no-undef
+   33:76   warning  'c' is already defined                                 no-redeclare
+   41:87   warning  'b' is assigned a value but never used                 no-unused-vars
+   47:64   warning  'l' is assigned a value but never used                 no-unused-vars
+   76:89   warning  'd' is already defined                                 no-redeclare
+   89:1    warning  Unreachable code                                       no-unreachable
+   92:58   warning  's' is not defined                                     no-undef
+   92:70   warning  's' is not defined                                     no-undef
+   92:113  warning  's' is not defined                                     no-undef
+  102:37   warning  's' is not defined                                     no-undef
+  103:5    warning  'e' is assigned a value but never used                 no-unused-vars
+  119:81   warning  'overview' is assigned a value but never used          no-unused-vars
+  120:5    warning  'content' is assigned a value but never used           no-unused-vars
+  120:35   warning  'showall' is assigned a value but never used           no-unused-vars
+  120:61   warning  'info' is assigned a value but never used              no-unused-vars
+  120:85   warning  'info_title_above' is assigned a value but never used  no-unused-vars
+  121:5    warning  'slide' is assigned a value but never used             no-unused-vars
+  123:34   warning  'f' is assigned a value but never used                 no-unused-vars
+  123:66   warning  'a' is assigned a value but never used                 no-unused-vars
+  132:29   warning  'a' is already defined                                 no-redeclare
+  151:9    warning  'a' is already defined                                 no-redeclare
+  151:33   warning  'j' is already defined                                 no-redeclare
+  151:75   warning  'c' is already defined                                 no-redeclare
+  152:10   warning  'b' is already defined                                 no-redeclare
+  163:38   warning  'a' is already defined                                 no-redeclare
+  164:34   warning  'a' is already defined                                 no-redeclare
+  176:52   warning  'b' is already defined                                 no-redeclare
+  184:80   warning  'c' is defined but never used                          no-unused-vars
+  184:82   warning  'a' is defined but never used                          no-unused-vars
+  203:81   warning  'e' is already defined                                 no-redeclare
+  204:5    warning  'a' is already defined                                 no-redeclare
+  237:43   warning  'd' is already defined                                 no-redeclare
+  239:72   warning  'g' is already defined                                 no-redeclare
+  240:15   warning  'e' is already defined                                 no-redeclare
+  240:55   warning  'd' is already defined                                 no-redeclare
+  242:43   warning  'd' is already defined                                 no-redeclare
+  244:72   warning  'g' is already defined                                 no-redeclare
+  245:45   warning  'd' is already defined                                 no-redeclare
+  247:70   warning  'd' is already defined                                 no-redeclare
+  248:57   warning  'd' is already defined                                 no-redeclare
+  252:27   warning  'h' is already defined                                 no-redeclare
+  255:27   warning  'h' is already defined                                 no-redeclare
+  259:231  warning  Unnecessary escape character: \"                       no-useless-escape
+  266:91   warning  'a' is already defined                                 no-redeclare
+  288:11   warning  'OrgHtmlManagerLoadCheck' is defined but never used    no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/parser.js
+  194:5  warning  'createLUs' is assigned a value but never used  no-unused-vars
+  209:5  warning  'clearBody' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/readtheorg.js
+   2:1   warning  '$' is not defined  no-undef
+   3:5   warning  '$' is not defined  no-undef
+   4:5   warning  '$' is not defined  no-undef
+   5:5   warning  '$' is not defined  no-undef
+   6:5   warning  '$' is not defined  no-undef
+   7:5   warning  '$' is not defined  no-undef
+   8:5   warning  '$' is not defined  no-undef
+   9:5   warning  '$' is not defined  no-undef
+  10:5   warning  '$' is not defined  no-undef
+  11:5   warning  '$' is not defined  no-undef
+  12:5   warning  '$' is not defined  no-undef
+  15:1   warning  '$' is not defined  no-undef
+  18:5   warning  '$' is not defined  no-undef
+  19:7   warning  '$' is not defined  no-undef
+  20:7   warning  '$' is not defined  no-undef
+  23:5   warning  '$' is not defined  no-undef
+  24:7   warning  '$' is not defined  no-undef
+  25:7   warning  '$' is not defined  no-undef
+  27:5   warning  '$' is not defined  no-undef
+  28:7   warning  '$' is not defined  no-undef
+  31:5   warning  '$' is not defined  no-undef
+  34:1   warning  '$' is not defined  no-undef
+  35:5   warning  '$' is not defined  no-undef
+  38:5   warning  '$' is not defined  no-undef
+  41:5   warning  '$' is not defined  no-undef
+  44:22  warning  '$' is not defined  no-undef
+  45:28  warning  '$' is not defined  no-undef
+  49:25  warning  '$' is not defined  no-undef
+  50:5   warning  '$' is not defined  no-undef
+  53:20  warning  '$' is not defined  no-undef
+  54:20  warning  '$' is not defined  no-undef
+  86:3   warning  '$' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/js/router.js
+   10:5   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   18:4   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  159:24  warning  'hashPath' is defined but never used          no-unused-vars
+  182:15  warning  'catalog' is not defined                      no-undef
+  186:22  warning  'getHtmlContentFromUrl' is not defined        no-undef
+  245:2   warning  Unnecessary semicolon                         no-extra-semi
+  248:5   warning  'setHash' is assigned a value but never used  no-unused-vars
+  254:3   warning  '$' is not defined                            no-undef
+  254:39  warning  'e' is defined but never used                 no-unused-vars
+  269:2   warning  Unnecessary semicolon                         no-extra-semi
+  272:1   warning  '$' is not defined                            no-undef
+  273:19  warning  'createLUs' is not defined                    no-undef
+  274:3   warning  'clearBody' is not defined                    no-undef
+  286:3   warning  '$' is not defined                            no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/docs/style/lib/js/jquery.stickytableheaders.min.js
+  1:4623  warning  'jQuery' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/js/cllexercise.js
+    4:5   warning  'rectWidth' is assigned a value but never used            no-unused-vars
+   13:54  warning  'num' is assigned a value but never used                  no-unused-vars
+   13:66  warning  'numb' is defined but never used                          no-unused-vars
+   22:5   warning  'numa' is already defined                                 no-redeclare
+   23:5   warning  'rindex' is defined but never used                        no-unused-vars
+   37:5   warning  'arrowtrianglewidth' is assigned a value but never used   no-unused-vars
+   38:5   warning  'arrowtriangleheight' is assigned a value but never used  no-unused-vars
+   45:10  warning  'handlers' is defined but never used                      no-unused-vars
+   99:3   warning  'val' is not defined                                      no-undef
+  159:28  warning  'val' is not defined                                      no-undef
+  266:12  warning  'i' is already defined                                    no-redeclare
+  414:12  warning  'i' is already defined                                    no-redeclare
+  419:12  warning  'i' is already defined                                    no-redeclare
+  428:10  warning  'i' is not defined                                        no-undef
+  428:17  warning  'i' is not defined                                        no-undef
+  428:37  warning  'i' is not defined                                        no-undef
+  429:19  warning  'i' is not defined                                        no-undef
+  429:33  warning  'i' is not defined                                        no-undef
+  443:8   warning  'i' is not defined                                        no-undef
+  443:15  warning  'i' is not defined                                        no-undef
+  443:48  warning  'i' is not defined                                        no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/js/cllpractice.js
+  513:10  error  Parsing error: Identifier 'search_num' has already been declared
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/circular-linked-list/simulation/js/realization.js
+    1:5  warning  'realizationCatalog' is assigned a value but never used  no-unused-vars
+  132:3  warning  Duplicate key 'Quiz DLL'                                 no-dupe-keys
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/sll.js
+   3:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   4:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   5:3  warning  Unnecessary semicolon  no-extra-semi
+   8:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   9:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  10:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  11:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  13:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  14:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  15:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  16:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  17:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  18:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  19:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  20:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  21:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  22:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  23:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  24:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  25:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  26:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  27:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  28:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  29:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  30:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  31:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  32:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  33:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  37:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  38:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  40:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  41:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  42:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  43:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  44:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  45:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  46:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  47:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  48:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  49:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  51:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  52:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  54:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  55:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  56:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  57:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  58:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  60:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  63:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  65:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  66:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  68:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  69:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  70:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  71:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  72:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  73:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  74:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  75:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  76:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  77:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  80:1  warning  'list' is not defined  no-undef
+  81:1  warning  'list' is not defined  no-undef
+  82:1  warning  'list' is not defined  no-undef
+  83:1  warning  'list' is not defined  no-undef
+  84:1  warning  'list' is not defined  no-undef
+  85:1  warning  'list' is not defined  no-undef
+  86:1  warning  'list' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/bootstrap.min.js
+  6:319    warning  'jQuery' is not defined                 no-undef
+  6:1071   warning  'jQuery' is not defined                 no-undef
+  6:2016   warning  'jQuery' is not defined                 no-undef
+  6:3965   warning  'jQuery' is not defined                 no-undef
+  6:8001   warning  'jQuery' is not defined                 no-undef
+  6:11369  warning  'jQuery' is not defined                 no-undef
+  6:13732  warning  'jQuery' is not defined                 no-undef
+  6:19734  warning  'jQuery' is not defined                 no-undef
+  6:27338  warning  'a' is assigned a value but never used  no-unused-vars
+  6:28677  warning  'jQuery' is not defined                 no-undef
+  6:30264  warning  'jQuery' is not defined                 no-undef
+  7:648    warning  'jQuery' is not defined                 no-undef
+  7:2468   warning  'jQuery' is not defined                 no-undef
+  7:4879   warning  'jQuery' is not defined                 no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/catalog.js
+  1:5  warning  'catalog' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/experiment.js
+   47:5   warning  'restrucureTheDivs' is assigned a value but never used     no-unused-vars
+   74:5   warning  'createTocAndSections' is assigned a value but never used  no-unused-vars
+   82:2   warning  Unnecessary semicolon                                      no-extra-semi
+   84:5   warning  'setHash' is assigned a value but never used               no-unused-vars
+  154:5   warning  '$' is not defined                                         no-undef
+  159:3   warning  '$' is not defined                                         no-undef
+  159:39  warning  'e' is defined but never used                              no-unused-vars
+  161:5   warning  'hash_path' is not defined                                 no-undef
+  162:31  warning  'hash_path' is not defined                                 no-undef
+  163:17  warning  'hash_path' is not defined                                 no-undef
+  173:2   warning  Unnecessary semicolon                                      no-extra-semi
+  175:1   warning  '$' is not defined                                         no-undef
+  190:3   warning  '$' is not defined                                         no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/get.resource.js
+  12:12  warning  'createHtmlElementWithClass' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/jquery.min.js
+  2:71     warning  'module' is not defined                                                    no-undef
+  2:86     warning  'module' is not defined                                                    no-undef
+  2:863    warning  'b' is assigned a value but never used                                     no-unused-vars
+  2:3050   warning  'r' is assigned a value but never used                                     no-unused-vars
+  2:5376   warning  Unexpected control character(s) in regular expression: \x1f, \x1f          no-control-regex
+  2:5847   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6101   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6532   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6758   warning  Empty block statement                                                      no-empty
+  2:7320   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9378   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9688   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11489  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12064  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12102  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12520  warning  Empty block statement                                                      no-empty
+  2:13134  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:13446  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15271  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15542  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15740  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:16114  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  2:16815  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19155  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19255  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19315  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:20674  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21288  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21399  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:23719  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:33344  warning  Empty block statement                                                      no-empty
+  2:37050  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:38265  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:38405  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:39039  warning  Empty block statement                                                      no-empty
+  2:45778  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:48087  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:49647  warning  Empty block statement                                                      no-empty
+  2:57298  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:59847  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:64132  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:65877  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:65943  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66247  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66313  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66720  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66997  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:72432  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:74924  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:75645  warning  'l.href' is assigned to itself                                             no-self-assign
+  2:79204  warning  Empty block statement                                                      no-empty
+  2:83243  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:83243  warning  'l' is assigned a value but never used                                     no-unused-vars
+  2:86651  warning  'define' is not defined                                                    no-undef
+  2:86663  warning  'define' is not defined                                                    no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/labtheme.js
+    1:1   warning  '$' is not defined             no-undef
+   45:3   warning  '$' is not defined             no-undef
+   47:3   warning  '$' is not defined             no-undef
+   47:35  warning  '$' is not defined             no-undef
+   73:3   warning  'main' is not defined          no-undef
+   73:10  warning  '$' is not defined             no-undef
+   74:3   warning  '$' is not defined             no-undef
+   74:5   warning  'main' is not defined          no-undef
+   77:3   warning  'contents' is not defined      no-undef
+   77:14  warning  '$' is not defined             no-undef
+   77:16  warning  'main' is not defined          no-undef
+   78:3   warning  '$' is not defined             no-undef
+   79:3   warning  'childs' is not defined        no-undef
+   79:12  warning  'main' is not defined          no-undef
+   80:7   warning  'idx' is not defined           no-undef
+   80:14  warning  'idx' is not defined           no-undef
+   80:18  warning  'childs' is not defined        no-undef
+   80:32  warning  'idx' is not defined           no-undef
+   81:5   warning  'cld' is not defined           no-undef
+   81:11  warning  'childs' is not defined        no-undef
+   81:18  warning  'idx' is not defined           no-undef
+   82:8   warning  'cld' is not defined           no-undef
+   83:13  warning  'cld' is not defined           no-undef
+   84:7   warning  'cld' is not defined           no-undef
+   85:7   warning  '$' is not defined             no-undef
+   85:9   warning  'cld' is not defined           no-undef
+   86:7   warning  '$' is not defined             no-undef
+   86:9   warning  'cld' is not defined           no-undef
+   87:7   warning  'text' is not defined          no-undef
+   87:14  warning  'childs' is not defined        no-undef
+   87:21  warning  'idx' is not defined           no-undef
+   88:7   warning  'link' is not defined          no-undef
+   88:87  warning  'text' is not defined          no-undef
+   89:7   warning  'childs' is not defined        no-undef
+   89:14  warning  'idx' is not defined           no-undef
+   89:31  warning  'link' is not defined          no-undef
+   89:38  warning  'cld' is not defined           no-undef
+   90:6   warning  Unnecessary semicolon          no-extra-semi
+   91:4   warning  Unnecessary semicolon          no-extra-semi
+   92:3   warning  'lists' is not defined         no-undef
+   92:11  warning  '$' is not defined             no-undef
+   92:13  warning  'main' is not defined          no-undef
+   93:13  warning  'lists' is not defined         no-undef
+   94:8   warning  'lists' is not defined         no-undef
+   95:7   warning  'lists' is not defined         no-undef
+   95:45  warning  'lists' is not defined         no-undef
+   95:91  warning  'lists' is not defined         no-undef
+   98:3   warning  'iHtml' is not defined         no-undef
+   98:11  warning  'main' is not defined          no-undef
+   99:3   warning  '$' is not defined             no-undef
+  100:3   warning  'str' is not defined           no-undef
+  117:3   warning  'str' is not defined           no-undef
+  117:9   warning  'str' is not defined           no-undef
+  117:15  warning  'iHtml' is not defined         no-undef
+  118:3   warning  'str' is not defined           no-undef
+  118:9   warning  'str' is not defined           no-undef
+  119:3   warning  '$' is not defined             no-undef
+  119:21  warning  'str' is not defined           no-undef
+  120:3   warning  'main' is not defined          no-undef
+  121:3   warning  '$' is not defined             no-undef
+  135:3   warning  '$' is not defined             no-undef
+  135:5   warning  'contents' is not defined      no-undef
+  136:3   warning  '$' is not defined             no-undef
+  136:5   warning  'contents' is not defined      no-undef
+  137:3   warning  '$' is not defined             no-undef
+  137:5   warning  'contents' is not defined      no-undef
+  139:3   warning  'str' is not defined           no-undef
+  141:3   warning  'cld' is not defined           no-undef
+  141:9   warning  '$' is not defined             no-undef
+  141:11  warning  'contents' is not defined      no-undef
+  142:11  warning  'i' is already defined         no-redeclare
+  142:17  warning  'cld' is not defined           no-undef
+  144:7   warning  'str' is not defined           no-undef
+  144:13  warning  'str' is not defined           no-undef
+  146:9   warning  '$' is not defined             no-undef
+  146:11  warning  'cld' is not defined           no-undef
+  147:7   warning  'iHTML' is not defined         no-undef
+  148:7   warning  'headText' is not defined      no-undef
+  148:18  warning  'cld' is not defined           no-undef
+  149:7   warning  'subChilds' is not defined     no-undef
+  149:19  warning  'cld' is not defined           no-undef
+  150:7   warning  'innerContent' is not defined  no-undef
+  151:21  warning  'subChilds' is not defined     no-undef
+  152:9   warning  'iHTML' is not defined         no-undef
+  153:12  warning  'subChilds' is not defined     no-undef
+  154:11  warning  'iText' is not defined         no-undef
+  154:19  warning  'subChilds' is not defined     no-undef
+  155:11  warning  'iHTML' is not defined         no-undef
+  155:36  warning  'headText' is not defined      no-undef
+  155:49  warning  'iText' is not defined         no-undef
+  155:71  warning  'iText' is not defined         no-undef
+  158:11  warning  'iHTML' is not defined         no-undef
+  158:19  warning  'iHTML' is not defined         no-undef
+  158:27  warning  'subChilds' is not defined     no-undef
+  160:9   warning  'innerContent' is not defined  no-undef
+  160:24  warning  'innerContent' is not defined  no-undef
+  160:39  warning  'iHTML' is not defined         no-undef
+  162:7   warning  'col' is not defined           no-undef
+  164:29  warning  'headText' is not defined      no-undef
+  164:54  warning  'headText' is not defined      no-undef
+  167:19  warning  'innerContent' is not defined  no-undef
+  171:7   warning  'str' is not defined           no-undef
+  171:13  warning  'str' is not defined           no-undef
+  171:19  warning  'col' is not defined           no-undef
+  174:7   warning  'col' is not defined           no-undef
+  176:19  warning  'cld' is not defined           no-undef
+  181:7   warning  'str' is not defined           no-undef
+  181:13  warning  'str' is not defined           no-undef
+  184:3   warning  '$' is not defined             no-undef
+  184:26  warning  'str' is not defined           no-undef
+  185:3   warning  '$' is not defined             no-undef
+  186:8   warning  '$' is not defined             no-undef
+  187:7   warning  '$' is not defined             no-undef
+  190:8   warning  '$' is not defined             no-undef
+  191:7   warning  '$' is not defined             no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/org-info.js
+   16:60   warning  'idx' is not defined                                   no-undef
+   27:9    warning  'a' is already defined                                 no-redeclare
+   28:28   warning  'a' is already defined                                 no-redeclare
+   31:515  warning  Unnecessary escape character: \'                       no-useless-escape
+   31:517  warning  Unnecessary escape character: \"                       no-useless-escape
+   31:524  warning  Unnecessary escape character: \'                       no-useless-escape
+   31:526  warning  Unnecessary escape character: \"                       no-useless-escape
+   32:38   warning  'orgInfoHooks' is not defined                          no-undef
+   32:63   warning  'orgInfoHooks' is not defined                          no-undef
+   33:76   warning  'c' is already defined                                 no-redeclare
+   41:87   warning  'b' is assigned a value but never used                 no-unused-vars
+   47:64   warning  'l' is assigned a value but never used                 no-unused-vars
+   76:89   warning  'd' is already defined                                 no-redeclare
+   89:1    warning  Unreachable code                                       no-unreachable
+   92:58   warning  's' is not defined                                     no-undef
+   92:70   warning  's' is not defined                                     no-undef
+   92:113  warning  's' is not defined                                     no-undef
+  102:37   warning  's' is not defined                                     no-undef
+  103:5    warning  'e' is assigned a value but never used                 no-unused-vars
+  119:81   warning  'overview' is assigned a value but never used          no-unused-vars
+  120:5    warning  'content' is assigned a value but never used           no-unused-vars
+  120:35   warning  'showall' is assigned a value but never used           no-unused-vars
+  120:61   warning  'info' is assigned a value but never used              no-unused-vars
+  120:85   warning  'info_title_above' is assigned a value but never used  no-unused-vars
+  121:5    warning  'slide' is assigned a value but never used             no-unused-vars
+  123:34   warning  'f' is assigned a value but never used                 no-unused-vars
+  123:66   warning  'a' is assigned a value but never used                 no-unused-vars
+  132:29   warning  'a' is already defined                                 no-redeclare
+  151:9    warning  'a' is already defined                                 no-redeclare
+  151:33   warning  'j' is already defined                                 no-redeclare
+  151:75   warning  'c' is already defined                                 no-redeclare
+  152:10   warning  'b' is already defined                                 no-redeclare
+  163:38   warning  'a' is already defined                                 no-redeclare
+  164:34   warning  'a' is already defined                                 no-redeclare
+  176:52   warning  'b' is already defined                                 no-redeclare
+  184:80   warning  'c' is defined but never used                          no-unused-vars
+  184:82   warning  'a' is defined but never used                          no-unused-vars
+  203:81   warning  'e' is already defined                                 no-redeclare
+  204:5    warning  'a' is already defined                                 no-redeclare
+  237:43   warning  'd' is already defined                                 no-redeclare
+  239:72   warning  'g' is already defined                                 no-redeclare
+  240:15   warning  'e' is already defined                                 no-redeclare
+  240:55   warning  'd' is already defined                                 no-redeclare
+  242:43   warning  'd' is already defined                                 no-redeclare
+  244:72   warning  'g' is already defined                                 no-redeclare
+  245:45   warning  'd' is already defined                                 no-redeclare
+  247:70   warning  'd' is already defined                                 no-redeclare
+  248:57   warning  'd' is already defined                                 no-redeclare
+  252:27   warning  'h' is already defined                                 no-redeclare
+  255:27   warning  'h' is already defined                                 no-redeclare
+  259:231  warning  Unnecessary escape character: \"                       no-useless-escape
+  266:91   warning  'a' is already defined                                 no-redeclare
+  288:11   warning  'OrgHtmlManagerLoadCheck' is defined but never used    no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/parser.js
+  194:5  warning  'createLUs' is assigned a value but never used  no-unused-vars
+  209:5  warning  'clearBody' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/readtheorg.js
+   2:1   warning  '$' is not defined  no-undef
+   3:5   warning  '$' is not defined  no-undef
+   4:5   warning  '$' is not defined  no-undef
+   5:5   warning  '$' is not defined  no-undef
+   6:5   warning  '$' is not defined  no-undef
+   7:5   warning  '$' is not defined  no-undef
+   8:5   warning  '$' is not defined  no-undef
+   9:5   warning  '$' is not defined  no-undef
+  10:5   warning  '$' is not defined  no-undef
+  11:5   warning  '$' is not defined  no-undef
+  12:5   warning  '$' is not defined  no-undef
+  15:1   warning  '$' is not defined  no-undef
+  18:5   warning  '$' is not defined  no-undef
+  19:7   warning  '$' is not defined  no-undef
+  20:7   warning  '$' is not defined  no-undef
+  23:5   warning  '$' is not defined  no-undef
+  24:7   warning  '$' is not defined  no-undef
+  25:7   warning  '$' is not defined  no-undef
+  27:5   warning  '$' is not defined  no-undef
+  28:7   warning  '$' is not defined  no-undef
+  31:5   warning  '$' is not defined  no-undef
+  34:1   warning  '$' is not defined  no-undef
+  35:5   warning  '$' is not defined  no-undef
+  38:5   warning  '$' is not defined  no-undef
+  41:5   warning  '$' is not defined  no-undef
+  44:22  warning  '$' is not defined  no-undef
+  45:28  warning  '$' is not defined  no-undef
+  49:25  warning  '$' is not defined  no-undef
+  50:5   warning  '$' is not defined  no-undef
+  53:20  warning  '$' is not defined  no-undef
+  54:20  warning  '$' is not defined  no-undef
+  86:3   warning  '$' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/js/router.js
+   10:5   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   18:4   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  159:24  warning  'hashPath' is defined but never used          no-unused-vars
+  182:15  warning  'catalog' is not defined                      no-undef
+  186:22  warning  'getHtmlContentFromUrl' is not defined        no-undef
+  245:2   warning  Unnecessary semicolon                         no-extra-semi
+  248:5   warning  'setHash' is assigned a value but never used  no-unused-vars
+  254:3   warning  '$' is not defined                            no-undef
+  254:39  warning  'e' is defined but never used                 no-unused-vars
+  269:2   warning  Unnecessary semicolon                         no-extra-semi
+  272:1   warning  '$' is not defined                            no-undef
+  273:19  warning  'createLUs' is not defined                    no-undef
+  274:3   warning  'clearBody' is not defined                    no-undef
+  286:3   warning  '$' is not defined                            no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/docs/style/lib/js/jquery.stickytableheaders.min.js
+  1:4623  warning  'jQuery' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/js/dllexercise.js
+    4:5   warning  'rectWidth' is assigned a value but never used            no-unused-vars
+   10:5   warning  'headSize' is assigned a value but never used             no-unused-vars
+   19:3   warning  'num' is defined but never used                           no-unused-vars
+   21:3   warning  'numb' is defined but never used                          no-unused-vars
+   22:3   warning  'color_stopperb' is defined but never used                no-unused-vars
+   30:5   warning  'gtype' is assigned a value but never used                no-unused-vars
+   32:5   warning  'numa' is already defined                                 no-redeclare
+   46:5   warning  'arrowtrianglewidth' is assigned a value but never used   no-unused-vars
+   47:5   warning  'arrowtriangleheight' is assigned a value but never used  no-unused-vars
+   50:5   warning  'asked' is assigned a value but never used                no-unused-vars
+   56:10  warning  'handlers' is defined but never used                      no-unused-vars
+  111:3   warning  'val' is not defined                                      no-undef
+  209:28  warning  'val' is not defined                                      no-undef
+  345:12  warning  'i' is already defined                                    no-redeclare
+  498:12  warning  'i' is already defined                                    no-redeclare
+  503:12  warning  'i' is already defined                                    no-redeclare
+  513:10  warning  'i' is not defined                                        no-undef
+  513:17  warning  'i' is not defined                                        no-undef
+  513:37  warning  'i' is not defined                                        no-undef
+  514:19  warning  'i' is not defined                                        no-undef
+  514:33  warning  'i' is not defined                                        no-undef
+  529:8   warning  'i' is not defined                                        no-undef
+  529:15  warning  'i' is not defined                                        no-undef
+  529:48  warning  'i' is not defined                                        no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/js/dllpractice.js
+    4:5   warning  'rectWidth' is assigned a value but never used            no-unused-vars
+   11:5   warning  'headSize' is assigned a value but never used             no-unused-vars
+   20:3   warning  'num' is assigned a value but never used                  no-unused-vars
+   28:5   warning  'dotradius' is assigned a value but never used            no-unused-vars
+   32:5   warning  'gtype' is assigned a value but never used                no-unused-vars
+   33:5   warning  'gap' is assigned a value but never used                  no-unused-vars
+   48:5   warning  'arrowtrianglewidth' is assigned a value but never used   no-unused-vars
+   49:5   warning  'arrowtriangleheight' is assigned a value but never used  no-unused-vars
+   51:5   warning  'headDot' is defined but never used                       no-unused-vars
+   52:5   warning  'headLine' is defined but never used                      no-unused-vars
+   59:10  warning  'handlers' is defined but never used                      no-unused-vars
+  125:3   warning  'val' is not defined                                      no-undef
+  221:28  warning  'val' is not defined                                      no-undef
+  338:12  warning  'i' is already defined                                    no-redeclare
+  490:3   warning  Unreachable code                                          no-unreachable
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/doubly-linked-list/simulation/js/realization.js
+    1:5  warning  'realizationCatalog' is assigned a value but never used  no-unused-vars
+  132:3  warning  Duplicate key 'Quiz DLL'                                 no-dupe-keys
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/posttest.js
+  18:6   warning  'letter' is not defined  no-undef
+  22:63  warning  'letter' is not defined  no-undef
+  23:3   warning  'letter' is not defined  no-undef
+  24:27  warning  'letter' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/sll.js
+   3:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   4:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   5:3  warning  Unnecessary semicolon  no-extra-semi
+   8:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+   9:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  10:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  11:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  13:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  14:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  15:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  16:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  17:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  18:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  19:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  20:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  21:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  22:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  23:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  24:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  25:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  26:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  27:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  28:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  29:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  30:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  31:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  32:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  33:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  37:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  38:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  40:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  41:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  42:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  43:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  44:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  45:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  46:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  47:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  48:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  49:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  51:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  52:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  54:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  55:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  56:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  57:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  58:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  60:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  63:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  65:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  66:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  68:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  69:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  70:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  71:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  72:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  73:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  74:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  75:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  76:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  77:1  warning  Mixed spaces and tabs  no-mixed-spaces-and-tabs
+  80:1  warning  'list' is not defined  no-undef
+  81:1  warning  'list' is not defined  no-undef
+  82:1  warning  'list' is not defined  no-undef
+  83:1  warning  'list' is not defined  no-undef
+  84:1  warning  'list' is not defined  no-undef
+  85:1  warning  'list' is not defined  no-undef
+  86:1  warning  'list' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/bootstrap.min.js
+  6:319    warning  'jQuery' is not defined                 no-undef
+  6:1071   warning  'jQuery' is not defined                 no-undef
+  6:2016   warning  'jQuery' is not defined                 no-undef
+  6:3965   warning  'jQuery' is not defined                 no-undef
+  6:8001   warning  'jQuery' is not defined                 no-undef
+  6:11369  warning  'jQuery' is not defined                 no-undef
+  6:13732  warning  'jQuery' is not defined                 no-undef
+  6:19734  warning  'jQuery' is not defined                 no-undef
+  6:27338  warning  'a' is assigned a value but never used  no-unused-vars
+  6:28677  warning  'jQuery' is not defined                 no-undef
+  6:30264  warning  'jQuery' is not defined                 no-undef
+  7:648    warning  'jQuery' is not defined                 no-undef
+  7:2468   warning  'jQuery' is not defined                 no-undef
+  7:4879   warning  'jQuery' is not defined                 no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/catalog.js
+  1:5  warning  'catalog' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/experiment.js
+   47:5   warning  'restrucureTheDivs' is assigned a value but never used     no-unused-vars
+   74:5   warning  'createTocAndSections' is assigned a value but never used  no-unused-vars
+   82:2   warning  Unnecessary semicolon                                      no-extra-semi
+   84:5   warning  'setHash' is assigned a value but never used               no-unused-vars
+  154:5   warning  '$' is not defined                                         no-undef
+  159:3   warning  '$' is not defined                                         no-undef
+  159:39  warning  'e' is defined but never used                              no-unused-vars
+  161:5   warning  'hash_path' is not defined                                 no-undef
+  162:31  warning  'hash_path' is not defined                                 no-undef
+  163:17  warning  'hash_path' is not defined                                 no-undef
+  173:2   warning  Unnecessary semicolon                                      no-extra-semi
+  175:1   warning  '$' is not defined                                         no-undef
+  190:3   warning  '$' is not defined                                         no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/get.resource.js
+  12:12  warning  'createHtmlElementWithClass' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/jquery.min.js
+  2:71     warning  'module' is not defined                                                    no-undef
+  2:86     warning  'module' is not defined                                                    no-undef
+  2:863    warning  'b' is assigned a value but never used                                     no-unused-vars
+  2:3050   warning  'r' is assigned a value but never used                                     no-unused-vars
+  2:5376   warning  Unexpected control character(s) in regular expression: \x1f, \x1f          no-control-regex
+  2:5847   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6101   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6532   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:6758   warning  Empty block statement                                                      no-empty
+  2:7320   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9378   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:9688   warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:11489  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12064  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12102  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:12520  warning  Empty block statement                                                      no-empty
+  2:13134  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:13446  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15271  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15542  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:15740  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:16114  warning  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  2:16815  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19155  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19255  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:19315  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:20674  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21288  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:21399  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:23719  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:33344  warning  Empty block statement                                                      no-empty
+  2:37050  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:38265  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:38405  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:39039  warning  Empty block statement                                                      no-empty
+  2:45778  warning  Unnecessary escape character: \/                                           no-useless-escape
+  2:48087  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:49647  warning  Empty block statement                                                      no-empty
+  2:57298  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:59847  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:64132  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:65877  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:65943  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66247  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66313  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66720  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:66997  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:72432  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:74924  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:75645  warning  'l.href' is assigned to itself                                             no-self-assign
+  2:79204  warning  Empty block statement                                                      no-empty
+  2:83243  warning  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  2:83243  warning  'l' is assigned a value but never used                                     no-unused-vars
+  2:86651  warning  'define' is not defined                                                    no-undef
+  2:86663  warning  'define' is not defined                                                    no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/labtheme.js
+    1:1   warning  '$' is not defined             no-undef
+   45:3   warning  '$' is not defined             no-undef
+   47:3   warning  '$' is not defined             no-undef
+   47:35  warning  '$' is not defined             no-undef
+   73:3   warning  'main' is not defined          no-undef
+   73:10  warning  '$' is not defined             no-undef
+   74:3   warning  '$' is not defined             no-undef
+   74:5   warning  'main' is not defined          no-undef
+   77:3   warning  'contents' is not defined      no-undef
+   77:14  warning  '$' is not defined             no-undef
+   77:16  warning  'main' is not defined          no-undef
+   78:3   warning  '$' is not defined             no-undef
+   79:3   warning  'childs' is not defined        no-undef
+   79:12  warning  'main' is not defined          no-undef
+   80:7   warning  'idx' is not defined           no-undef
+   80:14  warning  'idx' is not defined           no-undef
+   80:18  warning  'childs' is not defined        no-undef
+   80:32  warning  'idx' is not defined           no-undef
+   81:5   warning  'cld' is not defined           no-undef
+   81:11  warning  'childs' is not defined        no-undef
+   81:18  warning  'idx' is not defined           no-undef
+   82:8   warning  'cld' is not defined           no-undef
+   83:13  warning  'cld' is not defined           no-undef
+   84:7   warning  'cld' is not defined           no-undef
+   85:7   warning  '$' is not defined             no-undef
+   85:9   warning  'cld' is not defined           no-undef
+   86:7   warning  '$' is not defined             no-undef
+   86:9   warning  'cld' is not defined           no-undef
+   87:7   warning  'text' is not defined          no-undef
+   87:14  warning  'childs' is not defined        no-undef
+   87:21  warning  'idx' is not defined           no-undef
+   88:7   warning  'link' is not defined          no-undef
+   88:87  warning  'text' is not defined          no-undef
+   89:7   warning  'childs' is not defined        no-undef
+   89:14  warning  'idx' is not defined           no-undef
+   89:31  warning  'link' is not defined          no-undef
+   89:38  warning  'cld' is not defined           no-undef
+   90:6   warning  Unnecessary semicolon          no-extra-semi
+   91:4   warning  Unnecessary semicolon          no-extra-semi
+   92:3   warning  'lists' is not defined         no-undef
+   92:11  warning  '$' is not defined             no-undef
+   92:13  warning  'main' is not defined          no-undef
+   93:13  warning  'lists' is not defined         no-undef
+   94:8   warning  'lists' is not defined         no-undef
+   95:7   warning  'lists' is not defined         no-undef
+   95:45  warning  'lists' is not defined         no-undef
+   95:91  warning  'lists' is not defined         no-undef
+   98:3   warning  'iHtml' is not defined         no-undef
+   98:11  warning  'main' is not defined          no-undef
+   99:3   warning  '$' is not defined             no-undef
+  100:3   warning  'str' is not defined           no-undef
+  117:3   warning  'str' is not defined           no-undef
+  117:9   warning  'str' is not defined           no-undef
+  117:15  warning  'iHtml' is not defined         no-undef
+  118:3   warning  'str' is not defined           no-undef
+  118:9   warning  'str' is not defined           no-undef
+  119:3   warning  '$' is not defined             no-undef
+  119:21  warning  'str' is not defined           no-undef
+  120:3   warning  'main' is not defined          no-undef
+  121:3   warning  '$' is not defined             no-undef
+  135:3   warning  '$' is not defined             no-undef
+  135:5   warning  'contents' is not defined      no-undef
+  136:3   warning  '$' is not defined             no-undef
+  136:5   warning  'contents' is not defined      no-undef
+  137:3   warning  '$' is not defined             no-undef
+  137:5   warning  'contents' is not defined      no-undef
+  139:3   warning  'str' is not defined           no-undef
+  141:3   warning  'cld' is not defined           no-undef
+  141:9   warning  '$' is not defined             no-undef
+  141:11  warning  'contents' is not defined      no-undef
+  142:11  warning  'i' is already defined         no-redeclare
+  142:17  warning  'cld' is not defined           no-undef
+  144:7   warning  'str' is not defined           no-undef
+  144:13  warning  'str' is not defined           no-undef
+  146:9   warning  '$' is not defined             no-undef
+  146:11  warning  'cld' is not defined           no-undef
+  147:7   warning  'iHTML' is not defined         no-undef
+  148:7   warning  'headText' is not defined      no-undef
+  148:18  warning  'cld' is not defined           no-undef
+  149:7   warning  'subChilds' is not defined     no-undef
+  149:19  warning  'cld' is not defined           no-undef
+  150:7   warning  'innerContent' is not defined  no-undef
+  151:21  warning  'subChilds' is not defined     no-undef
+  152:9   warning  'iHTML' is not defined         no-undef
+  153:12  warning  'subChilds' is not defined     no-undef
+  154:11  warning  'iText' is not defined         no-undef
+  154:19  warning  'subChilds' is not defined     no-undef
+  155:11  warning  'iHTML' is not defined         no-undef
+  155:36  warning  'headText' is not defined      no-undef
+  155:49  warning  'iText' is not defined         no-undef
+  155:71  warning  'iText' is not defined         no-undef
+  158:11  warning  'iHTML' is not defined         no-undef
+  158:19  warning  'iHTML' is not defined         no-undef
+  158:27  warning  'subChilds' is not defined     no-undef
+  160:9   warning  'innerContent' is not defined  no-undef
+  160:24  warning  'innerContent' is not defined  no-undef
+  160:39  warning  'iHTML' is not defined         no-undef
+  162:7   warning  'col' is not defined           no-undef
+  164:29  warning  'headText' is not defined      no-undef
+  164:54  warning  'headText' is not defined      no-undef
+  167:19  warning  'innerContent' is not defined  no-undef
+  171:7   warning  'str' is not defined           no-undef
+  171:13  warning  'str' is not defined           no-undef
+  171:19  warning  'col' is not defined           no-undef
+  174:7   warning  'col' is not defined           no-undef
+  176:19  warning  'cld' is not defined           no-undef
+  181:7   warning  'str' is not defined           no-undef
+  181:13  warning  'str' is not defined           no-undef
+  184:3   warning  '$' is not defined             no-undef
+  184:26  warning  'str' is not defined           no-undef
+  185:3   warning  '$' is not defined             no-undef
+  186:8   warning  '$' is not defined             no-undef
+  187:7   warning  '$' is not defined             no-undef
+  190:8   warning  '$' is not defined             no-undef
+  191:7   warning  '$' is not defined             no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/org-info.js
+   16:60   warning  'idx' is not defined                                   no-undef
+   27:9    warning  'a' is already defined                                 no-redeclare
+   28:28   warning  'a' is already defined                                 no-redeclare
+   31:515  warning  Unnecessary escape character: \'                       no-useless-escape
+   31:517  warning  Unnecessary escape character: \"                       no-useless-escape
+   31:524  warning  Unnecessary escape character: \'                       no-useless-escape
+   31:526  warning  Unnecessary escape character: \"                       no-useless-escape
+   32:38   warning  'orgInfoHooks' is not defined                          no-undef
+   32:63   warning  'orgInfoHooks' is not defined                          no-undef
+   33:76   warning  'c' is already defined                                 no-redeclare
+   41:87   warning  'b' is assigned a value but never used                 no-unused-vars
+   47:64   warning  'l' is assigned a value but never used                 no-unused-vars
+   76:89   warning  'd' is already defined                                 no-redeclare
+   89:1    warning  Unreachable code                                       no-unreachable
+   92:58   warning  's' is not defined                                     no-undef
+   92:70   warning  's' is not defined                                     no-undef
+   92:113  warning  's' is not defined                                     no-undef
+  102:37   warning  's' is not defined                                     no-undef
+  103:5    warning  'e' is assigned a value but never used                 no-unused-vars
+  119:81   warning  'overview' is assigned a value but never used          no-unused-vars
+  120:5    warning  'content' is assigned a value but never used           no-unused-vars
+  120:35   warning  'showall' is assigned a value but never used           no-unused-vars
+  120:61   warning  'info' is assigned a value but never used              no-unused-vars
+  120:85   warning  'info_title_above' is assigned a value but never used  no-unused-vars
+  121:5    warning  'slide' is assigned a value but never used             no-unused-vars
+  123:34   warning  'f' is assigned a value but never used                 no-unused-vars
+  123:66   warning  'a' is assigned a value but never used                 no-unused-vars
+  132:29   warning  'a' is already defined                                 no-redeclare
+  151:9    warning  'a' is already defined                                 no-redeclare
+  151:33   warning  'j' is already defined                                 no-redeclare
+  151:75   warning  'c' is already defined                                 no-redeclare
+  152:10   warning  'b' is already defined                                 no-redeclare
+  163:38   warning  'a' is already defined                                 no-redeclare
+  164:34   warning  'a' is already defined                                 no-redeclare
+  176:52   warning  'b' is already defined                                 no-redeclare
+  184:80   warning  'c' is defined but never used                          no-unused-vars
+  184:82   warning  'a' is defined but never used                          no-unused-vars
+  203:81   warning  'e' is already defined                                 no-redeclare
+  204:5    warning  'a' is already defined                                 no-redeclare
+  237:43   warning  'd' is already defined                                 no-redeclare
+  239:72   warning  'g' is already defined                                 no-redeclare
+  240:15   warning  'e' is already defined                                 no-redeclare
+  240:55   warning  'd' is already defined                                 no-redeclare
+  242:43   warning  'd' is already defined                                 no-redeclare
+  244:72   warning  'g' is already defined                                 no-redeclare
+  245:45   warning  'd' is already defined                                 no-redeclare
+  247:70   warning  'd' is already defined                                 no-redeclare
+  248:57   warning  'd' is already defined                                 no-redeclare
+  252:27   warning  'h' is already defined                                 no-redeclare
+  255:27   warning  'h' is already defined                                 no-redeclare
+  259:231  warning  Unnecessary escape character: \"                       no-useless-escape
+  266:91   warning  'a' is already defined                                 no-redeclare
+  288:11   warning  'OrgHtmlManagerLoadCheck' is defined but never used    no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/parser.js
+  194:5  warning  'createLUs' is assigned a value but never used  no-unused-vars
+  209:5  warning  'clearBody' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/readtheorg.js
+   2:1   warning  '$' is not defined  no-undef
+   3:5   warning  '$' is not defined  no-undef
+   4:5   warning  '$' is not defined  no-undef
+   5:5   warning  '$' is not defined  no-undef
+   6:5   warning  '$' is not defined  no-undef
+   7:5   warning  '$' is not defined  no-undef
+   8:5   warning  '$' is not defined  no-undef
+   9:5   warning  '$' is not defined  no-undef
+  10:5   warning  '$' is not defined  no-undef
+  11:5   warning  '$' is not defined  no-undef
+  12:5   warning  '$' is not defined  no-undef
+  15:1   warning  '$' is not defined  no-undef
+  18:5   warning  '$' is not defined  no-undef
+  19:7   warning  '$' is not defined  no-undef
+  20:7   warning  '$' is not defined  no-undef
+  23:5   warning  '$' is not defined  no-undef
+  24:7   warning  '$' is not defined  no-undef
+  25:7   warning  '$' is not defined  no-undef
+  27:5   warning  '$' is not defined  no-undef
+  28:7   warning  '$' is not defined  no-undef
+  31:5   warning  '$' is not defined  no-undef
+  34:1   warning  '$' is not defined  no-undef
+  35:5   warning  '$' is not defined  no-undef
+  38:5   warning  '$' is not defined  no-undef
+  41:5   warning  '$' is not defined  no-undef
+  44:22  warning  '$' is not defined  no-undef
+  45:28  warning  '$' is not defined  no-undef
+  49:25  warning  '$' is not defined  no-undef
+  50:5   warning  '$' is not defined  no-undef
+  53:20  warning  '$' is not defined  no-undef
+  54:20  warning  '$' is not defined  no-undef
+  86:3   warning  '$' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/js/router.js
+   10:5   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   18:4   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  159:24  warning  'hashPath' is defined but never used          no-unused-vars
+  182:15  warning  'catalog' is not defined                      no-undef
+  186:22  warning  'getHtmlContentFromUrl' is not defined        no-undef
+  245:2   warning  Unnecessary semicolon                         no-extra-semi
+  248:5   warning  'setHash' is assigned a value but never used  no-unused-vars
+  254:3   warning  '$' is not defined                            no-undef
+  254:39  warning  'e' is defined but never used                 no-unused-vars
+  269:2   warning  Unnecessary semicolon                         no-extra-semi
+  272:1   warning  '$' is not defined                            no-undef
+  273:19  warning  'createLUs' is not defined                    no-undef
+  274:3   warning  'clearBody' is not defined                    no-undef
+  286:3   warning  '$' is not defined                            no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/docs/style/lib/js/jquery.stickytableheaders.min.js
+  1:4623  warning  'jQuery' is not defined  no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/js/realization.js
+    1:5  warning  'realizationCatalog' is assigned a value but never used  no-unused-vars
+  132:3  warning  Duplicate key 'Quiz DLL'                                 no-dupe-keys
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/js/sllexercise.js
+   36:10  warning  'handlers' is defined but never used  no-unused-vars
+   63:5   warning  'numa' is not defined                 no-undef
+   65:5   warning  'decider' is not defined              no-undef
+  120:3   warning  'val' is not defined                  no-undef
+  186:35  warning  'val' is not defined                  no-undef
+  190:33  warning  'val' is not defined                  no-undef
+  282:7   warning  'decider' is not defined              no-undef
+  283:7   warning  'decider' is not defined              no-undef
+  283:36  warning  'index' is not defined                no-undef
+  284:7   warning  'decider' is not defined              no-undef
+  284:36  warning  'index' is not defined                no-undef
+  285:7   warning  'decider' is not defined              no-undef
+  291:19  warning  'shift_stopper' is not defined        no-undef
+  298:19  warning  'shift_stopper' is not defined        no-undef
+  305:7   warning  'decider' is not defined              no-undef
+  308:23  warning  'index' is not defined                no-undef
+  311:7   warning  'decider' is not defined              no-undef
+  312:9   warning  'index' is not defined                no-undef
+  315:12  warning  'i' is already defined                no-redeclare
+  315:16  warning  'index' is not defined                no-undef
+  328:7   warning  'decider' is not defined              no-undef
+  333:7   warning  'numa' is not defined                 no-undef
+  334:9   warning  'decider' is not defined              no-undef
+  337:21  warning  'color_stopper' is not defined        no-undef
+  340:9   warning  'decider' is not defined              no-undef
+  341:7   warning  'shift_stopper' is not defined        no-undef
+  343:23  warning  'color_stopper' is not defined        no-undef
+  352:14  warning  'numa' is not defined                 no-undef
+  367:3   warning  'numa' is not defined                 no-undef
+  367:10  warning  'numa' is not defined                 no-undef
+  390:3   warning  'index' is not defined                no-undef
+  392:3   warning  'decider' is not defined              no-undef
+  399:3   warning  'shift_stopper' is not defined        no-undef
+  422:3   warning  'numa' is not defined                 no-undef
+  424:3   warning  'decider' is not defined              no-undef
+  430:3   warning  'index' is not defined                no-undef
+  432:3   warning  'color_stopper' is not defined        no-undef
+  432:45  warning  'index' is not defined                no-undef
+  441:3   warning  'index' is not defined                no-undef
+  456:8   warning  'index' is not defined                no-undef
+  462:3   warning  'numa' is not defined                 no-undef
+  464:3   warning  'decider' is not defined              no-undef
+  465:7   warning  'index' is not defined                no-undef
+  465:55  warning  'index' is not defined                no-undef
+  478:3   warning  'color_stopper' is not defined        no-undef
+  478:45  warning  'index' is not defined                no-undef
+  486:12  warning  'i' is already defined                no-redeclare
+  491:12  warning  'i' is already defined                no-redeclare
+  497:3   warning  'ansl' is not defined                 no-undef
+  498:41  warning  'ansl' is not defined                 no-undef
+  500:10  warning  'i' is not defined                    no-undef
+  500:17  warning  'i' is not defined                    no-undef
+  500:37  warning  'i' is not defined                    no-undef
+  501:19  warning  'i' is not defined                    no-undef
+  501:33  warning  'i' is not defined                    no-undef
+  502:9   warning  'ansl' is not defined                 no-undef
+  507:7   warning  'ansl' is not defined                 no-undef
+  515:8   warning  'i' is not defined                    no-undef
+  515:15  warning  'i' is not defined                    no-undef
+  515:48  warning  'i' is not defined                    no-undef
+
+/home/runner/work/exp-linked-lists-iiith/exp-linked-lists-iiith/experiment/singly-linked-list/simulation/js/sllpractice.js
+  607:10  error  Parsing error: Identifier 'insertAtNode' has already been declared
+
+✖ 1239 problems (2 errors, 1237 warnings)
+  0 errors and 21 warnings potentially fixable with the `--fix` option.
+

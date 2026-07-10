@@ -1,0 +1,69 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. As we have the memory address of Nodes can we traverse backwards in a linked list ?",
+      "answers": {
+        "a": "Yes, we can.",
+        "b": "No, we can\u2019t."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Even though we have memory addresses of nodes, each node only contains the memory address of the next node, not the previous one. We cannot traverse backwards without additional data structures.",
+        "b": "Correct. Each node only contains the memory address of the next node and hence the only way of finding out the previous node is by searching from the beginning."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What are the advantages of a linked list?",
+      "answers": {
+        "a": "Dynamic Memory Allocation",
+        "b": "They require less memory than an array to store the same data.",
+        "c": "We can easily traverse back to previous elements.",
+        "d": "None of the above."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In the linked list by default we do not specify the length of an array or anything of sort. It is completely dependent on the amount of memory available to the system, i.e. only when we insert a new element more memory space is occupied, and similarly space is cleared on deletion, this is Dynamic Memory Allocation.",
+        "b": "Incorrect. Each node needs to store both the data and a pointer and hence Linked list requires more memory than an array.",
+        "c": "Incorrect. Unlike an array, where we have indexing. In a linked list from a given element we can only move forward to the next element, and to traverse back is not possible and we have to start from the beginning again.",
+        "d": "Incorrect. Dynamic Memory Allocation is indeed an advantage of linked lists."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What is the time complexity for insertion of an element into linked list?",
+      "answers": {
+        "a": "O(1)",
+        "b": "O(log n)",
+        "c": "O(n)",
+        "d": "O(n^2)"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This would only be true if we were inserting at the head of the list or if we already had a reference to the insertion point.",
+        "b": "Incorrect. Linked lists don't support binary search-like operations that would give O(log n) complexity.",
+        "c": "Correct. Whenever we want to insert an element into a linked list, the worst case would be entering at the last. In an ideal linked list, we only have access to the first node, and therefore we would have to traverse to the position where we want to insert. Therefore insertion is O(n)",
+        "d": "Incorrect. This complexity would indicate nested loops, which is not the case for simple insertion."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. The following is a pseudo code for deleting an element from a linked list.<br><img src=\"images/quiz_q4.png\"><br>Which of the following is the most appropriate substitution for line 13?",
+      "answers": {
+        "a": "<img src=\"images/quiz_q4_a.png\">",
+        "b": "<img src=\"images/quiz_q4_b.png\">",
+        "c": "<img src=\"images/quiz_q4_c.png\">",
+        "d": "<img src=\"images/quiz_q4_d.png\">"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Parent here is the last but one node, and cur is the last node. Here we have to delete the cur node as it is the last node. In a linked list the last node points to NULL, and hence we point the parent to NULL, and free the memory occupied by the cur node. This is the most appropriate answer as it also removes dangling pointers and unused memory.",
+        "b": "Incorrect. This is correct, as this points the last but one node to NULL, but it is not the most appropriate since it doesn't handle memory deallocation properly.",
+        "c": "Incorrect. This is wrong, the last node should point to NULL, but here the parent, points to the first node.",
+        "d": "Incorrect. Here we are freeing the space occupied by the last node, but we are not pointing the last but one, parent, node to NULL. This could cause a runtime crash while running."
+      },
+      "difficulty": "intermediate"
+    }
+  ]
+}

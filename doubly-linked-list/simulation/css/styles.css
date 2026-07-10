@@ -1,0 +1,18 @@
+#ins {
+  text-align: center;
+}
+#questionid {
+  /* font-size:2vw; */
+  text-align: center;
+}
+#comments {
+  text-align: center;
+  /* height: 10vh; */
+  font-size: 1.1em;
+}
+#linkedlist {
+  width: 100%;
+}
+#buttondiv {
+  text-align: center;
+}
