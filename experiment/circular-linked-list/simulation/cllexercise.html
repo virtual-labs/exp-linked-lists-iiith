@@ -16,12 +16,16 @@
   <div class="instruction-box">
       <button class="collapsible">Instructions</button>
       <div class="content">
-          <ul><li>Enter the value to be inserted in the fields given corresponding to the position.</li>
-      <li>Click the corresponding button according to whether you want to insert the element at the head, the tail, or after a particular node.</li>
-      <li>Observe the linked list changing as per your modifications.</li>
-      <li>Explore various linked list operations!</li>
-      <li>Click on <b>Submit</b> button to check your answer.</li>
-      <li>Click on <b>Reset</b> button to start the experiment again.</li></ul>
+          <ul>
+            <li>Type a value in the relevant field before performing the operation.</li>
+            <li>Use <b>Insert At Head</b> to add a new node before the current first node.</li>
+            <li>Use <b>Insert At Tail</b> to append a new node after the last node.</li>
+            <li>Use <b>Insert At Node</b> when you want to insert a value after an existing index position; the index refers to the current node position.</li>
+            <li>Use <b>Remove</b> to delete the node whose value matches the entered number.</li>
+            <li>Click <b>Submit</b> to check whether your list matches the required answer.</li>
+            <li>Click <b>Reset</b> to restore the current problem to its starting state.</li>
+            <li>Click <b>New Problem</b> to generate a fresh challenge.</li>
+          </ul>
       </div>
   </div>
   <div class="wrapper">
@@ -42,8 +46,11 @@
               <input name="textbox3" id="index" type="number" maxlength="3" placeholder="index" class="text-box">&nbsp
               <input name="textbox4" id="AnytoBeInserted" type="number" maxlength="3" placeholder="at node" class="text-box">
               <button type="button" class="button-input" id="node-insert">Insert At Node</button>
+              <input name="textbox5" id="rightnode" type="number" maxlength="3" placeholder="remove" class="text-box">
+              <button type="button" class="button-input" id="remove-button">Remove</button>
               <button type="button" class="button-input" id="submit-button">Submit</button>
               <button type="button" class="button-input" id="reset-button">Reset</button>
+              <button type="button" class="button-input" id="new-problem-button">New Problem</button>
           </div>
       </div>
   </div>
