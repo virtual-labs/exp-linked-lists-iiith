@@ -97,6 +97,10 @@ function clear() {
   document.getElementById("toBeSearched").value = "";
   document.getElementById("rightnode").value = "";
 }
+function setObservation(message) {
+  var observation = document.getElementById("ins");
+  if (observation) observation.innerHTML = message;
+}
 function counter() {
   count--;
   if (count === 0) renderer();
@@ -299,10 +303,21 @@ function renderer() {
   ctx.closePath();
 }
 function array_maker() {
-  if (decider == 1) numbers.push(value);
-  if (decider == 2) numbers.insert(index, value);
+  if (decider == 1) {
+    numbers.push(value);
+    setObservation("Node with value " + value + " inserted at tail.");
+  }
+  if (decider == 2) {
+    numbers.insert(index, value);
+    setObservation(
+      "Node with value " + value + " inserted after node " + index + ".",
+    );
+  }
   if (decider == 3) numbers.splice(index - 1, 1);
-  if (decider == 4) numbers.unshift(value);
+  if (decider == 4) {
+    numbers.unshift(value);
+    setObservation("Node with value " + value + " inserted at head.");
+  }
 }
 function nodeshift() {
   if (keyc == boxDist) {
@@ -465,7 +480,7 @@ function insertAtHead() {
   value = parseInt(inputValue, 10);
   if (inputValue === "" || isNaN(value)) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to insert at head.";
+      "Invalid Entry! Please enter a valid number to insert at head.";
     busy = 0;
     clear();
     return;
@@ -502,7 +517,7 @@ function insertAtTail() {
   value = parseInt(inputValue, 10);
   if (inputValue === "" || isNaN(value)) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to insert at tail.";
+      "Invalid Entry! Please enter a valid number to insert at tail.";
     busy = 0;
     clear();
     return;
@@ -597,22 +612,24 @@ function deleter() {
   console.log("deleter: value to remove=", val);
   var idx = numbers.indexOf(parseInt(val, 10));
   console.log("deleter: index found=", idx);
-  clear();
   if (val === "" || isNaN(parseInt(val, 10))) {
     console.log("deleter: invalid input");
+    clear();
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to remove.";
+      "Invalid Entry! Please enter a valid number to remove.";
     busy = 0;
     return;
   }
   if (idx === -1) {
     console.log("deleter: value not found in list");
+    clear();
     document.getElementById("ins").innerHTML = "Value not found!";
     busy = 0;
     return;
   }
   console.log("deleter: removing value at index", idx);
   numbers.splice(idx, 1);
+  document.getElementById("rightnode").value = "";
   console.log("deleter: numbers after remove", numbers);
   document.getElementById("ins").innerHTML =
     "Node with value " + val + " removed.";

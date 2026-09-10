@@ -19,14 +19,20 @@ function renderer() {
 }
 // Ensure array_maker is defined at top-level scope
 function array_maker() {
-  if (decider == 1) numbers.push(value);
+  if (decider == 1) {
+    numbers.push(value);
+    setObservation("Node with value " + value + " inserted at tail.");
+  }
   if (decider == 2) {
-    // Insert at the specified index (0-based)
     numbers.insert(index, value);
+    setObservation(
+      "Node with value " + value + " inserted after node " + index + ".",
+    );
   }
   if (decider == 3 && index !== -1) numbers.splice(index, 1);
   if (decider == 4) {
     numbers.insert(0, value);
+    setObservation("Node with value " + value + " inserted at head.");
   }
 }
 //to test if input is busy or not
@@ -103,7 +109,7 @@ function handlers() {
     console.log("Index input:", idx, "Value input:", val);
     if (idx === "" || val === "") {
       document.getElementById("ins").innerHTML =
-        "Please enter both index and value.";
+        "Invalid Entry! Please enter both index and value.";
       console.log("Missing index or value");
       return;
     }
@@ -128,7 +134,7 @@ function handlers() {
       clear();
       if (val === "" || isNaN(parseInt(val, 10))) {
         document.getElementById("ins").innerHTML =
-          "Please enter a valid number to remove.";
+          "Invalid Entry! Please enter a valid number to remove.";
         busy = 0;
         return;
       }
@@ -155,7 +161,7 @@ function handlers() {
       clear();
       if (val === "" || isNaN(parseInt(val, 10))) {
         document.getElementById("ins").innerHTML =
-          "Please enter a valid number to search.";
+          "Invalid Entry! Please enter a valid number to search.";
         busy = 0;
         return;
       }
@@ -188,6 +194,10 @@ function clear() {
   document.getElementById("index").value = "";
   document.getElementById("toBeSearched").value = "";
   document.getElementById("rightnode").value = "";
+}
+function setObservation(message) {
+  var observation = document.getElementById("ins");
+  if (observation) observation.innerHTML = message;
 }
 function imgdeclarer() {
   box.onload = counter;
@@ -357,6 +367,15 @@ function insertAtNode(idx, val) {
   // Clamp index to valid range (0 to numbers.length)
   if (index < 0 || index > numbers.length) {
     document.getElementById("ins").innerHTML = "Invalid index or value.";
+    busy = 0;
+    clear();
+    return;
+  }
+  if (index > numbers.length - 1 && index !== numbers.length) {
+    document.getElementById("ins").innerHTML =
+      "Node position should lie between 1 and " +
+      String(parseInt(numbers.length) - 1) +
+      ". Use Insert At Tail to add a node after the last node.";
     busy = 0;
     clear();
     return;
@@ -535,7 +554,7 @@ function insertAtHead() {
   value = parseInt(inputValue, 10);
   if (inputValue === "" || isNaN(value)) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to insert at head.";
+      "Invalid Entry! Please enter a valid number to insert at head.";
     busy = 0;
     console.log("Invalid or empty input for head insertion");
     clear();
@@ -583,7 +602,7 @@ function insertAtTail() {
     value = parseInt(inputValue, 10);
     if (inputValue === "" || isNaN(value)) {
       document.getElementById("ins").innerHTML =
-        "Please enter a valid number to insert at tail.";
+        "Invalid Entry! Please enter a valid number to insert at tail.";
       busy = 0;
       console.log("Invalid or empty input for tail insertion");
       clear();
@@ -677,6 +696,25 @@ function deleter() {
     value = parseInt(inputValue, 10);
     index = numbers.indexOf(value);
   }
-  clear();
-  color_stopperb = setInterval(searcher, 500, value);
+  if (
+    inputValue === "" ||
+    inputValue === undefined ||
+    isNaN(value) ||
+    index === -1
+  ) {
+    clear();
+    document.getElementById("ins").innerHTML =
+      value === undefined || isNaN(value)
+        ? "Invalid input! Please enter a valid number to remove."
+        : "Value not found!";
+    busy = 0;
+    return;
+  }
+
+  numbers.splice(index, 1);
+  document.getElementById("rightnode").value = "";
+  document.getElementById("ins").innerHTML =
+    "Node with value " + value + " removed.";
+  renderer();
+  busy = 0;
 }

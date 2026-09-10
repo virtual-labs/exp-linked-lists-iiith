@@ -49,6 +49,12 @@ function handlers() {
   document.getElementById("reset-button").onclick = function () {
     reseter();
   };
+  var newProblemBtn = document.getElementById("new-problem-button");
+  if (newProblemBtn) {
+    newProblemBtn.onclick = function () {
+      newProblem();
+    };
+  }
   var removeBtn = document.getElementById("remove-button");
   if (removeBtn)
     removeBtn.onclick = function () {
@@ -92,6 +98,10 @@ function clear() {
   document.getElementById("TailtoBeInserted").value = "";
   document.getElementById("AnytoBeInserted").value = "";
   document.getElementById("index").value = "";
+}
+function setObservation(message) {
+  var observation = document.getElementById("ins");
+  if (observation) observation.innerHTML = message;
 }
 function counter() {
   count--;
@@ -279,10 +289,21 @@ function srenderer() {
 }
 
 function array_maker() {
-  if (decider == 1) numbers.push(value);
-  if (decider == 2) numbers.insert(index, value);
+  if (decider == 1) {
+    numbers.push(value);
+    setObservation("Node with value " + value + " inserted at tail.");
+  }
+  if (decider == 2) {
+    numbers.insert(index, value);
+    setObservation(
+      "Node with value " + value + " inserted after node " + index + ".",
+    );
+  }
   if (decider == 3) numbers.splice(index - 1, 1);
-  if (decider == 4) numbers.unshift(value);
+  if (decider == 4) {
+    numbers.unshift(value);
+    setObservation("Node with value " + value + " inserted at head.");
+  }
 }
 
 function nodeshift() {
@@ -375,14 +396,14 @@ function insertAtHead() {
   value = document.getElementById("HeadtoBeInserted").value;
   if (!value || value.trim() === "") {
     document.getElementById("ins").innerHTML =
-      "Please enter a value to insert at head.";
+      "Invalid Entry! Please enter a value to insert at head.";
     clear();
     busy = 0;
     return;
   }
   if (!value.isNumber()) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to insert at head.";
+      "Invalid Entry! Please enter a valid number to insert at head.";
     clear();
     busy = 0;
     return;
@@ -407,14 +428,14 @@ function insertAtTail() {
   value = document.getElementById("TailtoBeInserted").value;
   if (!value || value.trim() === "") {
     document.getElementById("ins").innerHTML =
-      "Please enter a value to insert at tail.";
+      "Invalid Entry! Please enter a value to insert at tail.";
     clear();
     busy = 0;
     return;
   }
   if (!value.isNumber()) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to insert at tail.";
+      "Invalid Entry! Please enter a valid number to insert at tail.";
     clear();
     busy = 0;
     return;
@@ -441,14 +462,14 @@ function insertAtNode() {
   index = document.getElementById("index").value;
   if (!value || value.trim() === "") {
     document.getElementById("ins").innerHTML =
-      "Please enter a value to insert at node.";
+      "Invalid Entry! Please enter a value to insert at node.";
     clear();
     busy = 0;
     return;
   }
   if (!value.isNumber()) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to insert at node.";
+      "Invalid Entry! Please enter a valid number to insert at node.";
     clear();
     busy = 0;
     return;
@@ -459,17 +480,18 @@ function insertAtNode() {
     busy = 0;
     return;
   }
+  index = Number(index);
   numa = 0;
   keyc = 0;
   decider = 2;
-  if (index > String(parseInt(numbers.length) - 1) || index < 1) {
+  if (index > numbers.length - 1 || index < 1) {
     if (numbers.length == 0)
       document.getElementById("ins").innerHTML = "Linked List is empty!";
     else
       document.getElementById("ins").innerHTML =
-        "Node no should lie between 1 and " +
+        "Node position should lie between 1 and " +
         String(parseInt(numbers.length) - 1) +
-        " !";
+        ". Use Insert At Tail to add a node after the last node.";
     clear();
     busy = 0;
     return;
@@ -518,10 +540,50 @@ function llgenerator() {
     quesnumbers.push(temp);
   }
 }
-function reseter() {
-  location.reload();
+var initialNumbers = [];
+var initialQuestion = "";
+
+function resetProblemState() {
+  numbers.length = 0;
+  for (var i = 0; i < initialNumbers.length; i++) {
+    numbers.push(initialNumbers[i]);
+  }
+  if (typeof ques_string !== "undefined") {
+    ques_string.innerHTML = "<b>Question:</b>Convert to" + initialQuestion;
+  }
+  clear();
+  setObservation("Problem reset. You can continue from the starting state.");
+  renderer();
 }
+
+function newProblem() {
+  numbers.length = 0;
+  quesnumbers.length = 0;
+  tvalues.length = 0;
+  ques_string.innerHTML = "<b>Question:</b>Convert to";
+  llgenerator();
+  initialNumbers = numbers.slice();
+  initialQuestion = "";
+  q2();
+  initialNumbers = numbers.slice();
+  initialQuestion = ques_string.innerHTML.replace(
+    "<b>Question:</b>Convert to",
+    "",
+  );
+  setObservation("New problem generated.");
+  renderer();
+}
+
+function reseter() {
+  resetProblemState();
+}
+initialNumbers = [];
 llgenerator();
+initialNumbers = numbers.slice();
+q2();
+initialQuestion = ques_string.innerHTML.replace(
+  "<b>Question:</b>Convert to",
+  "",
+);
 imgdeclarer();
 srenderer();
-q2();
