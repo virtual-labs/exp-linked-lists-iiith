@@ -1,0 +1,138 @@
+{
+  "document_catalog":{
+    "linked-list":"expid"
+  },
+  "realization_catalog" : {
+    "rcatalog" : {
+      "id" : "",
+      "reference_id" : ""
+    },
+    "sll-vid" :  {
+      "id" : "sll-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/sll_intro.mp4"
+    },
+    "sll-insert-vid" :  {
+      "id" : "sll-insert-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/sll_insert.mp4"
+    },
+    "sll-search-vid" :  {
+      "id" : "sll-search-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/sll_search.mp4"
+    },
+    "sll-delete-vid" :  {
+      "id" : "sll-delete-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/sll_remove.mp4"
+    },
+    "dll-vid" :  {
+      "id" : "dll-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/dll_demo.mp4"
+    },
+    "cll-vid" :  {
+      "id" : "cll-vid",
+      "type" : "video",
+      "url": "/linked-list/videos/cll_demo.mp4"
+    },
+    "pre-a2-quiz-js" :  {
+      "id" : "pre-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/prequiz_html.html"
+    },
+    "post-a2-quiz-js" :  {
+      "id" : "post-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/postquiz_html.html"
+    },
+    "sll-a2-quiz-js" :  {
+      "id" : "sll-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/sllquiz_html.html"
+    },
+    "dll-a2-quiz-js" :  {
+      "id" : "dll-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/dllquiz_html.html"
+    },
+    "cll-a2-quiz-js" :  {
+      "id" : "cll-a2-quiz-js",
+      "type" : "html",
+      "url": "/linked-list/html/cllquiz_html.html"
+    },
+    "singly-linked-list-operation-unit-req" :  {
+      "id" : "singly-linked-list-operation-unit-req",
+      "type" : "html",
+      "url": "/linked-list/html/sllpractice.html"
+    },
+    "doubly-linked-list-operation-unit-req" : {
+      "id" : "doubly-linked-list-operation-unit-req",
+      "type" : "html",
+      "url" : "/linked-list/html/dllpractice.html"
+    },
+    "circular-linked-list-operation-unit-req" : {
+      "id" : "circular-linked-list-operation-unit-req",
+      "type" : "html",
+      "url" : "/linked-list/html/cllpractice.html"
+    },
+    "sll-exe" : {
+      "id" : "sll-exe",
+      "type" : "html",
+      "url" : "/linked-list/html/sllexercise.html"
+    },
+    "dll-exe" : {
+      "id" : "dll-exe",
+      "type" : "html",
+      "url" : "/linked-list/html/dllexercise.html"
+    },
+    "cll-exe" : {
+      "id" : "cll-exe",
+      "type" : "html",
+      "url" : "/linked-list/html/cllexercise.html"
+    },
+    "singly-linked-list-memory-rep-text" : {
+      "id" : "singly-linked-list-memory-rep-text",
+      "type" : "image",
+      "url" : "/linked-list/img/mem-rep.png"
+    },
+    "dll-pic" : {
+      "id" : "dll-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/sll-vs-dll.png"
+    },
+    "cll-pic" : {
+      "id" : "cll-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/types-of-cll.png"
+    },
+    "sll-intro-image" : {
+      "id" : "sll-intro-image",
+      "type" : "image",
+      "url" : "/linked-list/img/sll.png"
+    },
+    "linked-list-example-pic" : {
+      "id" : "linked-list-example-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/real-life.png"
+    },
+    "linked-list-array-pic" : {
+      "id" : "linked-list-array-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/mem-rep.png"
+    },
+    "all-linked-list-array-pic" : {
+      "id" : "all-linked-list-array-pic",
+      "type" : "image",
+      "url" : "/linked-list/img/types-of-ll.png"
+    },
+    "linked-list-structure-req" : {
+      "id" : "linked-list-structure-req",
+      "type" : "image",
+      "url" : "/linked-list/img/structure.jpg"
+    }
+  },
+  "typeOfDocument":"A2",
+  "expId":"linked-list"
+}
