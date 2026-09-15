@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is a key feature of a doubly linked-list node?",
+      "answers": {
+        "a": "It stores only a link to the next node",
+        "b": "It stores links to both the previous and next nodes",
+        "c": "It stores no links",
+        "d": "It stores two links to the first node"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A single next link describes a singly linked-list node.",
+        "b": "Correct. A doubly linked-list node normally contains links to both its previous and next nodes.",
+        "c": "Incorrect. Links are required to connect a doubly linked list.",
+        "d": "Incorrect. The two links normally represent neighboring nodes rather than two copies of the first-node reference."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. What is a major advantage of a doubly linked list over a singly linked list?",
+      "answers": {
+        "a": "It always uses less memory",
+        "b": "It automatically keeps nodes sorted",
+        "c": "It supports traversal in both directions",
+        "d": "It provides direct indexed access"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. An additional previous link requires extra memory.",
+        "b": "Incorrect. Doubly linked lists do not automatically sort their nodes.",
+        "c": "Correct. The previous and next links allow movement in both directions.",
+        "d": "Incorrect. Doubly linking does not provide array-like indexed access."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In a non-circular doubly linked list, what does the previous link of the first node normally contain?",
+      "answers": {
+        "a": "The last node",
+        "b": "The second node",
+        "c": "NULL",
+        "d": "The address of the head variable"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Linking the first node to the last would introduce a circular relationship.",
+        "b": "Incorrect. The second node follows the first node rather than preceding it.",
+        "c": "Correct. The first node has no previous node, so its previous link normally contains NULL.",
+        "d": "Incorrect. The previous link identifies a node, not the variable that stores the head reference."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. When a pointer to a target node in a doubly linked list is already available, what is the time complexity of deleting that node?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The neighboring previous and next links can be updated directly using a constant number of operations.",
+        "b": "Incorrect. No logarithmic search is required when the target node is already known.",
+        "c": "Incorrect. Traversal is unnecessary when a direct pointer to the target is available.",
+        "d": "Incorrect. Deletion with direct access requires only a constant number of link updates."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Why is deleting a known node often simpler in a doubly linked list than in a singly linked list?",
+      "answers": {
+        "a": "The doubly linked node provides direct access to its predecessor",
+        "b": "Doubly linked lists store all nodes contiguously",
+        "c": "Doubly linked lists do not require links",
+        "d": "The node automatically deletes itself"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The previous link identifies the predecessor, allowing the neighboring links to be updated without searching from the head for that predecessor.",
+        "b": "Incorrect. Doubly linked nodes do not require contiguous memory.",
+        "c": "Incorrect. Links are essential to the structure of a doubly linked list.",
+        "d": "Incorrect. Deletion still requires explicit updates to the relevant links and memory management."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. When inserting a node between two known nodes in a doubly linked list, which links are affected?",
+      "answers": {
+        "a": "Only the new node's data",
+        "b": "Only the head pointer",
+        "c": "The neighboring nodes' links and the new node's previous and next links",
+        "d": "Every link in the list"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Data alone does not connect the new node to the list.",
+        "b": "Incorrect. A local insertion does not generally require changing only the head pointer.",
+        "c": "Correct. The new node must be connected to both neighbors, and their corresponding links must be adjusted.",
+        "d": "Incorrect. The insertion is local and does not require changing every link."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Consider the doubly linked sequence 10 ↔ 20 ↔ 30. If a pointer refers to the node containing 20, what does following its previous link reach?",
+      "answers": {
+        "a": "10",
+        "b": "20",
+        "c": "30",
+        "d": "NULL"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The previous link of the middle node refers to the node containing $10$.",
+        "b": "Incorrect. The current node contains $20$; its previous link points to its predecessor.",
+        "c": "Incorrect. $30$ is reached through the next link from $20$.",
+        "d": "Incorrect. The middle node has a valid predecessor, so its previous link is not NULL."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. A doubly linked list contains 10 ↔ 20 ↔ 30. If the node containing 20 is removed, which sequence should remain?",
+      "answers": {
+        "a": "10 ↔ 20",
+        "b": "20 ↔ 30",
+        "c": "10 ↔ 30",
+        "d": "10 ↔ 20 ↔ 30"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This sequence still contains the removed middle node and omits the final node.",
+        "b": "Incorrect. This sequence still contains the removed node and omits the first node.",
+        "c": "Correct. Removing the middle node reconnects the first and last nodes, leaving $10 \\\\leftrightarrow 30$.",
+        "d": "Incorrect. The sequence still contains the node that was removed."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which statement correctly compares traversal in singly and doubly linked lists?",
+      "answers": {
+        "a": "Only singly linked lists can be traversed forward",
+        "b": "A doubly linked list can move backward through previous links, while a singly linked list normally cannot move directly backward",
+        "c": "Both structures always provide direct indexed access",
+        "d": "A singly linked list requires more links per node than a doubly linked list"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Both singly and doubly linked lists support forward traversal.",
+        "b": "Correct. The previous links in a doubly linked list provide direct backward movement that a standard singly linked list lacks.",
+        "c": "Incorrect. Neither structure provides array-like direct indexed access as a defining feature.",
+        "d": "Incorrect. A singly linked-list node normally has fewer link fields than a doubly linked-list node."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

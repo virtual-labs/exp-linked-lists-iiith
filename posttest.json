@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which statement about a singly linked-list node is correct?",
+      "answers": {
+        "a": "It normally contains data and a link to the next node",
+        "b": "It must contain previous and next links",
+        "c": "It must contain its position index",
+        "d": "It must contain the total list size"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. A singly linked-list node normally stores data and a link to the next node.",
+        "b": "Incorrect. A previous link is not required in a singly linked list.",
+        "c": "Incorrect. A node does not need to store its position explicitly.",
+        "d": "Incorrect. The total list size is not required in every node."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. A list contains 5 → 8 → 12 → NULL. If `head` points to 5, what data is in `head->next`?",
+      "answers": {
+        "a": "5",
+        "b": "12",
+        "c": "NULL",
+        "d": "8"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. 5 is the data in the first node.",
+        "b": "Incorrect. 12 is in the third node.",
+        "c": "Incorrect. NULL marks the end link, not the data in the second node.",
+        "d": "Correct. `head->next` refers to the second node, whose data is 8."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which statement about memory allocation for linked-list nodes is correct?",
+      "answers": {
+        "a": "All nodes must be consecutive in memory",
+        "b": "Nodes can be allocated at different locations and connected using links",
+        "c": "Only the first node needs memory",
+        "d": "Linked lists cannot use dynamic allocation"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Linked-list nodes do not have to occupy consecutive memory locations.",
+        "b": "Correct. Nodes may be stored at different memory locations and connected through their links.",
+        "c": "Incorrect. Every existing node requires storage.",
+        "d": "Incorrect. Dynamic allocation is commonly used to create linked-list nodes."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What is the worst-case time complexity of deleting the last node when only a head pointer is available?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A head pointer does not directly identify the predecessor of the last node.",
+        "b": "Incorrect. Singly linked-list traversal is not logarithmic.",
+        "c": "Correct. The list may need to be traversed to locate the last node and its predecessor.",
+        "d": "Incorrect. A single traversal does not require quadratic work."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Why is insertion at the beginning of a singly linked list $O(1)$ when `head` is available?",
+      "answers": {
+        "a": "All nodes are shifted",
+        "b": "Every existing node is visited",
+        "c": "The last node is found first",
+        "d": "Only the new node and a constant number of links need updating"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Linked-list insertion does not require shifting existing nodes.",
+        "b": "Incorrect. Existing nodes need not be traversed for head insertion.",
+        "c": "Incorrect. The last node is irrelevant to insertion at the head.",
+        "d": "Correct. The new node is linked to the current first node and the head reference is updated."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which statement about a circular linked list is true?",
+      "answers": {
+        "a": "The last node points to NULL in every implementation",
+        "b": "The last node can link back to the first node",
+        "c": "Every node must have a previous pointer",
+        "d": "It cannot be traversed sequentially"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A circular link closes the cycle instead of terminating with NULL.",
+        "b": "Correct. In a circular singly linked list, the last node links back to the first node.",
+        "c": "Incorrect. A previous pointer is not required for circularity.",
+        "d": "Incorrect. Circular lists can be traversed sequentially with an appropriate stopping condition."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. If a pointer to the node at position $k$ is already available, what is the complexity of inserting a node immediately after it?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(n)$",
+        "c": "$O(\\log n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Only a constant number of link assignments is required when the insertion node is already known.",
+        "b": "Incorrect. Traversal is unnecessary when the required node is already referenced.",
+        "c": "Incorrect. The operation does not use a logarithmic search.",
+        "d": "Incorrect. Constant-time pointer updates do not require quadratic time."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. A singly linked list contains $n$ nodes. If it is traversed once from head to the end, how does the running time grow with $n$?",
+      "answers": {
+        "a": "Constantly",
+        "b": "Logarithmically",
+        "c": "Linearly",
+        "d": "Quadratically"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The traversal visits nodes, so work increases with list size.",
+        "b": "Incorrect. A complete sequential traversal is not logarithmic.",
+        "c": "Correct. A single traversal visits each of the $n$ nodes once, so the growth is linear.",
+        "d": "Incorrect. One traversal does not perform a quadratic number of visits."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which operation is generally more convenient in a doubly linked list when a pointer to the target node is already available?",
+      "answers": {
+        "a": "Searching for an arbitrary value",
+        "b": "Counting all nodes",
+        "c": "Finding the smallest value",
+        "d": "Deleting the target without first searching for its predecessor"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A previous link does not make arbitrary-value searching constant time.",
+        "b": "Incorrect. Counting nodes still requires traversal.",
+        "c": "Incorrect. Finding a minimum in an unsorted list requires examining nodes.",
+        "d": "Correct. The previous and next links allow neighboring nodes to be updated directly when the target is already known."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

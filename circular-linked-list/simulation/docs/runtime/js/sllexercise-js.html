@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-03-13 Sat 10:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Singly Linked List Exercise</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Singly Linked List Exercise</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga062cb9">1. Introduction</a></li>
+<li><a href="#org3ef6ebc">2. Singly Linked List Exercise Artefact</a></li>
+<li><a href="#org713e7ab">3. Functions</a>
+<ul>
+<li><a href="#orgbab8b37">3.1. Variable Declaration</a></li>
+<li><a href="#org2343795">3.2. Event handlers</a></li>
+<li><a href="#org2a8ce9b">3.3. Insert</a></li>
+<li><a href="#org97452f0">3.4. Type Check</a></li>
+<li><a href="#orgbd62192">3.5. Clear</a></li>
+<li><a href="#org56d8a20">3.6. Image Declaration</a></li>
+<li><a href="#orgfa7d6e7">3.7. Draw Box</a></li>
+<li><a href="#org2794c2b">3.8. Draw Arrow</a></li>
+<li><a href="#orgad6a15b">3.9. Draw Head</a></li>
+<li><a href="#org220c307">3.10. Renderer</a></li>
+<li><a href="#org8d98e5c">3.11. Initial renderer</a></li>
+<li><a href="#org21287d3">3.12. Array Maker</a></li>
+<li><a href="#org42329a5">3.13. Shift Node</a></li>
+<li><a href="#orgdebe5ed">3.14. Colorer</a></li>
+<li><a href="#org9a5709c">3.15. Insert New Node At Head</a></li>
+<li><a href="#orge855812">3.16. Insert New Node At Tail</a></li>
+<li><a href="#orgaf21e6a">3.17. Insert New Node</a></li>
+<li><a href="#org4b68dfe">3.18. Generate Question</a></li>
+<li><a href="#org8275796">3.19. Check</a></li>
+<li><a href="#orgcb56935">3.20. Generate Random Interger</a></li>
+<li><a href="#orgd6ee2cd">3.21. Linked List Generator</a></li>
+<li><a href="#orge604a6e">3.22. Reset</a></li>
+<li><a href="#org4d2228a">3.23. Call Functions</a></li>
+</ul>
+</li>
+<li><a href="#orgc4c61bf">4. Skeleton</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga062cb9" class="outline-2">
+<h2 id="orga062cb9"><span class="section-number-2">1</span> Introduction</h2>
+</div>
+
+<div id="outline-container-org3ef6ebc" class="outline-2">
+<h2 id="org3ef6ebc"><span class="section-number-2">2</span> Singly Linked List Exercise Artefact</h2>
+</div>
+
+<div id="outline-container-org713e7ab" class="outline-2">
+<h2 id="org713e7ab"><span class="section-number-2">3</span> Functions</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgbab8b37" class="outline-3">
+<h3 id="orgbab8b37"><span class="section-number-3">3.1</span> Variable Declaration</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org6c9814e"><span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">box</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Image</span>();
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tbox</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Image</span>();
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">sbox</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Image</span>();
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">boxline</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Image</span>();
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">arrowtriangle</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Image</span>();
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">arrowline</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Image</span>();
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">dot</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Image</span>();
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">reversetriangle</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Image</span>();
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">ques_string</span> = document.getElementById(<span style="font-style: italic;">"questionid"</span>);
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">canvas</span> = document.getElementById(<span style="font-style: italic;">"linkedlist"</span>);
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">ctx</span> = canvas.getContext(<span style="font-style: italic;">"2d"</span>);
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">headX</span> = 180;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">headY</span> = 110;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">topgap</span> = 170;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">leftgap</span> = 120;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">ncolor</span> = <span style="font-style: italic;">"white"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">scolor</span> = <span style="font-style: italic;">"green"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">dcolor</span> = <span style="font-style: italic;">"#9898fb"</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">gtype</span> = <span style="font-style: italic;">'sll'</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nWidth</span> = 127;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">nHeight</span> = 93 * 0.9;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">linegap</span> = 90;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">linewidth</span> = 2;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">lineheight</span> = 63;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">dotwidth</span> = 17;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">dotheight</span> = 16;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">rectHeight</span> = 50;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">numbers</span> = [];
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">boxDist</span> = 148;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">value</span>;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">keyc</span> = 0;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">busy</span> = 0;
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">tvalues</span> = [];
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">quesnumbers</span> = [];
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">count</span> = 5;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2343795" class="outline-3">
+<h3 id="org2343795"><span class="section-number-3">3.2</span> Event handlers</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>A function that adds all the event handlers to the html document</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="org0cd14fe"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">handlers</span>(){ 
+ document.getElementById(<span style="font-style: italic;">"head-insert"</span>).onclick = <span style="font-weight: bold;">function</span>() { insertAtHead(); };
+ document.getElementById(<span style="font-style: italic;">"tail-insert"</span>).onclick = <span style="font-weight: bold;">function</span>() { insertAtTail(); };
+ document.getElementById(<span style="font-style: italic;">"node-insert"</span>).onclick = <span style="font-weight: bold;">function</span>() { insertAtNode(); };
+ document.getElementById(<span style="font-style: italic;">"submit-button"</span>).onclick = <span style="font-weight: bold;">function</span>() { check(); };
+ document.getElementById(<span style="font-style: italic;">"reset-button"</span>).onclick = <span style="font-weight: bold;">function</span>() { reseter(); };
+}; 
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2a8ce9b" class="outline-3">
+<h3 id="org2a8ce9b"><span class="section-number-3">3.3</span> Insert</h3>
+<div class="outline-text-3" id="text-3-3">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org109a7d4">Array.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insert = <span style="font-weight: bold;">function</span> ( <span style="font-weight: bold; font-style: italic;">index</span>, <span style="font-weight: bold; font-style: italic;">item</span> ) {
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.splice( index, 0, item );
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org97452f0" class="outline-3">
+<h3 id="org97452f0"><span class="section-number-3">3.4</span> Type Check</h3>
+<div class="outline-text-3" id="text-3-4">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgcebd552">String.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.isNumber = <span style="font-weight: bold;">function</span>(){ 
+        <span style="font-weight: bold;">return</span> <span style="font-style: italic;">/^-{0,1}\d+$/</span>.test(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+};
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbd62192" class="outline-3">
+<h3 id="orgbd62192"><span class="section-number-3">3.5</span> Clear</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Function which clears the input fields
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgdb6bdeb"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">clear</span>(){
+        document.getElementById(<span style="font-style: italic;">'HeadtoBeInserted'</span>).value=<span style="font-style: italic;">""</span>;
+        document.getElementById(<span style="font-style: italic;">'TailtoBeInserted'</span>).value=<span style="font-style: italic;">""</span>;
+        document.getElementById(<span style="font-style: italic;">'AnytoBeInserted'</span>).value=<span style="font-style: italic;">""</span>;
+        document.getElementById(<span style="font-style: italic;">'index'</span>).value=<span style="font-style: italic;">""</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org56d8a20" class="outline-3">
+<h3 id="org56d8a20"><span class="section-number-3">3.6</span> Image Declaration</h3>
+<div class="outline-text-3" id="text-3-6">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org3374f52"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">counter</span>() {
+    count--;
+    <span style="font-weight: bold;">if</span> (count === 0) renderer();
+}
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">imgdeclarer</span>() {
+    box.onload = counter;
+    tbox.onload = counter;
+    sbox.onload = counter;
+    boxline.onload = counter;
+    arrowtriangle.onload = counter;
+    arrowline.onload = counter;
+    dot.onload = counter;
+
+    box.src = <span style="font-style: italic;">'../../static/img/slldemosearch-rectangle-19-copy-13@2x.png'</span>;
+    tbox.src = <span style="font-style: italic;">'../../static/img/slldemoinsert-rectangle-19-copy-12@2x.png'</span>;
+    sbox.src = <span style="font-style: italic;">'../../static/img/slldemosearch-rectangle-19-copy-14@2x.png'</span>;
+    boxline.src = <span style="font-style: italic;">'../../static/img/slldemosearch-path-5@2x.png'</span>;
+    arrowtriangle.src = <span style="font-style: italic;">'../../static/img/slldemosearch-triangle 4@2x.png'</span>;
+    arrowline.src = <span style="font-style: italic;">'../../static/img/slldemosearch-path-15 4@2x.png'</span>;
+    dot.src = <span style="font-style: italic;">'../../static/img/slldemosearch-oval-7-copy@2x.png'</span>;
+    reversetriangle.src = <span style="font-style: italic;">'../../static/img/imageedit_2_7773519787.png'</span>;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfa7d6e7" class="outline-3">
+<h3 id="orgfa7d6e7"><span class="section-number-3">3.7</span> Draw Box</h3>
+<div class="outline-text-3" id="text-3-7">
+<p>
+This function is just to draw a linked list node,at given coordinates x and y.The index of array is also passed to this function
+so that the linked list node is filled with the text.The color of the node is also passed and that color is filled in the box.
+Here the thing is we've used direct images given by UI team,hence the nodes can't be colored with just the parameter.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgd85db31"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">drawBox</span>(<span style="font-weight: bold; font-style: italic;">x</span>, <span style="font-weight: bold; font-style: italic;">y</span>, <span style="font-weight: bold; font-style: italic;">ind</span>, <span style="font-weight: bold; font-style: italic;">color</span>) {
+    val = numbers[ind];
+    <span style="font-weight: bold;">if</span> (color == ncolor)
+        ctx.drawImage(box, x, y, nWidth, nHeight);
+    <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (color == scolor)
+        ctx.drawImage(sbox, x, y, nWidth, nHeight);
+    <span style="font-weight: bold;">else</span>
+        ctx.drawImage(tbox, x, y, nWidth, nHeight);
+
+    ctx.globalAlpha = 0.5;
+    ctx.drawImage(boxline, x + linegap * 0.9, y + (nHeight - lineheight) / 2, linewidth, lineheight);
+    ctx.globalAlpha = 1;
+
+    <span style="font-weight: bold;">if</span> (ind == numbers.length - 1) {
+        ctx.drawImage(arrowtriangle, x + (linegap + 15 + 43 + 45) * 0.9, y + (nHeight - dotheight) / 2 - 5, 20, 14);
+        ctx.drawImage(arrowline, x + linegap + 15, y + (nHeight - dotheight) / 2, 100 * 0.7, 5);
+    } <span style="font-weight: bold;">else</span> {
+        ctx.drawImage(arrowtriangle, x + (linegap + 15 + 43) * 0.9, y + (nHeight - dotheight) / 2 - 5, 20, 14);
+        ctx.drawImage(arrowline, x + linegap + 15, y + (nHeight - dotheight) / 2, 55 * 0.6, 5);
+    }
+
+    ctx.drawImage(dot, x + (linegap + 15) * 0.9, y + (nHeight - dotheight) / 2 - 5, dotwidth, dotheight);
+
+    ctx.beginPath();
+    <span style="font-weight: bold;">if</span> (color == ncolor)
+        ctx.fillStyle = <span style="font-style: italic;">"#2180bc"</span>;
+    <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (color == scolor)
+        ctx.fillStyle = <span style="font-style: italic;">"#fff"</span>;
+    <span style="font-weight: bold;">else</span>
+        ctx.fillStyle = <span style="font-style: italic;">"#fff"</span>;
+
+    ctx.font = <span style="font-style: italic;">"25px OpenSans-Regular"</span>;
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">ll</span> = ctx.measureText(val).width;
+    ctx.fillText(numbers[ind], x + (linegap - ll) / 2, (rectHeight) + y);
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2794c2b" class="outline-3">
+<h3 id="org2794c2b"><span class="section-number-3">3.8</span> Draw Arrow</h3>
+<div class="outline-text-3" id="text-3-8">
+<p>
+This function just draws arrow between given two coordinates.This function draws arrow using basic canvas methods.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgfb15fe9"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">drawArrow</span>(<span style="font-weight: bold; font-style: italic;">startX</span>, <span style="font-weight: bold; font-style: italic;">startY</span>, <span style="font-weight: bold; font-style: italic;">endX</span>, <span style="font-weight: bold; font-style: italic;">endY</span>) {
+    ctx.beginPath();
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">headlen</span> = 20; <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">length of head in pixels</span>
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">angle</span> = Math.atan2(endY - startY, endX - startX);
+
+    ctx.strokeStyle = <span style="font-style: italic;">"#d2d2d2"</span>;
+    ctx.moveTo(startX, startY);
+    ctx.lineTo(endX, endY);
+    ctx.stroke();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.moveTo(endX - headlen * Math.cos(angle - Math.PI / 6), endY - headlen * Math.sin(angle - Math.PI / 6));
+    ctx.lineTo(endX, endY);
+    ctx.lineTo(endX - headlen * Math.cos(angle + Math.PI / 6), endY - headlen * Math.sin(angle + Math.PI / 6));
+    ctx.fillStyle = <span style="font-style: italic;">"#979091"</span>;
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgad6a15b" class="outline-3">
+<h3 id="orgad6a15b"><span class="section-number-3">3.9</span> Draw Head</h3>
+<div class="outline-text-3" id="text-3-9">
+<p>
+This function is just to draw the head part where "Head" is written with a dot to denotes that head vairable is just a pointer to the
+first node.There's an arrow from this dot to the first node 
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript" id="org720f778"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">draw_head</span>() {
+    ctx.beginPath();
+    ctx.font = <span style="font-style: italic;">"22px OpenSans-SemiBold"</span>;
+    ctx.fillStyle = <span style="font-style: italic;">"#2f99d1"</span>;
+    ctx.fillText(<span style="font-style: italic;">"Head"</span>, headX - 20, headY - 30);
+    ctx.closePath();
+    ctx.stroke();
+
+    ctx.beginPath();
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">radius</span> = 7;
+    ctx.arc(headX, headY, radius, 0, 2 * Math.PI, <span style="font-weight: bold; text-decoration: underline;">false</span>);
+    ctx.fillStyle = <span style="font-style: italic;">'#d7d7d7'</span>;
+    ctx.strokeStyle = <span style="font-style: italic;">"#d7d7d7"</span>;
+    ctx.fill();
+    ctx.stroke();
+    ctx.closePath();
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org220c307" class="outline-3">
+<h3 id="org220c307"><span class="section-number-3">3.10</span> Renderer</h3>
+<div class="outline-text-3" id="text-3-10">
+<p>
+This function is to draw all the nodes with contents of the numbers array.Basically the purpose of this function is to refresh linked list
+with updated values.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgc40e703"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">renderer</span>() {
+    ctx.clearRect(0, 0, 1360, 320);
+    draw_head();
+    drawArrow(headX, headY, headX, topgap);
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; numbers.length; i++) {
+        drawBox(leftgap + (i * boxDist), topgap, i, ncolor);
+    }
+    <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">if (numbers.length &gt; 0)</span>
+    <span style="font-weight: bold; font-style: italic;">//     </span><span style="font-weight: bold; font-style: italic;">drawBox(leftgap + (numbers.length - 1) * (boxDist), topgap, numbers.length - 1, ncolor);</span>
+    ctx.beginPath();
+    ctx.font = <span style="font-style: italic;">"22px OpenSans-SemiBold"</span>;
+    ctx.fillStyle = <span style="font-style: italic;">"#2f99d1"</span>;
+    ctx.fillText(<span style="font-style: italic;">"Null"</span>, leftgap + (numbers.length) * (boxDist) + 55, topgap + rectHeight / 2 + 20);
+    ctx.fill();
+    ctx.closePath();
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8d98e5c" class="outline-3">
+<h3 id="org8d98e5c"><span class="section-number-3">3.11</span> Initial renderer</h3>
+<div class="outline-text-3" id="text-3-11">
+<p>
+This function is to draw all the nodes with contents of the numbers array.Basically the purpose of this function is to refresh linked list
+with updated values.But this function is only to make sure the control is at first node.As in whenever this function is called,the first
+node is colored from where user can start traversal.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="org8d99d13"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">srenderer</span>() {
+    ctx.clearRect(0, 0, 1360, 320);
+    draw_head();
+    drawArrow(headX, headY, headX, topgap);
+    drawBox(leftgap, topgap, 0, dcolor);
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 1; i &lt; numbers.length; i++) {
+        drawBox(leftgap + (i * boxDist), topgap, i, ncolor);
+    }
+    ctx.beginPath();
+    ctx.font = <span style="font-style: italic;">"22px OpenSans-SemiBold"</span>;
+    ctx.fillStyle = <span style="font-style: italic;">"#2f99d1"</span>;
+    ctx.fillText(<span style="font-style: italic;">"Null"</span>, leftgap + (numbers.length) * (boxDist) + 55, topgap + rectHeight / 2 + 10);
+    ctx.fill();
+    ctx.closePath();
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org21287d3" class="outline-3">
+<h3 id="org21287d3"><span class="section-number-3">3.12</span> Array Maker</h3>
+<div class="outline-text-3" id="text-3-12">
+<p>
+This function is to make changes in numbers array depending on option
+selected by user,the numbers array can have new insertion or deletion.
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript" id="org32ec290"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">array_maker</span>(){
+        <span style="font-weight: bold;">if</span> (decider==1)
+                numbers.push(value);
+        <span style="font-weight: bold;">if</span> (decider==2)
+                numbers.insert(index,value);    
+        <span style="font-weight: bold;">if</span> (decider==3)
+                numbers.splice(index-1, 1);
+        <span style="font-weight: bold;">if</span> (decider==4)
+                numbers.unshift(value);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org42329a5" class="outline-3">
+<h3 id="org42329a5"><span class="section-number-3">3.13</span> Shift Node</h3>
+<div class="outline-text-3" id="text-3-13">
+<p>
+This function is for shifting nodes.This is the main function doing animation inside canvas.Depending on type of animation,
+few nodes are shfifted to left or right.This shifting is being done by just calling nodeshift every millisecond and changing
+position of all nodes by 1 px.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-javascript" id="org8dc84b0"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">nodeshift</span>() {
+    <span style="font-weight: bold;">if</span> (keyc == boxDist) {
+        busy = 0;
+        clearInterval(shift_stopper);
+        array_maker();
+        renderer();
+        <span style="font-weight: bold;">return</span>;
+    }
+    <span style="font-weight: bold;">if</span> (keyc == -boxDist) {
+        busy = 0;
+        clearInterval(shift_stopper);
+        array_maker();
+        renderer();
+        <span style="font-weight: bold;">return</span>;
+    }
+    ctx.clearRect(0, 0, 1360, 320);
+    draw_head();
+    <span style="font-weight: bold;">if</span> (decider == 4)
+        drawArrow(headX, headY, headX + keyc, topgap);
+    <span style="font-weight: bold;">else</span>
+        drawArrow(headX, headY, headX, topgap);
+
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; index - 1; i++) {
+        drawBox(leftgap + (i * boxDist), topgap, i, ncolor);
+    }
+    <span style="font-weight: bold;">if</span> (decider == 2) {
+        i = index - 1;
+        drawBox(leftgap + (i * boxDist), topgap, i, ncolor);
+    }
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = index; i &lt; numbers.length; i++) {
+        drawBox(leftgap + (i * boxDist) + keyc, topgap, i, ncolor);
+    }
+    ctx.beginPath();
+    ctx.font = <span style="font-style: italic;">"22px OpenSans-SemiBold"</span>;
+    ctx.fillStyle = <span style="font-style: italic;">"#2f99d1"</span>;
+    ctx.fillText(<span style="font-style: italic;">"Null"</span>, leftgap + (numbers.length) * (boxDist) + 55 + keyc, topgap + rectHeight / 2 + 20);
+    ctx.fill();
+    ctx.closePath();
+    <span style="font-weight: bold;">if</span> (decider == 3)
+        keyc = keyc - 1;
+    <span style="font-weight: bold;">else</span>
+        keyc = keyc + 1;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdebe5ed" class="outline-3">
+<h3 id="orgdebe5ed"><span class="section-number-3">3.14</span> Colorer</h3>
+<div class="outline-text-3" id="text-3-14">
+<p>
+This function is just to pass the controller.This function colors the
+current node.When user clicks an arrow key the next or previous node is colored.
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript" id="org5ea9a52"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">colorer</span>(<span style="font-weight: bold; font-style: italic;">last</span>) {
+    <span style="font-weight: bold;">if</span> (numa == last) {
+        <span style="font-weight: bold;">if</span> (decider == 1) {
+            array_maker();
+            busy = 0;
+            clearInterval(color_stopper);
+            renderer();
+        }
+        <span style="font-weight: bold;">if</span> (decider == 2) {
+            shift_stopper = setInterval(nodeshift, 1);
+            setTimeout(<span style="font-weight: bold;">function</span>() {
+                clearInterval(color_stopper);
+                busy = 0;
+            }, boxDist);
+        }
+        <span style="font-weight: bold;">return</span>;
+    }
+    ctx.clearRect(0, 0, 1360, 320);
+    renderer();
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; numbers.length; i++) {
+        <span style="font-weight: bold;">if</span> (i != numa)
+            drawBox(leftgap + (i * boxDist), topgap, i, ncolor);
+        <span style="font-weight: bold;">else</span>
+            drawBox(leftgap + (i * boxDist), topgap, i, dcolor);
+    }
+    <span style="font-weight: bold;">if</span> (gtype != <span style="font-style: italic;">'cll'</span>) {
+        ctx.beginPath();
+        ctx.font = <span style="font-style: italic;">"22px OpenSans-SemiBold"</span>;
+        ctx.fillStyle = <span style="font-style: italic;">"#2f99d1"</span>;
+        ctx.fillText(<span style="font-style: italic;">"Null"</span>, leftgap + (numbers.length) * (boxDist) + 55 + keyc, topgap + rectHeight / 2 + 20);
+        ctx.fill();
+        ctx.closePath();
+    }
+    numa = numa + 1;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9a5709c" class="outline-3">
+<h3 id="org9a5709c"><span class="section-number-3">3.15</span> Insert New Node At Head</h3>
+<div class="outline-text-3" id="text-3-15">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgae85ce6"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">insertAtHead</span>() {
+    <span style="font-weight: bold;">if</span> (busy == 1) {
+        clear();
+        <span style="font-weight: bold;">return</span>;
+    }
+    <span style="font-weight: bold;">else</span>
+        busy = 1;
+    value = document.getElementById(<span style="font-style: italic;">'HeadtoBeInserted'</span>).value;
+    index = 0;
+    keyc = 0;
+    decider = 4;
+    <span style="font-weight: bold;">if</span> (numbers.length == 7) {
+        document.getElementById(<span style="font-style: italic;">'ins'</span>).innerHTML= <span style="font-style: italic;">"Only 7 boxes allowed"</span>;
+        clear();
+        busy = 0;
+        <span style="font-weight: bold;">return</span>;
+    }
+    clear();
+        shift_stopper = setInterval(nodeshift, 1);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge855812" class="outline-3">
+<h3 id="orge855812"><span class="section-number-3">3.16</span> Insert New Node At Tail</h3>
+<div class="outline-text-3" id="text-3-16">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orga8ae578"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">insertAtTail</span>() {
+    <span style="font-weight: bold;">if</span> (busy == 1) {
+        clear();
+        <span style="font-weight: bold;">return</span>;
+    }
+    <span style="font-weight: bold;">else</span>
+        busy = 1;
+    numa = 0;
+    keyc = 0;
+    decider = 1;
+    value = document.getElementById(<span style="font-style: italic;">'TailtoBeInserted'</span>).value;
+    <span style="font-weight: bold;">if</span> (numbers.length == 7) {
+        document.getElementById(<span style="font-style: italic;">'ins'</span>).innerHTML= <span style="font-style: italic;">"Only 7 boxes allowed"</span>;
+        clear();
+        busy = 0;
+        <span style="font-weight: bold;">return</span>;
+    }
+    index = numbers.length;
+    clear();
+        color_stopper = setInterval(colorer, 500, index);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaf21e6a" class="outline-3">
+<h3 id="orgaf21e6a"><span class="section-number-3">3.17</span> Insert New Node</h3>
+<div class="outline-text-3" id="text-3-17">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgd146583"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">insertAtNode</span>() {
+    <span style="font-weight: bold;">if</span> (busy == 1) {
+        clear();
+        <span style="font-weight: bold;">return</span>;
+    }
+    <span style="font-weight: bold;">else</span>
+        busy = 1;
+    numa = 0;
+    keyc = 0;
+    decider = 2;
+    value = document.getElementById(<span style="font-style: italic;">'AnytoBeInserted'</span>).value;
+    index = document.getElementById(<span style="font-style: italic;">'index'</span>).value;
+    <span style="font-weight: bold;">if</span> (!index.isNumber()) {
+        document.getElementById(<span style="font-style: italic;">'ins'</span>).innerHTML= <span style="font-style: italic;">"Enter Numbers"</span>;
+        clear();
+        busy = 0;
+        <span style="font-weight: bold;">return</span>;
+    }
+    <span style="font-weight: bold;">if</span> ((index &gt; String(parseInt(numbers.length)-1)) || (index &lt; 1)) {
+        <span style="font-weight: bold;">if</span> (numbers.length == 0)
+            document.getElementById(<span style="font-style: italic;">'ins'</span>).innerHTML= <span style="font-style: italic;">"Linked List is empty!"</span>;
+        <span style="font-weight: bold;">else</span>
+            document.getElementById(<span style="font-style: italic;">'ins'</span>).innerHTML= <span style="font-style: italic;">"Node no should lie between 1 and "</span> + String(parseInt(numbers.length)-1) + <span style="font-style: italic;">" !"</span>;
+        clear();
+        busy = 0;
+        <span style="font-weight: bold;">return</span>;
+    }
+    <span style="font-weight: bold;">if</span> (numbers.length == 7) {
+        document.getElementById(<span style="font-style: italic;">'ins'</span>).innerHTML= <span style="font-style: italic;">"Only 7 boxes allowed"</span>;
+        clear();
+        busy = 0;
+        <span style="font-weight: bold;">return</span>;
+    }
+    clear();
+    color_stopper = setInterval(colorer, 500, index);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4b68dfe" class="outline-3">
+<h3 id="org4b68dfe"><span class="section-number-3">3.18</span> Generate Question</h3>
+<div class="outline-text-3" id="text-3-18">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgc04e75c"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">q2</span>() {
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; numbers.length; i++)
+        tvalues[i] = numbers[i];
+    <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">extras</span> = randomIntFromInterval(1, 3);
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; extras; i++) {
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">temp</span> = randomIntFromInterval(1, 100);
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">rindex</span> = randomIntFromInterval(0, tvalues.length);
+        tvalues.insert(rindex, temp);
+    }
+    <span style="font-weight: bold;">for</span> (<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">i</span> = 0; i &lt; tvalues.length - 1; i++)
+        ques_string.innerHTML = ques_string.innerHTML + <span style="font-style: italic;">' '</span> + tvalues[i] + <span style="font-style: italic;">','</span>;
+    ques_string.innerHTML = ques_string.innerHTML + <span style="font-style: italic;">' '</span> + tvalues[tvalues.length - 1];
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8275796" class="outline-3">
+<h3 id="org8275796"><span class="section-number-3">3.19</span> Check</h3>
+<div class="outline-text-3" id="text-3-19">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org759d76a"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">check</span>() {
+    ansl = 0;
+    <span style="font-weight: bold;">if</span> (numbers.length != tvalues.length)
+        ansl = 1;
+    <span style="font-weight: bold;">else</span> {
+        <span style="font-weight: bold;">for</span> (i = 0; i &lt; numbers.length; i++) {
+            <span style="font-weight: bold;">if</span> (tvalues[i] != numbers[i]) {
+                ansl = 1;
+                <span style="font-weight: bold;">break</span>;
+            }
+        }
+    }
+    <span style="font-weight: bold;">if</span> (ansl == 1) {
+        document.getElementById(<span style="font-style: italic;">'ins'</span>).innerHTML= <span style="font-style: italic;">"Wrong"</span>;
+    } <span style="font-weight: bold;">else</span> {
+        document.getElementById(<span style="font-style: italic;">'ins'</span>).innerHTML= <span style="font-style: italic;">"Correct"</span>;
+    }
+    clear();
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcb56935" class="outline-3">
+<h3 id="orgcb56935"><span class="section-number-3">3.20</span> Generate Random Interger</h3>
+<div class="outline-text-3" id="text-3-20">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orgffe63ba"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">randomIntFromInterval</span>(<span style="font-weight: bold; font-style: italic;">min</span>,<span style="font-weight: bold; font-style: italic;">max</span>) {
+    <span style="font-weight: bold;">return</span> Math.floor(Math.random()*(max-min+1)+min);
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd6ee2cd" class="outline-3">
+<h3 id="orgd6ee2cd"><span class="section-number-3">3.21</span> Linked List Generator</h3>
+<div class="outline-text-3" id="text-3-21">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org21a25ee"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">llgenerator</span>(){
+        <span style="font-weight: bold;">for</span> (i=0; i&lt;randomIntFromInterval(3,6); i++) {
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">temp</span> = Math.floor((Math.random() * 100) + 1);
+                numbers.push(temp);
+                quesnumbers.push(temp);
+        }
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge604a6e" class="outline-3">
+<h3 id="orge604a6e"><span class="section-number-3">3.22</span> Reset</h3>
+<div class="outline-text-3" id="text-3-22">
+<div class="org-src-container">
+<pre class="src src-javascript" id="org2f50037"><span style="font-weight: bold;">function</span> <span style="font-weight: bold;">reseter</span>(){
+        location.reload();
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4d2228a" class="outline-3">
+<h3 id="org4d2228a"><span class="section-number-3">3.23</span> Call Functions</h3>
+<div class="outline-text-3" id="text-3-23">
+<div class="org-src-container">
+<pre class="src src-javascript" id="orge6f792e">llgenerator();
+imgdeclarer();
+srenderer();
+q2();
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc4c61bf" class="outline-2">
+<h2 id="orgc4c61bf"><span class="section-number-2">4</span> Skeleton</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-javascript">&lt;&lt;declaration&gt;&gt;
+&lt;&lt;handlers&gt;&gt;
+&lt;&lt;insert&gt;&gt;
+&lt;&lt;isnum&gt;&gt;
+&lt;&lt;clear&gt;&gt;
+&lt;&lt;imgdecl&gt;&gt;
+&lt;&lt;drawbox&gt;&gt;
+&lt;&lt;drawarrow&gt;&gt;
+&lt;&lt;drawhead&gt;&gt;
+&lt;&lt;renderer&gt;&gt;
+&lt;&lt;srenderer&gt;&gt;
+&lt;&lt;array-maker&gt;&gt;
+&lt;&lt;nodeshift&gt;&gt;
+&lt;&lt;colorer&gt;&gt;
+&lt;&lt;insertathead&gt;&gt;
+&lt;&lt;insertattail&gt;&gt;
+&lt;&lt;insertatnode&gt;&gt;
+&lt;&lt;rand-<span style="font-weight: bold; text-decoration: underline;">int</span>&gt;&gt;
+&lt;&lt;generator&gt;&gt;
+&lt;&lt;check&gt;&gt;
+&lt;&lt;gen-ll&gt;&gt;
+&lt;&lt;reseter&gt;&gt;
+&lt;&lt;func-call&gt;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2018-05-22 Tue 00:00</p>
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2021-03-13 Sat 10:49</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

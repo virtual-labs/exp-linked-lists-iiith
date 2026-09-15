@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What distinguishes a circular singly linked list from a standard singly linked list?",
+      "answers": {
+        "a": "The last node links back to the first node",
+        "b": "Every node contains two data fields",
+        "c": "Nodes must be stored consecutively",
+        "d": "Every node contains a previous pointer"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The last node links back to the first node, forming a cycle.",
+        "b": "Incorrect. Circularity does not require additional data fields in each node.",
+        "c": "Incorrect. Circular linked lists do not require contiguous memory.",
+        "d": "Incorrect. A previous pointer is not required in a circular singly linked list."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. In a circular singly linked list with at least one node, what does the last node's next link reference?",
+      "answers": {
+        "a": "NULL",
+        "b": "The first node",
+        "c": "The previous node",
+        "d": "The last node only"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A NULL link would terminate the chain rather than close a circular list.",
+        "b": "Correct. The last node links back to the first node to form the cycle.",
+        "c": "Incorrect. A standard circular singly linked list does not use a previous link.",
+        "d": "Incorrect. A self-link is not the general rule for a multi-node circular list."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which traversal rule is important when traversing a circular linked list?",
+      "answers": {
+        "a": "Stop only when a NULL link is found",
+        "b": "Continue until the starting node is encountered again",
+        "c": "Move only toward lower memory addresses",
+        "d": "Visit the first node exactly twice before stopping"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A circular list may not contain a NULL link at its end.",
+        "b": "Correct. A traversal can stop when it returns to the starting node after completing one cycle.",
+        "c": "Incorrect. Node memory addresses do not determine traversal direction.",
+        "d": "Incorrect. Visiting the starting node twice is not itself a general traversal requirement."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What is the worst-case time complexity of searching for a value in a circular linked list containing $n$ nodes?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The desired value may require examining many nodes.",
+        "b": "Incorrect. Circular linking does not provide logarithmic random access.",
+        "c": "Correct. In the worst case, all $n$ nodes may be examined during the traversal.",
+        "d": "Incorrect. A single complete traversal is linear rather than quadratic."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. If a circular singly linked list has a pointer to its last node, which node can be reached directly through the last node's next link?",
+      "answers": {
+        "a": "The first node",
+        "b": "The second-to-last node",
+        "c": "NULL",
+        "d": "A newly allocated node"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The last node's next link closes the circle by referring to the first node.",
+        "b": "Incorrect. The previous node is not what the next link of the last node identifies.",
+        "c": "Incorrect. A circular list uses the link to close the cycle rather than terminate it with NULL.",
+        "d": "Incorrect. A link does not create a new node merely by being followed."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. When inserting a node between two existing nodes in a circular singly linked list, which links normally need to be changed?",
+      "answers": {
+        "a": "Only the new node's data field",
+        "b": "The predecessor's next link and the new node's next link",
+        "c": "Every link in the list",
+        "d": "Only the head pointer"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Changing only data does not connect the new node into the list.",
+        "b": "Correct. The predecessor must point to the new node, and the new node must point to the former successor.",
+        "c": "Incorrect. Insertion is a local operation and does not require changing every link.",
+        "d": "Incorrect. The head pointer alone cannot establish both required local connections."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. A circular linked list contains 10 → 20 → 30 and the link from 30 returns to 10. Starting at 10, what value is reached after three `next` operations?",
+      "answers": {
+        "a": "10",
+        "b": "20",
+        "c": "30",
+        "d": "NULL"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The sequence is $10$, $20$, $30$, and then back to $10$ after the third link traversal.",
+        "b": "Incorrect. $20$ is reached after the first `next` operation.",
+        "c": "Incorrect. $30$ is reached after the second `next` operation.",
+        "d": "Incorrect. The circular link does not terminate with NULL."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. Why can a circular linked list be useful for repeatedly cycling through a collection of nodes?",
+      "answers": {
+        "a": "Its links naturally return traversal to the first node after the last node",
+        "b": "It automatically sorts the nodes after each traversal",
+        "c": "It provides constant-time access by index",
+        "d": "It removes the need to store node links"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The link from the last node back to the first allows traversal to continue around the collection.",
+        "b": "Incorrect. Circular linking does not perform sorting.",
+        "c": "Incorrect. Circularity does not provide indexed random access.",
+        "d": "Incorrect. Links are necessary to connect the nodes and maintain the cycle."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. In a circular singly linked list, what is a reliable way to detect completion of one full traversal when starting from a known node?",
+      "answers": {
+        "a": "Stop when the current pointer becomes NULL",
+        "b": "Stop when the current pointer returns to the starting node after moving forward",
+        "c": "Stop when a node contains the largest value",
+        "d": "Stop after visiting an arbitrary number of nodes"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A circular list may continue indefinitely without a NULL link.",
+        "b": "Correct. Returning to the known starting node indicates that one complete cycle has been traversed.",
+        "c": "Incorrect. Node data values do not determine the end of a traversal.",
+        "d": "Incorrect. An arbitrary count may stop before or after one complete cycle."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. In a singly linked list, can a node directly identify the node immediately before it?",
+      "answers": {
+        "a": "Yes, because every node stores a previous pointer",
+        "b": "No, because a standard singly linked-list node stores only its next link",
+        "c": "Yes, because memory addresses are always consecutive",
+        "d": "No, because singly linked lists contain no links"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A previous pointer is not part of a standard singly linked-list node.",
+        "b": "Correct. A standard singly linked-list node has a link to the next node but no direct link to its predecessor.",
+        "c": "Incorrect. Linked-list nodes do not have to occupy consecutive memory locations.",
+        "d": "Incorrect. Links are essential to connect nodes in a singly linked list."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. Which field is normally present in a node of a singly linked list?",
+      "answers": {
+        "a": "Data and a link to the next node",
+        "b": "Data and links to both previous and next nodes",
+        "c": "Only a memory address",
+        "d": "Only the position of the node"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. A singly linked-list node normally contains data and a link to the next node.",
+        "b": "Incorrect. The previous link is characteristic of a doubly linked list.",
+        "c": "Incorrect. A node also needs to store the data represented by that node.",
+        "d": "Incorrect. A position value is not the defining link information in a singly linked-list node."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. What normally indicates the end of a non-circular singly linked list?",
+      "answers": {
+        "a": "The last node points to the first node",
+        "b": "The last node points to itself",
+        "c": "The last node's next link contains NULL",
+        "d": "The last node is stored at the largest memory address"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Linking the last node to the first would make the list circular.",
+        "b": "Incorrect. A self-link would create a cycle rather than mark the end of the list.",
+        "c": "Correct. The absence of a next node is represented by a NULL next link.",
+        "d": "Incorrect. Memory addresses do not determine which node is last in a linked list."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What is the worst-case time complexity of searching for a value in a singly linked list of $n$ nodes?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The desired value may be near the end of the list.",
+        "b": "Incorrect. Sequential linked-list access does not support logarithmic search.",
+        "c": "Correct. In the worst case, all $n$ nodes may be examined.",
+        "d": "Incorrect. A single sequential search does not require quadratic work."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. When inserting a node immediately after a known node in a singly linked list, how many existing nodes must be traversed to locate the insertion point?",
+      "answers": {
+        "a": "All $n$ nodes",
+        "b": "Only the known node is needed",
+        "c": "Exactly $n/2$ nodes",
+        "d": "The number depends on whether the list is sorted"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Traversal of all nodes is unnecessary when the insertion node is already known.",
+        "b": "Correct. A direct pointer to the insertion node is sufficient to perform the local link updates.",
+        "c": "Incorrect. There is no requirement to traverse half of the list.",
+        "d": "Incorrect. Whether the list is sorted does not change the need for traversal when the target node is already referenced."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. If `head` points to the first node and that node is deleted from a singly linked list, what must happen to `head`?",
+      "answers": {
+        "a": "It must point to the deleted node",
+        "b": "It must be set to the last node",
+        "c": "It must be updated to point to the former second node",
+        "d": "It must always be set to NULL"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Keeping head at the deleted node would leave the list entry point referring to removed storage.",
+        "b": "Incorrect. Deleting the first node does not require moving head directly to the last node.",
+        "c": "Correct. The next node becomes the first node, so head must refer to that node.",
+        "d": "Incorrect. NULL is appropriate only when there is no remaining node."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. A singly linked list contains 10 → 20 → 30 → NULL. If `head` points to 10, what does `head->next->next->data` contain?",
+      "answers": {
+        "a": "10",
+        "b": "20",
+        "c": "30",
+        "d": "NULL"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The starting node contains 10, before any `next` traversal.",
+        "b": "Incorrect. One `next` traversal reaches the node containing 20.",
+        "c": "Correct. Two `next` traversals reach the node containing 30.",
+        "d": "Incorrect. The second `next` traversal reaches a valid node; NULL is reached after the next link from that node."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. If a singly linked list contains $n$ nodes, what is the worst-case time complexity of deleting the last node when only the head pointer is available?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The predecessor of the last node may have to be found by traversal.",
+        "b": "Incorrect. A singly linked list does not provide logarithmic access to its nodes.",
+        "c": "Correct. Traversal may be required to locate the last node and its predecessor, giving $O(n)$ worst-case time.",
+        "d": "Incorrect. Locating the last node requires at most one linear traversal, not quadratic work."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which situation allows deletion of a node in a singly linked list to be performed without first traversing from the head to locate that node?",
+      "answers": {
+        "a": "The node itself is already directly referenced and the required neighboring information is available",
+        "b": "The list contains more than $n$ nodes",
+        "c": "The list is stored in contiguous memory",
+        "d": "The list is sorted in ascending order"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. A direct reference to the target, together with the information needed to reconnect the list, can avoid a search from the head.",
+        "b": "Incorrect. The number of nodes does not by itself provide a direct reference to the target.",
+        "c": "Incorrect. Linked-list deletion does not depend on contiguous storage.",
+        "d": "Incorrect. Sorting does not by itself eliminate the need to locate the target and its predecessor."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
