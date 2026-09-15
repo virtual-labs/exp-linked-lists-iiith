@@ -2,6 +2,7 @@
   "unit-type": "lu",
   "label": "Linked List",
   "basedir": ".",
+  "LaTeXinMD": "true",
   "units": [
     {
       "unit-type": "aim"
@@ -13,7 +14,7 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    
+
     {
       "unit-type": "task",
       "label": "Pretest",
@@ -36,8 +37,6 @@
           "source": "overview.md",
           "target": "overview.html"
         }
-	
-      
       ]
     },
     {
@@ -48,30 +47,30 @@
         {
           "unit-type": "aim"
         },
-	
-	{
+
+        {
           "unit-type": "task",
           "label": " Insertion",
           "content-type": "video",
           "source": "sll-introduction-insertion.md",
           "target": "sll-introduction-insertion.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Deletion",
           "content-type": "video",
           "source": "sll-introduction-deletion.md",
           "target": "sll-introduction-deletion.html"
         },
-        
-	{
+
+        {
           "unit-type": "task",
           "label": "Practice",
           "content-type": "simulation",
           "source": "simulation/sllpractice.html",
           "target": "sllpractice.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Exercise",
           "content-type": "simulation",
@@ -84,10 +83,10 @@
           "content-type": "assesment",
           "source": "singly-linked-list-quiz.json",
           "target": "singly-linked-list-quiz.html"
-        } 
+        }
       ]
     },
-        {
+    {
       "unit-type": "lu",
       "label": "Doubly Linked List",
       "basedir": "doubly-linked-list",
@@ -95,7 +94,7 @@
         {
           "unit-type": "aim"
         },
-	
+
         {
           "unit-type": "task",
           "label": "Concept",
@@ -110,8 +109,8 @@
           "source": "simulation/dllpractice.html",
           "target": "dllpractice.html"
         },
-        
-	{
+
+        {
           "unit-type": "task",
           "label": "Exercise ",
           "content-type": "simulation",
@@ -124,10 +123,10 @@
           "content-type": "assesment",
           "source": "doubly-linked-list-quiz.json",
           "target": "doubly-linked-list-quiz.html"
-        } 
+        }
       ]
     },
-     {
+    {
       "unit-type": "lu",
       "label": "Circular Linked List",
       "basedir": "circular-linked-list",
@@ -135,7 +134,7 @@
         {
           "unit-type": "aim"
         },
-	
+
         {
           "unit-type": "task",
           "label": "Concept",
@@ -150,8 +149,8 @@
           "source": "simulation/cllpractice.html",
           "target": "cllpractice.html"
         },
-        
-	{
+
+        {
           "unit-type": "task",
           "label": "Exercise ",
           "content-type": "simulation",
@@ -164,10 +163,10 @@
           "content-type": "assesment",
           "source": "circular-linked-list-quiz.json",
           "target": "circular-linked-list-quiz.html"
-        } 
+        }
       ]
     },
-    
+
     {
       "unit-type": "task",
       "label": "Posttest",
@@ -175,7 +174,7 @@
       "source": "posttest.json",
       "target": "posttest.html"
     },
-       
+
     {
       "unit-type": "task",
       "label": "Further Readings/References",

@@ -1,66 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. Which of these best describes an array?",
-            "answers": {
-                "a": "A data structure that shows a hierarchical behaviour",
-                "b": "Container of objects of similar types",
-                "c": "Container of objects of mixed types",
-                "d": "All of the mentioned"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "a": "The data structure that shows hierarchical behaviour is a tree, and hence it is the wrong answer.",
-                "b": "As we have read earlier a simple container for objects of similar types is an array, they might be integer, characters or any custom class objects, Hence this is the correct description for an array.",
-                "c": "We have a 'list' that is similar to an array but is a container of objects of mixed types, and hence is not an array and is the wrong answer.",
-                "d": "Only one of the mentioned answers describes an array and hence it cannot be all."
-            },
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2. What is the time complexity of insertion at any point in an array?",
-            "answers": {
-                "a": "O(N)",
-                "b": "O(N^2)",
-                "c": "O(NLogN)",
-                "d": "None of these"
-            },
-            "correctAnswer": "a",
-            "explanations": {},
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "3. Pick incorrect options from the following",
-            "answers": {
-                "a": "If structure contains 3 types of data then one pointer is sufficient for that structure",
-                "b": "One variable can be bound to many structures",
-                "c": "Contents of a structure are stored in contiguous memory",
-                "d": "None of these"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "a": "A structure itself acts as a custom data type consisting of the 3 types of data and hence, a single pointer is sufficient to point to the structure.",
-                "b": "One variable cannot be bound to multiple structures.",
-                "c": "Contents of the structure are stored continuously in the memory, hence this statement is correct"
-            },
-            "difficulty": "na"
-        },
-        {
-            "question": "4. The memory occupied by a pointer _______",
-            "answers": {
-                "a": "Is dependent on which data type the pointer points to.",
-                "b": "Is independent of data type.",
-                "c": "Depends on the program we are writing,",
-                "d": "None of these"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "a": "A pointer pointing to any data type ultimately is just a variable that stores a memory address. The space required to store memory address is independent of what the memory address holds. Hence this is incorrect.",
-                "b": "As memory address is always a hexadecimal, it will depend on the system you are using. It will occupy 4 bytes on 32 bit system and 8 bytes on a 64 bit system. But is completely independent on which data type it is storing.",
-                "c": "Incorrect. It depends, only on which system we are declaring the pointer."
-            },
-            "difficulty": "beginner"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Which statement best describes a linked list?",
+      "answers": {
+        "a": "A collection stored only in contiguous memory",
+        "b": "A collection of nodes connected through links or pointers",
+        "c": "A fixed-size collection with direct indexing",
+        "d": "A hierarchical structure with child nodes"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Contiguous storage is associated with arrays, not a defining requirement of linked lists.",
+        "b": "Correct. A linked list consists of nodes connected through links or pointers.",
+        "c": "Incorrect. Direct indexed access is not a defining feature of linked lists.",
+        "d": "Incorrect. A hierarchical structure with child nodes describes a tree rather than a linked list."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. In a singly linked list, what does the link field of the last node normally contain?",
+      "answers": {
+        "a": "The address of the first node",
+        "b": "The address of the previous node",
+        "c": "NULL",
+        "d": "The number of nodes"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Linking the last node to the first creates a circular relationship.",
+        "b": "Incorrect. A singly linked list stores a link to the next node, not the previous node.",
+        "c": "Correct. The last node has no next node, so its link normally contains NULL.",
+        "d": "Incorrect. The link field stores a node reference, not the list size."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. Which is a key advantage of a linked list over a fixed-size array?",
+      "answers": {
+        "a": "Nodes can be added or removed without requiring one contiguous block of storage",
+        "b": "Every element has direct indexed access",
+        "c": "It always uses less memory",
+        "d": "It automatically keeps elements sorted"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Linked-list nodes can be allocated independently, so the structure can grow or shrink without requiring one contiguous block.",
+        "b": "Incorrect. Linked lists do not provide direct indexed access like arrays.",
+        "c": "Incorrect. Link fields require additional memory, so a linked list does not always use less memory.",
+        "d": "Incorrect. A linked list does not automatically sort its elements."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. What is the worst-case time complexity of searching for a value in a singly linked list containing $n$ nodes?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n^2)$",
+        "d": "$O(n)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A search may require examining many nodes.",
+        "b": "Incorrect. A singly linked list does not provide the access pattern required for logarithmic search.",
+        "c": "Incorrect. A single sequential search does not require quadratic work.",
+        "d": "Correct. In the worst case, all $n$ nodes may need to be examined."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. Suppose `head` refers to the first node. What does `head->next` represent?",
+      "answers": {
+        "a": "The data in the first node",
+        "b": "The address of the second node",
+        "c": "The address of the last node",
+        "d": "The number of nodes"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The data field and link field are separate parts of a node.",
+        "b": "Correct. The `next` field of the first node stores the reference to the node that follows it.",
+        "c": "Incorrect. The `next` field identifies the immediately following node, not necessarily the last node.",
+        "d": "Incorrect. The `next` field stores a node reference rather than the list size."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which operation can be performed in $O(1)$ time when a pointer to the relevant node is already available?",
+      "answers": {
+        "a": "Searching for an arbitrary value",
+        "b": "Finding the node at position $n/2$",
+        "c": "Inserting a new node immediately after the referenced node",
+        "d": "Finding the smallest value in an unsorted list"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Searching for an arbitrary value may require visiting many nodes.",
+        "b": "Incorrect. Reaching a particular position generally requires traversal.",
+        "c": "Correct. A constant number of pointer updates is sufficient when the insertion node is already known.",
+        "d": "Incorrect. Finding the smallest value requires examining the nodes."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Consider 10 → 20 → 30 → NULL. If `head` points to 10, what value is obtained from `head->next->next`?",
+      "answers": {
+        "a": "20",
+        "b": "30",
+        "c": "10",
+        "d": "NULL"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. One `next` operation reaches 20.",
+        "b": "Correct. Two `next` operations move from 10 to 20 and then to 30.",
+        "c": "Incorrect. Following `next` moves forward rather than back to the starting node.",
+        "d": "Incorrect. The second `next` reaches a valid node before the final NULL link."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. In a doubly linked list, which pair of links is normally maintained in each internal node?",
+      "answers": {
+        "a": "Links to the previous and next nodes",
+        "b": "Two links to the next node",
+        "c": "A link to the head and a link to the list size",
+        "d": "A link to the first and last nodes"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. An internal doubly linked-list node normally stores links to both its previous and next nodes.",
+        "b": "Incorrect. Two next links do not provide the backward connection of a doubly linked list.",
+        "c": "Incorrect. Head and list-size information are not the standard pair of links in each node.",
+        "d": "Incorrect. Links to the global ends are not the standard links stored in each internal node."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which statement distinguishes a circular singly linked list from a standard singly linked list?",
+      "answers": {
+        "a": "Every node has two data fields",
+        "b": "It provides direct indexing",
+        "c": "The last node links back to the first node",
+        "d": "It cannot represent an empty list"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Circularity changes the linking relationship, not the number of data fields.",
+        "b": "Incorrect. Circular linking does not provide indexed random access.",
+        "c": "Correct. The last node links back to the first node instead of ending with NULL.",
+        "d": "Incorrect. A circular-list implementation can represent an empty list."
+      },
+      "difficulty": "advanced"
+    }
+  ]
 }

@@ -86,6 +86,10 @@ function clear() {
   document.getElementById("toBeSearched").value = "";
   document.getElementById("rightnode").value = "";
 }
+function setObservation(message) {
+  var observation = document.getElementById("ins");
+  if (observation) observation.innerHTML = message;
+}
 function counter() {
   count--;
   if (count === 0) renderer();
@@ -238,10 +242,21 @@ function renderer() {
     );
 }
 function array_maker() {
-  if (decider == 1) numbers.push(value);
-  if (decider == 2) numbers.insert(index, value);
+  if (decider == 1) {
+    numbers.push(value);
+    setObservation("Node with value " + value + " inserted at tail.");
+  }
+  if (decider == 2) {
+    numbers.insert(index, value);
+    setObservation(
+      "Node with value " + value + " inserted after node " + index + ".",
+    );
+  }
   if (decider == 3) numbers.splice(index - 1, 1);
-  if (decider == 4) numbers.unshift(value);
+  if (decider == 4) {
+    numbers.unshift(value);
+    setObservation("Node with value " + value + " inserted at head.");
+  }
 }
 function nodeshift() {
   if (keyc == boxDist) {
@@ -403,7 +418,7 @@ function insertAtTail() {
   value = parseInt(inputValue, 10);
   if (inputValue === "" || isNaN(value)) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to insert at tail.";
+      "Invalid input! Please enter a valid number to insert at tail.";
     busy = 0;
     clear();
     return;
@@ -455,14 +470,15 @@ function insertAtNode() {
     busy = 0;
     return;
   }
-  if (index > String(parseInt(numbers.length) - 1) || index < 1) {
+  index = Number(index);
+  if (index > numbers.length - 1 || index < 1) {
     if (numbers.length == 0)
       document.getElementById("ins").innerHTML = "Linked List is empty!";
     else
       document.getElementById("ins").innerHTML =
-        "Node no should lie between 1 and " +
+        "Node position should lie between 1 and " +
         String(parseInt(numbers.length) - 1) +
-        " !";
+        ". Use Insert At Tail to add a node after the last node.";
     clear();
     busy = 0;
     return;
@@ -491,19 +507,21 @@ function deleter() {
   } else busy = 1;
   var val = document.getElementById("rightnode").value;
   var idx = numbers.indexOf(parseInt(val, 10));
-  clear();
   if (val === "" || isNaN(parseInt(val, 10))) {
+    clear();
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to remove.";
+      "Invalid input! Please enter a valid number to remove.";
     busy = 0;
     return;
   }
   if (idx === -1) {
+    clear();
     document.getElementById("ins").innerHTML = "Value not found!";
     busy = 0;
     return;
   }
   numbers.splice(idx, 1);
+  document.getElementById("rightnode").value = "";
   document.getElementById("ins").innerHTML =
     "Node with value " + val + " removed.";
   renderer();
@@ -519,7 +537,7 @@ function search_num() {
   clear();
   if (val === "" || isNaN(parseInt(val, 10))) {
     document.getElementById("ins").innerHTML =
-      "Please enter a valid number to search.";
+      "Invalid input! Please enter a valid number to search.";
     busy = 0;
     return;
   }
