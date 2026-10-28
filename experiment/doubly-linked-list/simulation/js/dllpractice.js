@@ -7,6 +7,7 @@ var nWidth = 127;
 var nHeight = 93 * 0.9;
 //Initial numbers array
 var numbers = [];
+var MAX_NODES = 8;
 //Length of side of head in linked list
 var headSize = 50;
 var decider = 0;
@@ -303,6 +304,13 @@ function renderer() {
   ctx.closePath();
 }
 function array_maker() {
+  if (
+    (decider == 1 || decider == 2 || decider == 4) &&
+    numbers.length >= MAX_NODES
+  ) {
+    setObservation("Only 8 nodes are allowed");
+    return;
+  }
   if (decider == 1) {
     numbers.push(value);
     setObservation("Node with value " + value + " inserted at tail.");
@@ -488,7 +496,7 @@ function insertAtHead() {
   index = 0;
   keyc = 0;
   decider = 4;
-  if (numbers.length == 8) {
+  if (numbers.length >= MAX_NODES) {
     document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     busy = 0;
     clear();
@@ -524,8 +532,8 @@ function insertAtTail() {
   }
   index = numbers.length; // Set index to the current length of the numbers array
   decider = 1; // Set decider to 1 for tail insertion
-  if (numbers.length == 7) {
-    document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
+  if (numbers.length >= MAX_NODES) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     clear();
     busy = 0;
     return;
@@ -569,7 +577,7 @@ function insertAtNode() {
     clear();
     return;
   }
-  if (numbers.length >= 8) {
+  if (numbers.length >= MAX_NODES) {
     document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     busy = 0;
     clear();

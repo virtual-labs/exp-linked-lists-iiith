@@ -52,6 +52,7 @@ var ansl = 1;
 var tvalues = [];
 var quesnumbers = [];
 var ques_string = document.getElementById("questionid");
+var MAX_NODES = 8;
 
 function handlers() {
   document.getElementById("head-insert").onclick = function () {
@@ -440,6 +441,12 @@ function insertAtHead() {
   index = 0;
   keyc = 0;
   decider = 4;
+  if (numbers.length >= MAX_NODES) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
+    busy = 0;
+    clear();
+    return;
+  }
   clear();
   shift_stopper = setInterval(nodeshift, 1);
 }
@@ -457,6 +464,12 @@ function insertAtTail() {
   if (inputValue === "" || isNaN(value)) {
     document.getElementById("ins").innerHTML =
       "Invalid Entry! Please enter a valid number to insert at tail.";
+    busy = 0;
+    clear();
+    return;
+  }
+  if (numbers.length >= MAX_NODES) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     busy = 0;
     clear();
     return;
@@ -493,7 +506,7 @@ function insertAtNode() {
   }
   index = idx;
   value = val;
-  if (numbers.length == 8) {
+  if (numbers.length >= MAX_NODES) {
     document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     clear();
     busy = 0;
@@ -521,15 +534,33 @@ function randomIntFromInterval(min, max) {
 }
 
 function q2() {
-  for (var i = 0; i < numbers.length; i++) tvalues[i] = numbers[i];
-  var extras = randomIntFromInterval(1, 3);
+  tvalues.length = 0;
+  for (var i = 0; i < numbers.length; i++) {
+    tvalues[i] = numbers[i];
+  }
+
+  // Never allow the question array to exceed 8 elements.
+  var maxExtras = Math.min(3, MAX_NODES - tvalues.length);
+  if (maxExtras <= 0) {
+    for (var i = 0; i < tvalues.length - 1; i++) {
+      ques_string.innerHTML = ques_string.innerHTML + " " + tvalues[i] + ",";
+    }
+    ques_string.innerHTML =
+      ques_string.innerHTML + " " + tvalues[tvalues.length - 1];
+    return;
+  }
+  var extras = randomIntFromInterval(1, maxExtras);
+
   for (var i = 0; i < extras; i++) {
     var temp = randomIntFromInterval(1, 100);
     var rindex = randomIntFromInterval(0, tvalues.length);
     tvalues.insert(rindex, temp);
   }
-  for (var i = 0; i < tvalues.length - 1; i++)
+
+  for (var i = 0; i < tvalues.length - 1; i++) {
     ques_string.innerHTML = ques_string.innerHTML + " " + tvalues[i] + ",";
+  }
+
   ques_string.innerHTML =
     ques_string.innerHTML + " " + tvalues[tvalues.length - 1];
 }
@@ -584,8 +615,10 @@ function deleter() {
 }
 
 function llgenerator() {
-  for (i = 0; i < randomIntFromInterval(3, 6); i++) {
-    var temp = Math.floor(Math.random() * 100 + 1);
+  var count = Math.min(randomIntFromInterval(3, 6), MAX_NODES);
+
+  for (let i = 0; i < count; i++) {
+    var temp = randomIntFromInterval(1, 100);
     numbers.push(temp);
     quesnumbers.push(temp);
   }

@@ -19,6 +19,13 @@ function renderer() {
 }
 // Ensure array_maker is defined at top-level scope
 function array_maker() {
+  if (
+    (decider == 1 || decider == 2 || decider == 4) &&
+    numbers.length >= MAX_NODES
+  ) {
+    setObservation("Only 8 nodes are allowed");
+    return;
+  }
   if (decider == 1) {
     numbers.push(value);
     setObservation("Node with value " + value + " inserted at tail.");
@@ -37,6 +44,7 @@ function array_maker() {
 }
 //to test if input is busy or not
 var busy = 0;
+var MAX_NODES = 8;
 //Height and width of the boxes in linked lists
 var rectWidth = 40;
 var rectHeight = 50;
@@ -382,8 +390,8 @@ function insertAtNode(idx, val) {
   }
   keyc = 0;
   decider = 2;
-  if (numbers.length == 7) {
-    document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
+  if (numbers.length >= MAX_NODES) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     busy = 0;
     clear();
     return;
@@ -564,8 +572,8 @@ function insertAtHead() {
   keyc = 0;
   decider = 4;
   console.log("Head value input:", value);
-  if (numbers.length == 7) {
-    document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
+  if (numbers.length >= MAX_NODES) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     busy = 0;
     console.log("Max nodes reached");
     clear();
@@ -611,6 +619,12 @@ function insertAtTail() {
     console.log("Max nodes reached");
     return;
   }
+  if (numbers.length >= MAX_NODES) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
+    busy = 0;
+    clear();
+    return;
+  }
   clear();
   document.getElementById("ins").innerHTML =
     "Next of last node is pointed to the new node. Next of new node is pointed to NULL.";
@@ -644,8 +658,8 @@ function insertAtNode(idx, val) {
   }
   keyc = 0;
   decider = 2;
-  if (numbers.length == 7) {
-    document.getElementById("ins").innerHTML = "Only 7 nodes are allowed";
+  if (numbers.length >= MAX_NODES) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     clear();
     busy = 0;
     console.log("Max nodes reached");

@@ -32,6 +32,7 @@ var keyc = 0;
 var busy = 0;
 var tvalues = [];
 var quesnumbers = [];
+var MAX_NODES = 8;
 var count = 5;
 function handlers() {
   document.getElementById("head-insert").onclick = function () {
@@ -411,7 +412,7 @@ function insertAtHead() {
   index = 0;
   keyc = 0;
   decider = 4;
-  if (numbers.length == 8) {
+  if (numbers.length >= MAX_NODES) {
     document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     busy = 0;
     return;
@@ -443,7 +444,7 @@ function insertAtTail() {
   numa = 0;
   keyc = 0;
   decider = 1;
-  if (numbers.length == 8) {
+  if (numbers.length >= MAX_NODES) {
     document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
     busy = 0;
     return;
@@ -484,6 +485,12 @@ function insertAtNode() {
   numa = 0;
   keyc = 0;
   decider = 2;
+  if (numbers.length >= MAX_NODES) {
+    document.getElementById("ins").innerHTML = "Only 8 nodes are allowed";
+    clear();
+    busy = 0;
+    return;
+  }
   if (index > numbers.length - 1 || index < 1) {
     if (numbers.length == 0)
       document.getElementById("ins").innerHTML = "Linked List is empty!";
@@ -503,8 +510,17 @@ function randomIntFromInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 function q2() {
+  tvalues.length = 0;
   for (var i = 0; i < numbers.length; i++) tvalues[i] = numbers[i];
-  var extras = randomIntFromInterval(1, 3);
+  var maxExtras = Math.min(3, MAX_NODES - tvalues.length);
+  if (maxExtras <= 0) {
+    for (var i = 0; i < tvalues.length - 1; i++)
+      ques_string.innerHTML = ques_string.innerHTML + " " + tvalues[i] + ",";
+    ques_string.innerHTML =
+      ques_string.innerHTML + " " + tvalues[tvalues.length - 1];
+    return;
+  }
+  var extras = randomIntFromInterval(1, maxExtras);
   for (var i = 0; i < extras; i++) {
     var temp = randomIntFromInterval(1, 100);
     var rindex = randomIntFromInterval(0, tvalues.length);
@@ -534,7 +550,8 @@ function check() {
   clear();
 }
 function llgenerator() {
-  for (i = 0; i < randomIntFromInterval(3, 6); i++) {
+  var count = Math.min(randomIntFromInterval(3, 6), MAX_NODES);
+  for (i = 0; i < count; i++) {
     var temp = Math.floor(Math.random() * 100 + 1);
     numbers.push(temp);
     quesnumbers.push(temp);
